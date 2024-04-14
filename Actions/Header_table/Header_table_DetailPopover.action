@@ -1,0 +1,20 @@
+{
+    "PopoverItems": [{
+            "Title": "Add Item_table",
+            "OnPress": "/n44/Actions/Header_table/NavToHeader_table_CreateItem_table.action"
+        },
+        {
+            "Title": "Add Supplier_table",
+            "OnPress": "/n44/Actions/Header_table/NavToHeader_table_CreateSupplier_table.action"
+        },
+        {
+            "Title": "Add Supplier_bid_table",
+            "OnPress": "/n44/Actions/Header_table/NavToHeader_table_CreateSupplier_bid_table.action"
+        },
+        {
+            "Title": "Delete",
+            "OnPress": "/n44/Rules/Header_table/Header_table_DeleteConfirmation.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

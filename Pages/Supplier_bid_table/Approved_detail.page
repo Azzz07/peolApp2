@@ -1,0 +1,132 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Supplier_bid_table",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "{doc_id}",
+						"Description": "{invitationId}",
+						"StatusText": "{item_name}",
+						"SubstatusText": "{supp_quot_price}",
+						"HeadlineText": "{item_name}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{doc_id}",
+							"_Name": "KeyValue0",
+							"KeyName": "Doc Id",
+							"Visible": true
+						},
+						{
+							"Value": "{invitationId}",
+							"_Name": "KeyValue1",
+							"KeyName": "Supplier Mail Id",
+							"Visible": true
+						},
+						{
+							"Value": "{item_id}",
+							"_Name": "KeyValue2",
+							"KeyName": "Material ID",
+							"Visible": true
+						},
+						{
+							"Value": "{item_name}",
+							"_Name": "KeyValue4",
+							"KeyName": "Material Name",
+							"Visible": true
+						},
+						{
+							"Value": "{title}",
+							"_Name": "KeyValue3",
+							"KeyName": "title",
+							"Visible": false
+						},
+						{
+							"Value": "{supp_quot_quantity}",
+							"_Name": "KeyValue6",
+							"KeyName": "supp_quot_quantity",
+							"Visible": false
+						},
+						{
+							"Value": "{price}",
+							"_Name": "KeyValue7",
+							"KeyName": "Base Price",
+							"Visible": true
+						},
+						{
+							"Value": "{quantity}",
+							"_Name": "KeyValue8",
+							"KeyName": "Quantity",
+							"Visible": true
+						},
+						{
+							"Value": "{status}",
+							"_Name": "KeyValue9",
+							"KeyName": "Status",
+							"Visible": true
+						},
+						{
+							"Value": "{ariba_status}",
+							"_Name": "KeyValue10",
+							"KeyName": "ariba_status",
+							"Visible": false
+						},
+						{
+							"Value": "{supp_quot_price}",
+							"_Name": "KeyValue5",
+							"KeyName": "Price",
+							"Visible": true
+						},
+						{
+							"Value": "{whatsapp_status}",
+							"_Name": "KeyValue11",
+							"KeyName": "whatsapp_status",
+							"Visible": false
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Supplier_bid_table_Detail",
+	"Caption": "Line Item Detail",
+	"PrefersLargeCaption": true
+}

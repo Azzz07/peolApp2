@@ -1,0 +1,164 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": false,
+						"HeaderSeparator": false,
+						"FooterSeparator": false,
+						"ControlSeparator": false
+					},
+					"Controls": [
+						{
+							"validationProperties": {
+								"ValidationMessageColor": "#e22222",
+								"SeparatorBackgroundColor": "#787a4b",
+								"SeparatorIsHidden": true,
+								"ValidationViewBackgroundColor": "#9b5e5e",
+								"ValidationViewIsHidden": true
+							},
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty0",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Name",
+							"PlaceHolder": "Enter your name",
+							"KeyboardType": "Default",
+							"AlternateInput": "None",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"validationProperties": {
+								"ValidationMessage": "It should contain @gmail.com",
+								"ValidationMessageColor": "#dd1313",
+								"SeparatorBackgroundColor": "#b22323"
+							},
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Email",
+							"PlaceHolder": "Enter your email",
+							"KeyboardType": "Email",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"validationProperties": {
+								"ValidationMessage": "input should be 10 digit",
+								"ValidationMessageColor": "#c93636",
+								"SeparatorBackgroundColor": "#ad5353",
+								"SeparatorIsHidden": false,
+								"ValidationViewBackgroundColor": "#a36363"
+							},
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty3",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Phone",
+							"PlaceHolder": "Enter your phone number",
+							"KeyboardType": "Phone",
+							"AlternateInput": "None",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"validationProperties": {
+								"ValidationMessage": "{Message}",
+								"ValidationMessageColor": "#b22a2a"
+							},
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty4",
+							"IsVisible": true,
+							"Separator": false,
+							"Caption": "Password",
+							"PlaceHolder": "Enter password",
+							"KeyboardType": "Password",
+							"HelperText": "***8 character/special character/number***",
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": false,
+						"HeaderSeparator": false,
+						"FooterSeparator": false,
+						"ControlSeparator": false
+					},
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"Styles": {
+								"Button": "rbutton1"
+							},
+							"_Name": "SectionButton0",
+							"Title": "Sign In",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"ImagePosition": "Trailing",
+							"ImageSize": {
+								"Height": 20
+							},
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": {
+								"Handler": "/n44/Actions/Service/SyncStartedMessage.action",
+								"UserInteraction": {
+									"Enabled": true,
+									"Title": "Register"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Registration",
+	"Caption": "Sign In",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/n44/Actions/Application/UserMenuPopover.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

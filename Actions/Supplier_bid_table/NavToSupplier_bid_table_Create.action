@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/n44/Pages/Supplier_bid_table/Supplier_bid_table_Create.page",
+    "_Type": "Action.Type.Navigation"
+}

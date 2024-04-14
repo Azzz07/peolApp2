@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.PushNotificationRegister",
+	"ActionResult": {
+		"_Name": "notification"
+	}
+}

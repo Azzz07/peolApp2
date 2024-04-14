@@ -1,0 +1,84 @@
+{
+	"Caption": "Update Item_table Detail",
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Item_table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/n44/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/n44/Actions/Item_table/Item_table_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "doc_id",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{doc_id}",
+								"ReturnValue": "{doc_id}",
+								"Target": {
+									"EntitySet": "Header_table",
+									"Service": "/n44/Services/capurl.service"
+								}
+							},
+							"Value": "{doc_id}",
+							"_Name": "doc_id",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"IsEditable": false
+						},
+						{
+							"Caption": "itemid",
+							"_Name": "itemid",
+							"Value": "{itemid}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "item_name",
+							"_Name": "item_name",
+							"Value": "{item_name}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "price",
+							"_Name": "price",
+							"Value": "{price}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "quantity",
+							"_Name": "quantity",
+							"Value": "{quantity}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Item_table_Edit",
+	"PrefersLargeCaption": true
+}

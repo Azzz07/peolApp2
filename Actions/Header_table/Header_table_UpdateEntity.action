@@ -1,0 +1,20 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Header_table",
+        "Service": "/n44/Services/capurl.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "doc_id": "#Control:doc_id/#Value",
+        "title": "#Control:title/#Value",
+        "status": "#Control:status/#Value",
+        "date_created": "#Control:date_created/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/n44/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/n44/Actions/UpdateEntityFailureMessage.action"
+}

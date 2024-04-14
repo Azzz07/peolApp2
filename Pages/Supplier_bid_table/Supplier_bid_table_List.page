@@ -1,0 +1,73 @@
+{
+	"Caption": "Supplier_bid_table",
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Create.action",
+				"Position": "Right",
+				"SystemItem": "Add"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{invitationId}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"OnPress": "/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Detail.action",
+						"StatusImage": "",
+						"Title": "{title}",
+						"Footnote": "{item_id}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{item_name}",
+						"Subhead": "{doc_id}",
+						"SubstatusText": "{supp_quot_price}"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": false,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "Supplier_bid_table",
+						"Service": "/n44/Services/capurl.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Supplier_bid_table_List",
+	"PrefersLargeCaption": true
+}

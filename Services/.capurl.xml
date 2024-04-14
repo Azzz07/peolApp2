@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="WhatsappService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Header_table" EntityType="WhatsappService.Header_table">
+                    <NavigationPropertyBinding Path="header_item_rel" Target="Item_table"/>
+                    <NavigationPropertyBinding Path="header_supplier_rel" Target="Supplier_table"/>
+                    <NavigationPropertyBinding Path="header_supplier_bid_rel" Target="Supplier_bid_table"/>
+                </EntitySet>
+                <EntitySet Name="Supplier_table" EntityType="WhatsappService.Supplier_table">
+                    <NavigationPropertyBinding Path="supplier_header_rel" Target="Header_table"/>
+                    <NavigationPropertyBinding Path="supplier_to_sbid" Target="Supplier_bid_table"/>
+                </EntitySet>
+                <EntitySet Name="Item_table" EntityType="WhatsappService.Item_table">
+                    <NavigationPropertyBinding Path="item_header_rel" Target="Header_table"/>
+                </EntitySet>
+                <EntitySet Name="Supplier_bid_table" EntityType="WhatsappService.Supplier_bid_table">
+                    <NavigationPropertyBinding Path="supplier_bid_header_rel" Target="Header_table"/>
+                </EntitySet>
+                <EntitySet Name="Bid_reply" EntityType="WhatsappService.Bid_reply"/>
+                <EntitySet Name="supplier_replay" EntityType="WhatsappService.supplier_replay"/>
+                <EntitySet Name="Timestamp" EntityType="WhatsappService.Timestamp"/>
+                <EntitySet Name="Approved_Bid" EntityType="WhatsappService.Approved_Bid"/>
+            </EntityContainer>
+            <EntityType Name="Header_table">
+                <Key>
+                    <PropertyRef Name="doc_id"/>
+                </Key>
+                <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="eventTypeName" Type="Edm.String"/>
+                <Property Name="title" Type="Edm.String"/>
+                <Property Name="status" Type="Edm.String"/>
+                <Property Name="date_created" Type="Edm.String"/>
+                <NavigationProperty Name="header_item_rel" Type="Collection(WhatsappService.Item_table)"/>
+                <NavigationProperty Name="header_supplier_rel" Type="Collection(WhatsappService.Supplier_table)"/>
+                <NavigationProperty Name="header_supplier_bid_rel" Type="Collection(WhatsappService.Supplier_bid_table)"/>
+            </EntityType>
+            <EntityType Name="Supplier_table">
+                <Key>
+                    <PropertyRef Name="doc_id"/>
+                    <PropertyRef Name="invitationId"/>
+                </Key>
+                <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="invitationId" Type="Edm.String" MaxLength="50" Nullable="false"/>
+                <Property Name="title" Type="Edm.String"/>
+                <Property Name="smvendor_id" Type="Edm.String"/>
+                <Property Name="phone_main" Type="Edm.String"/>
+                <Property Name="status" Type="Edm.String"/>
+                <NavigationProperty Name="supplier_header_rel" Type="WhatsappService.Header_table">
+                    <ReferentialConstraint Property="doc_id" ReferencedProperty="doc_id"/>
+                </NavigationProperty>
+                <NavigationProperty Name="supplier_to_sbid" Type="Collection(WhatsappService.Supplier_bid_table)"/>
+            </EntityType>
+            <EntityType Name="Item_table">
+                <Key>
+                    <PropertyRef Name="doc_id"/>
+                    <PropertyRef Name="itemid"/>
+                </Key>
+                <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="itemid" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="improvise_amount" Type="Edm.Int32"/>
+                <Property Name="item_name" Type="Edm.String"/>
+                <Property Name="price" Type="Edm.String"/>
+                <Property Name="quantity" Type="Edm.String"/>
+                <NavigationProperty Name="item_header_rel" Type="WhatsappService.Header_table">
+                    <ReferentialConstraint Property="doc_id" ReferencedProperty="doc_id"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="Supplier_bid_table">
+                <Key>
+                    <PropertyRef Name="doc_id"/>
+                    <PropertyRef Name="invitationId"/>
+                    <PropertyRef Name="item_id"/>
+                </Key>
+                <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="invitationId" Type="Edm.String" MaxLength="50" Nullable="false"/>
+                <Property Name="item_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="eventTypeName" Type="Edm.String"/>
+                <Property Name="leadBid" Type="Edm.Int32"/>
+                <Property Name="title" Type="Edm.String"/>
+                <Property Name="item_name" Type="Edm.String"/>
+                <Property Name="supp_quot_price" Type="Edm.Int32"/>
+                <Property Name="supp_quot_quantity" Type="Edm.Int32"/>
+                <Property Name="price" Type="Edm.String"/>
+                <Property Name="quantity" Type="Edm.String"/>
+                <Property Name="status" Type="Edm.String"/>
+                <Property Name="ariba_status" Type="Edm.String"/>
+                <Property Name="whatsapp_status" Type="Edm.String"/>
+                <NavigationProperty Name="supplier_bid_header_rel" Type="WhatsappService.Header_table">
+                    <ReferentialConstraint Property="doc_id" ReferencedProperty="doc_id"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="Bid_reply">
+                <Property Name="doc_id" Type="Edm.String"/>
+                <Property Name="item_name" Type="Edm.String"/>
+                <Property Name="phone" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="supplier_replay">
+                <Key>
+                    <PropertyRef Name="SmsMessageSid"/>
+                </Key>
+                <Property Name="OriginalRepliedMessageSender" Type="Edm.String"/>
+                <Property Name="SmsMessageSid" Type="Edm.String" MaxLength="100" Nullable="false"/>
+                <Property Name="NumMedia" Type="Edm.String"/>
+                <Property Name="ProfileName" Type="Edm.String"/>
+                <Property Name="SmsSid" Type="Edm.String"/>
+                <Property Name="WaId" Type="Edm.String"/>
+                <Property Name="SmsStatus" Type="Edm.String"/>
+                <Property Name="Body" Type="Edm.String"/>
+                <Property Name="ButtonText" Type="Edm.String"/>
+                <Property Name="To" Type="Edm.String"/>
+                <Property Name="ButtonPayload" Type="Edm.String"/>
+                <Property Name="NumSegments" Type="Edm.String"/>
+                <Property Name="ReferralNumMedia" Type="Edm.String"/>
+                <Property Name="MessageSid" Type="Edm.String"/>
+                <Property Name="AccountSid" Type="Edm.String"/>
+                <Property Name="OriginalRepliedMessageSid" Type="Edm.String"/>
+                <Property Name="From" Type="Edm.String"/>
+                <Property Name="ApiVersion" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Timestamp">
+                <Property Name="timestamp" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Approved_Bid">
+                <Key>
+                    <PropertyRef Name="doc_id"/>
+                    <PropertyRef Name="invitationId"/>
+                </Key>
+                <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="invitationId" Type="Edm.String" MaxLength="50" Nullable="false"/>
+                <Property Name="item_id" Type="Edm.String" MaxLength="20"/>
+                <Property Name="item_name" Type="Edm.String"/>
+                <Property Name="price" Type="Edm.Int32"/>
+                <Property Name="quantity" Type="Edm.Int32"/>
+                <Property Name="status" Type="Edm.String"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

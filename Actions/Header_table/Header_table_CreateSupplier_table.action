@@ -1,0 +1,27 @@
+{
+    "ParentLink": {
+        "Property": "header_supplier_rel",
+        "Target": {
+            "EntitySet": "Header_table",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/n44/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/n44/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "doc_id": "#Control:doc_id/#SelectedValue",
+        "invitationId": "#Control:invitationId/#Value",
+        "title": "#Control:title/#Value",
+        "smvendor_id": "#Control:smvendor_id/#Value",
+        "phone_main": "#Control:phone_main/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "Target": {
+        "EntitySet": "Supplier_table",
+        "Service": "/n44/Services/capurl.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "Supplier_table",
+        "Service": "/n44/Services/capurl.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/n44/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/n44/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

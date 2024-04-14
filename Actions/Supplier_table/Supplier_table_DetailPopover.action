@@ -1,0 +1,12 @@
+{
+    "PopoverItems": [{
+            "Title": "Add Supplier_bid_table",
+            "OnPress": "/n44/Actions/Supplier_table/NavToSupplier_table_CreateSupplier_bid_table.action"
+        },
+        {
+            "Title": "Delete",
+            "OnPress": "/n44/Rules/Supplier_table/Supplier_table_DeleteConfirmation.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

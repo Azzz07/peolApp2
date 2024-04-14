@@ -1,0 +1,111 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/n44/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel"
+			},
+			{
+				"OnPress": "/n44/Actions/Header_table/Header_table_CreateSupplier_bid_table.action",
+				"Position": "Right",
+				"SystemItem": "Save"
+			}
+		]
+	},
+	"Caption": "Create Supplier_bid_table",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "doc_id",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsEditable": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{doc_id}",
+								"ReturnValue": "{doc_id}",
+								"Target": {
+									"EntitySet": "Header_table",
+									"Service": "/n44/Services/capurl.service"
+								}
+							},
+							"_Name": "doc_id",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"Value": "{doc_id}"
+						},
+						{
+							"Caption": "invitationId",
+							"_Name": "invitationId",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "item_id",
+							"_Name": "item_id",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "title",
+							"_Name": "title",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "item_name",
+							"_Name": "item_name",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "supp_quot_price",
+							"KeyboardType": "Number",
+							"_Name": "supp_quot_price",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "supp_quot_quantity",
+							"KeyboardType": "Number",
+							"_Name": "supp_quot_quantity",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "price",
+							"_Name": "price",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "quantity",
+							"_Name": "quantity",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "status",
+							"_Name": "status",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ariba_status",
+							"_Name": "ariba_status",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "whatsapp_status",
+							"_Name": "whatsapp_status",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Header_table_CreateSupplier_bid_table",
+	"PrefersLargeCaption": true
+}

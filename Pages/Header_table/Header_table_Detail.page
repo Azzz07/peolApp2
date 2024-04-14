@@ -1,0 +1,182 @@
+{
+	"Caption": "Header_table Detail",
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Header_table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/n44/Actions/Header_table/NavToHeader_table_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/n44/Actions/Header_table/Header_table_DetailPopover.action",
+				"Position": "Right",
+				"Caption": "More"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{title}",
+						"Subhead": "{doc_id}",
+						"BodyText": "",
+						"Footnote": "{date_created}",
+						"Description": "{status}",
+						"StatusText": "",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "doc_id",
+							"Value": "{doc_id}"
+						},
+						{
+							"KeyName": "title",
+							"Value": "{title}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						},
+						{
+							"KeyName": "date_created",
+							"Value": "{date_created}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"Header": {
+						"Caption": "header_item_rel"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{itemid}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{item_name}",
+						"Footnote": "{price}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{quantity}",
+						"Subhead": "{doc_id}",
+						"SubstatusText": "",
+						"OnPress": "/n44/Actions/Item_table/NavToItem_table_Detail.action"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/header_item_rel",
+						"Service": "/n44/Services/capurl.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "header_supplier_rel"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{invitationId}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{title}",
+						"Footnote": "{smvendor_id}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{phone_main}",
+						"Subhead": "{doc_id}",
+						"SubstatusText": "{status}",
+						"OnPress": "/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/header_supplier_rel",
+						"Service": "/n44/Services/capurl.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "header_supplier_bid_rel"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{invitationId}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{title}",
+						"Footnote": "{item_id}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{item_name}",
+						"Subhead": "{doc_id}",
+						"SubstatusText": "{supp_quot_price}",
+						"OnPress": "/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Detail.action"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/header_supplier_bid_rel",
+						"Service": "/n44/Services/capurl.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"DataSubscriptions": [
+				"Item_table",
+				"Supplier_table",
+				"Supplier_bid_table"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Header_table_Detail",
+	"PrefersLargeCaption": true
+}

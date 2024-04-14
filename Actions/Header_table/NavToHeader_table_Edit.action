@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/n44/Pages/Header_table/Header_table_Edit.page",
+    "_Type": "Action.Type.Navigation"
+}

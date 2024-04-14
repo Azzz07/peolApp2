@@ -1,0 +1,21 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Item_table",
+        "Service": "/n44/Services/capurl.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "doc_id": "#Control:doc_id/#SelectedValue",
+        "itemid": "#Control:itemid/#Value",
+        "item_name": "#Control:item_name/#Value",
+        "price": "#Control:price/#Value",
+        "quantity": "#Control:quantity/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/n44/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/n44/Actions/UpdateEntityFailureMessage.action"
+}

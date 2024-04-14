@@ -1,0 +1,120 @@
+{
+	"Caption": "Supplier_table Detail",
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Supplier_table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/n44/Actions/Supplier_table/NavToSupplier_table_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/n44/Actions/Supplier_table/Supplier_table_DetailPopover.action",
+				"Position": "Right",
+				"Caption": "More"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{title}",
+						"Subhead": "{doc_id}",
+						"BodyText": "",
+						"Footnote": "{smvendor_id}",
+						"Description": "{invitationId}",
+						"StatusText": "{phone_main}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{status}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "doc_id",
+							"Value": "{doc_id}"
+						},
+						{
+							"KeyName": "invitationId",
+							"Value": "{invitationId}"
+						},
+						{
+							"KeyName": "title",
+							"Value": "{title}"
+						},
+						{
+							"KeyName": "smvendor_id",
+							"Value": "{smvendor_id}"
+						},
+						{
+							"KeyName": "phone_main",
+							"Value": "{phone_main}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"Header": {
+						"Caption": "supplier_to_sbid"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{invitationId}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{title}",
+						"Footnote": "{item_id}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{item_name}",
+						"Subhead": "{doc_id}",
+						"SubstatusText": "{supp_quot_price}",
+						"OnPress": "/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Detail.action"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/supplier_to_sbid",
+						"Service": "/n44/Services/capurl.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"DataSubscriptions": [
+				"Supplier_bid_table"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Supplier_table_Detail",
+	"PrefersLargeCaption": true
+}

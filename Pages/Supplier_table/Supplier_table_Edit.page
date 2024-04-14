@@ -1,0 +1,90 @@
+{
+	"Caption": "Update Supplier_table Detail",
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Supplier_table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/n44/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/n44/Actions/Supplier_table/Supplier_table_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "doc_id",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{doc_id}",
+								"ReturnValue": "{doc_id}",
+								"Target": {
+									"EntitySet": "Header_table",
+									"Service": "/n44/Services/capurl.service"
+								}
+							},
+							"Value": "{doc_id}",
+							"_Name": "doc_id",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"IsEditable": false
+						},
+						{
+							"Caption": "invitationId",
+							"_Name": "invitationId",
+							"Value": "{invitationId}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "title",
+							"_Name": "title",
+							"Value": "{title}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "smvendor_id",
+							"_Name": "smvendor_id",
+							"Value": "{smvendor_id}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "phone_main",
+							"_Name": "phone_main",
+							"Value": "{phone_main}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "status",
+							"_Name": "status",
+							"Value": "{status}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Supplier_table_Edit",
+	"PrefersLargeCaption": true
+}

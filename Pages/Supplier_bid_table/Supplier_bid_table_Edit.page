@@ -1,0 +1,223 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Supplier_bid_table",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "{doc_id}",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "doc_id",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Doc Id",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"PickerItems": {
+								"DisplayValue": "{doc_id}",
+								"ReturnValue": "{doc_id}",
+								"Target": {
+									"EntitySet": "Header_table",
+									"Service": "/n44/Services/capurl.service"
+								}
+							}
+						},
+						{
+							"Value": "{invitationId}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "invitationId",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Supplier Mail Id",
+							"Enabled": false,
+							"IsEditable": false
+						},
+						{
+							"Value": "{item_id}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "item_id",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Material ID",
+							"Enabled": false,
+							"IsEditable": false
+						},
+						{
+							"Value": "{title}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "title",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Description",
+							"Enabled": false,
+							"IsEditable": false
+						},
+						{
+							"Value": "{item_name}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "item_name",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Material Name",
+							"Enabled": false,
+							"IsEditable": false
+						},
+						{
+							"Value": "{supp_quot_quantity}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "supp_quot_quantity",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "supp_quot_quantity",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{quantity}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "quantity",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Quantity",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{status}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "status",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Status",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{eventTypeName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty2",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Event Type",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{leadBid}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Lead Bid",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{price}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "price",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Base Price",
+							"KeyboardType": "Default",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{supp_quot_price}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "supp_quot_price",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Price*",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{ariba_status}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ariba_status",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "ariba_status",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{whatsapp_status}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty0",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "whatsapp_status",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Supplier_bid_table_Edit",
+	"Caption": "Bid Update",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/n44/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/n44/Actions/Supplier_bid_table/Supplier_bid_table_UpdateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

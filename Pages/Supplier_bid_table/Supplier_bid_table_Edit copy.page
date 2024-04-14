@@ -1,0 +1,129 @@
+{
+	"Caption": "Update Supplier_bid_table Detail",
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Supplier_bid_table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/n44/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/n44/Actions/Supplier_bid_table/Supplier_bid_table_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "doc_id",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{doc_id}",
+								"ReturnValue": "{doc_id}",
+								"Target": {
+									"EntitySet": "Header_table",
+									"Service": "/n44/Services/capurl.service"
+								}
+							},
+							"Value": "{doc_id}",
+							"_Name": "doc_id",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"IsEditable": false
+						},
+						{
+							"Caption": "invitationId",
+							"_Name": "invitationId",
+							"Value": "{invitationId}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "item_id",
+							"_Name": "item_id",
+							"Value": "{item_id}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "title",
+							"_Name": "title",
+							"Value": "{title}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "item_name",
+							"_Name": "item_name",
+							"Value": "{item_name}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "supp_quot_price",
+							"_Name": "supp_quot_price",
+							"Value": "{supp_quot_price}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "supp_quot_quantity",
+							"_Name": "supp_quot_quantity",
+							"Value": "{supp_quot_quantity}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "price",
+							"_Name": "price",
+							"Value": "{price}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "quantity",
+							"_Name": "quantity",
+							"Value": "{quantity}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "status",
+							"_Name": "status",
+							"Value": "{status}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ariba_status",
+							"_Name": "ariba_status",
+							"Value": "{ariba_status}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "whatsapp_status",
+							"_Name": "whatsapp_status",
+							"Value": "{whatsapp_status}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Supplier_bid_table_Edit",
+	"PrefersLargeCaption": true
+}

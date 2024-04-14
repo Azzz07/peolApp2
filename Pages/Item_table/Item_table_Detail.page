@@ -1,0 +1,80 @@
+{
+	"Caption": "Item_table Detail",
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Item_table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/n44/Actions/Item_table/NavToItem_table_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/n44/Rules/Item_table/Item_table_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{item_name}",
+						"Subhead": "{doc_id}",
+						"BodyText": "",
+						"Footnote": "{price}",
+						"Description": "{itemid}",
+						"StatusText": "{quantity}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "doc_id",
+							"Value": "{doc_id}"
+						},
+						{
+							"KeyName": "itemid",
+							"Value": "{itemid}"
+						},
+						{
+							"KeyName": "item_name",
+							"Value": "{item_name}"
+						},
+						{
+							"KeyName": "price",
+							"Value": "{price}"
+						},
+						{
+							"KeyName": "quantity",
+							"Value": "{quantity}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Item_table_Detail",
+	"PrefersLargeCaption": true
+}

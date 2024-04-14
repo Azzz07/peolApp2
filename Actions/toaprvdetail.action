@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "toaprvdetail"
+	},
+	"PageToOpen": "/n44/Pages/Supplier_bid_table/Approved_detail.page"
+}

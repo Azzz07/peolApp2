@@ -1,0 +1,130 @@
+/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.
+
+Examples:
+
+@mdkYellow1: #ffbb33;
+@mdkRed1: #ff0000;
+
+//// By-Type style: All Pages in the application will now have a yellow background
+Page
+
+{ background-color: @mdkYellow1; }
+//// By-Name style: All Buttons with _Name == "BlueButton" will now have this style
+#BlueButton
+
+{ color: @mdkYellow1; background-color: #0000FF; }
+//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function
+
+.MyButton
+
+{ color: @mdkYellow1; background-color: @mdkRed1; }
+*/
+ActionBar {
+    color: rgb(255, 255, 255);
+    background-color:#51abf1;
+}
+Toolbar {
+  color: rgb(255, 255, 255);
+  background-color:#51abf1;
+}
+
+.button1{
+   
+    background-color: #51abf1; 
+    color: rgb(255, 255, 255);
+    font-typeface: bold; 
+    font-size: 16px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+    
+  }
+ 
+ 
+  .header1{
+   text-align-last: center;
+  }
+
+
+ .label1{
+   text-align: center;
+ }
+ .MYINFO{
+   text-align: center; 
+ }
+
+ 
+ .rbutton1{
+   border: 1px solid black;
+     border: 2px solid #007bff;
+     color: rgb(243, 247, 249);
+     font-size: 26px;
+     padding: 10px 20px;
+     background-color: rgb(125, 156, 181); 
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
+ }
+
+
+
+
+   .NoteFormCellValue {
+    background-color: #cfcfe6; 
+    color: black;
+    font-style: body;  
+    font-typeface: bold;  
+    font-size: 24px;
+  }
+  .Form{
+   
+    color: black;
+    font-style: body; 
+    font-typeface: bold;  
+    font-size: 26px;
+  }
+  .Formm{
+    color: rgb(117, 117, 212);
+    font-style: bold;           
+    font-size: 26px;
+    text-align-last: center;
+    text-align: center
+  }
+
+  .fr{
+    background-color: rgb(215, 215, 233);  
+    border-radius: 50%
+  }
+  .AdditionalTextStyle {
+    background-color: rgb(215, 215, 233); 
+    color:black;          
+    font-size: 20px;
+}
+.f{
+  text-align-last: center; 
+}
+
+.ff{
+  border-radius: 75;
+border-bottom-left-radius: 20;
+border-bottom-right-radius: 20;
+text-align-last: center;           
+font-size: 8x;
+}
+
+.e{
+  text-align-last: center;
+  color: rgb(117, 117, 212);  
+  font-size: 11px;
+}
+.t{
+  border-radius: 20%; 
+}
+
+MDKPage {
+  color: rgb(13, 13, 14); 
+  background-color: rgb(238, 238, 253);
+}

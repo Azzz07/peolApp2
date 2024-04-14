@@ -1,0 +1,28 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.Tabs",
+			"_Name": "Tabs0",
+			"Items": [
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "/n44/Rules/countRule.js",
+					"PageToOpen": "/n44/Pages/Supplier_table/Supplier_table_List.page",
+					"_Name": "TabItem0"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "/n44/Rules/count.js",
+					"PageToOpen": "/n44/Pages/Supplier_table/Approved_List.page",
+					"_Name": "TabItem1"
+				}
+			],
+			"Position": "Top",
+			"TabStripType": "Normal",
+			"SwipeEnabled": true
+		}
+	],
+	"_Type": "Page",
+	"_Name": "TabsForBidsSummary",
+	"Caption": "Bids Summary"
+}
