@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "toQus"
+	},
+	"PageToOpen": "/n44/Pages/qus.page",
+	"Properties": {
+        "Target": {
+            "EntitySet": "Questionnaire_reply_table",
+            "Service": "/n44/Services/capurl.service",
+            "ReadLink": "{@odata.readLink}",
+            "Properties": {
+                "doc_id": "Doc54576248",
+                "invitationId": "testcase1peol@gmail.com"
+            }
+        }
+    }
+}

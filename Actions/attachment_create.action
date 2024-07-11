@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "attachment_create"
+	},
+	"PageToOpen": "/n44/Pages/AttachCreate.page",
+	"ModalPage": true,
+	"ModalPageFullscreen": false
+}

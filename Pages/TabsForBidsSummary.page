@@ -2,7 +2,7 @@
 	"Controls": [
 		{
 			"_Type": "Control.Type.Tabs",
-			"_Name": "Tabs0",
+			"_Name": "Awarded Bids",
 			"Items": [
 				{
 					"_Type": "Control.Type.TabItem",
@@ -15,6 +15,12 @@
 					"Caption": "/n44/Rules/count.js",
 					"PageToOpen": "/n44/Pages/Supplier_table/Approved_List.page",
 					"_Name": "TabItem1"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "/n44/Rules/awardedCountRule.js",
+					"PageToOpen": "/n44/Pages/Supplier_table/Awarded List.page",
+					"_Name": "TabItem2"
 				}
 			],
 			"Position": "Top",

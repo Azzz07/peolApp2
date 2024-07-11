@@ -1,0 +1,7 @@
+{
+	"_Type": "Register.Type.ExtensionControl",
+	"Module": "QuestionnaireClass",
+	"Control": "QuestionnaireClass",
+	"Class": "QuestionnaireClass",
+	"Display": "Questionnaire"
+}

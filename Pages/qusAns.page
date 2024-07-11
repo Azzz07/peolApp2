@@ -1,0 +1,112 @@
+{
+	"_Type": "Page",
+	"_Name": "qusAns",
+	"Controls": [
+		{
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	
+	"PrefersLargeCaption": true,
+	"Caption": "Update Questionnaire_reply_table Detail",
+	"DesignTimeTarget": {
+		"Service": "/quss/Services/capurl.service",
+		"EntitySet": "Questionnaire_reply_table",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/quss/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/quss/Actions/Questionnaire_reply_table/Questionnaire_reply_table_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "doc_id",
+							"_Name": "doc_id",
+							"Value": "{doc_id}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "questionnaire_id",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{questionnaire_id}",
+								"ReturnValue": "{questionnaire_id}",
+								"Target": {
+									"EntitySet": "Questionnaire_table",
+									"Service": "/quss/Services/capurl.service"
+								}
+							},
+							"Value": "{questionnaire_id}",
+							"_Name": "questionnaire_id",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"IsEditable": false
+						},
+						{
+							"Caption": "invitationId",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{invitationId}",
+								"ReturnValue": "{invitationId}",
+								"Target": {
+									"EntitySet": "Supplier_table",
+									"Service": "/quss/Services/capurl.service"
+								}
+							},
+							"Value": "{invitationId}",
+							"_Name": "invitationId",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"IsEditable": false
+						},
+						{
+							"Caption": "user_reply",
+							"_Name": "user_reply",
+							"Value": "{user_reply}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "description",
+							"_Name": "description",
+							"Value": "{description}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "type",
+							"_Name": "type",
+							"Value": "{type}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "qusAns",
+	"PrefersLargeCaption": true
+}

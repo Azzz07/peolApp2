@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(this, () => {
-return /******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./build.definitions/n44/i18n/i18n.properties":
@@ -40,6 +30,11 @@ let n44_actions_application_onwillupdate_action = __webpack_require__(/*! ./n44/
 let n44_actions_application_reset_action = __webpack_require__(/*! ./n44/Actions/Application/Reset.action */ "./build.definitions/n44/Actions/Application/Reset.action")
 let n44_actions_application_resetmessage_action = __webpack_require__(/*! ./n44/Actions/Application/ResetMessage.action */ "./build.definitions/n44/Actions/Application/ResetMessage.action")
 let n44_actions_application_usermenupopover_action = __webpack_require__(/*! ./n44/Actions/Application/UserMenuPopover.action */ "./build.definitions/n44/Actions/Application/UserMenuPopover.action")
+let n44_actions_attachdelete_action = __webpack_require__(/*! ./n44/Actions/attachDelete.action */ "./build.definitions/n44/Actions/attachDelete.action")
+let n44_actions_attachment_create_action = __webpack_require__(/*! ./n44/Actions/attachment_create.action */ "./build.definitions/n44/Actions/attachment_create.action")
+let n44_actions_attachment_table_create_entity_action = __webpack_require__(/*! ./n44/Actions/attachment_table_create_entity.action */ "./build.definitions/n44/Actions/attachment_table_create_entity.action")
+let n44_actions_attachment_table_upload_stream_action = __webpack_require__(/*! ./n44/Actions/attachment_table_upload_stream.action */ "./build.definitions/n44/Actions/attachment_table_upload_stream.action")
+let n44_actions_attachments_table_opendocument_action = __webpack_require__(/*! ./n44/Actions/Attachments_table/OpenDocument.action */ "./build.definitions/n44/Actions/Attachments_table/OpenDocument.action")
 let n44_actions_closemodalpage_cancel_action = __webpack_require__(/*! ./n44/Actions/CloseModalPage_Cancel.action */ "./build.definitions/n44/Actions/CloseModalPage_Cancel.action")
 let n44_actions_closemodalpage_complete_action = __webpack_require__(/*! ./n44/Actions/CloseModalPage_Complete.action */ "./build.definitions/n44/Actions/CloseModalPage_Complete.action")
 let n44_actions_closepage_action = __webpack_require__(/*! ./n44/Actions/ClosePage.action */ "./build.definitions/n44/Actions/ClosePage.action")
@@ -76,6 +71,7 @@ let n44_actions_logging_uploadlog_action = __webpack_require__(/*! ./n44/Actions
 let n44_actions_logging_uploadlogprogress_action = __webpack_require__(/*! ./n44/Actions/Logging/UploadLogProgress.action */ "./build.definitions/n44/Actions/Logging/UploadLogProgress.action")
 let n44_actions_login_to_reg_action = __webpack_require__(/*! ./n44/Actions/login_to_reg.action */ "./build.definitions/n44/Actions/login_to_reg.action")
 let n44_actions_notification_action = __webpack_require__(/*! ./n44/Actions/notification.action */ "./build.definitions/n44/Actions/notification.action")
+let n44_actions_qusupdate_action = __webpack_require__(/*! ./n44/Actions/qusUpdate.action */ "./build.definitions/n44/Actions/qusUpdate.action")
 let n44_actions_service_initializeonline_action = __webpack_require__(/*! ./n44/Actions/Service/InitializeOnline.action */ "./build.definitions/n44/Actions/Service/InitializeOnline.action")
 let n44_actions_service_initializeonlinefailuremessage_action = __webpack_require__(/*! ./n44/Actions/Service/InitializeOnlineFailureMessage.action */ "./build.definitions/n44/Actions/Service/InitializeOnlineFailureMessage.action")
 let n44_actions_service_initializeonlinesuccessmessage_action = __webpack_require__(/*! ./n44/Actions/Service/InitializeOnlineSuccessMessage.action */ "./build.definitions/n44/Actions/Service/InitializeOnlineSuccessMessage.action")
@@ -97,10 +93,23 @@ let n44_actions_supplier_table_supplier_table_deleteentity_action = __webpack_re
 let n44_actions_supplier_table_supplier_table_detailpopover_action = __webpack_require__(/*! ./n44/Actions/Supplier_table/Supplier_table_DetailPopover.action */ "./build.definitions/n44/Actions/Supplier_table/Supplier_table_DetailPopover.action")
 let n44_actions_supplier_table_supplier_table_updateentity_action = __webpack_require__(/*! ./n44/Actions/Supplier_table/Supplier_table_UpdateEntity.action */ "./build.definitions/n44/Actions/Supplier_table/Supplier_table_UpdateEntity.action")
 let n44_actions_toapprovedetail_action = __webpack_require__(/*! ./n44/Actions/toApproveDetail.action */ "./build.definitions/n44/Actions/toApproveDetail.action")
+let n44_actions_toapprovedqus_action = __webpack_require__(/*! ./n44/Actions/toApprovedQus.action */ "./build.definitions/n44/Actions/toApprovedQus.action")
 let n44_actions_toaprvdetail_action = __webpack_require__(/*! ./n44/Actions/toaprvdetail.action */ "./build.definitions/n44/Actions/toaprvdetail.action")
+let n44_actions_toawardeddetail_action = __webpack_require__(/*! ./n44/Actions/toAwardedDetail.action */ "./build.definitions/n44/Actions/toAwardedDetail.action")
+let n44_actions_toawardedlist_action = __webpack_require__(/*! ./n44/Actions/toAwardedList.action */ "./build.definitions/n44/Actions/toAwardedList.action")
+let n44_actions_toawardedqus_action = __webpack_require__(/*! ./n44/Actions/toAwardedQus.action */ "./build.definitions/n44/Actions/toAwardedQus.action")
+let n44_actions_toqus_action = __webpack_require__(/*! ./n44/Actions/toQus.action */ "./build.definitions/n44/Actions/toQus.action")
+let n44_actions_toqusans_action = __webpack_require__(/*! ./n44/Actions/toQusAns.action */ "./build.definitions/n44/Actions/toQusAns.action")
+let n44_actions_toqusedit_action = __webpack_require__(/*! ./n44/Actions/toQusEdit.action */ "./build.definitions/n44/Actions/toQusEdit.action")
 let n44_actions_totabs_action = __webpack_require__(/*! ./n44/Actions/toTabs.action */ "./build.definitions/n44/Actions/toTabs.action")
 let n44_actions_updateentityfailuremessage_action = __webpack_require__(/*! ./n44/Actions/UpdateEntityFailureMessage.action */ "./build.definitions/n44/Actions/UpdateEntityFailureMessage.action")
 let n44_actions_updateentitysuccessmessage_action = __webpack_require__(/*! ./n44/Actions/UpdateEntitySuccessMessage.action */ "./build.definitions/n44/Actions/UpdateEntitySuccessMessage.action")
+let n44_actions_uploadstreamfailuremessage_action = __webpack_require__(/*! ./n44/Actions/UploadStreamFailureMessage.action */ "./build.definitions/n44/Actions/UploadStreamFailureMessage.action")
+let n44_actions_uploadstreamsuccessmessage_action = __webpack_require__(/*! ./n44/Actions/UploadStreamSuccessMessage.action */ "./build.definitions/n44/Actions/UploadStreamSuccessMessage.action")
+let n44_extensions_questionnaireaprv_controls_questionnaireaprv_ts = __webpack_require__(/*! ./n44/Extensions/questionnaireAprv/controls/questionnaireAprv.ts */ "./build.definitions/n44/Extensions/questionnaireAprv/controls/questionnaireAprv.ts")
+let n44_extensions_questionnaireclass_controls_questionnaireclass_ts = __webpack_require__(/*! ./n44/Extensions/QuestionnaireClass/controls/QuestionnaireClass.ts */ "./build.definitions/n44/Extensions/QuestionnaireClass/controls/QuestionnaireClass.ts")
+let n44_extensions_qusextn_controls_dropdown_ts = __webpack_require__(/*! ./n44/Extensions/QusEXtn/controls/dropdown.ts */ "./build.definitions/n44/Extensions/QusEXtn/controls/dropdown.ts")
+let n44_extensions_qusextn_ts = __webpack_require__(/*! ./n44/Extensions/QusEXtn.ts */ "./build.definitions/n44/Extensions/QusEXtn.ts")
 let n44_globals_application_appdefinition_version_global = __webpack_require__(/*! ./n44/Globals/Application/AppDefinition_Version.global */ "./build.definitions/n44/Globals/Application/AppDefinition_Version.global")
 let n44_globals_application_applicationname_global = __webpack_require__(/*! ./n44/Globals/Application/ApplicationName.global */ "./build.definitions/n44/Globals/Application/ApplicationName.global")
 let n44_globals_application_supportemail_global = __webpack_require__(/*! ./n44/Globals/Application/SupportEmail.global */ "./build.definitions/n44/Globals/Application/SupportEmail.global")
@@ -111,6 +120,9 @@ let n44_jsconfig_json = __webpack_require__(/*! ./n44/jsconfig.json */ "./build.
 let n44_pages_application_about_page = __webpack_require__(/*! ./n44/Pages/Application/About.page */ "./build.definitions/n44/Pages/Application/About.page")
 let n44_pages_application_support_page = __webpack_require__(/*! ./n44/Pages/Application/Support.page */ "./build.definitions/n44/Pages/Application/Support.page")
 let n44_pages_application_useractivitylog_page = __webpack_require__(/*! ./n44/Pages/Application/UserActivityLog.page */ "./build.definitions/n44/Pages/Application/UserActivityLog.page")
+let n44_pages_approvedqus_page = __webpack_require__(/*! ./n44/Pages/approvedQus.page */ "./build.definitions/n44/Pages/approvedQus.page")
+let n44_pages_attachcreate_page = __webpack_require__(/*! ./n44/Pages/AttachCreate.page */ "./build.definitions/n44/Pages/AttachCreate.page")
+let n44_pages_awardedqus_page = __webpack_require__(/*! ./n44/Pages/AwardedQus.page */ "./build.definitions/n44/Pages/AwardedQus.page")
 let n44_pages_header_table_header_table_create_page = __webpack_require__(/*! ./n44/Pages/Header_table/Header_table_Create.page */ "./build.definitions/n44/Pages/Header_table/Header_table_Create.page")
 let n44_pages_header_table_header_table_createitem_table_page = __webpack_require__(/*! ./n44/Pages/Header_table/Header_table_CreateItem_table.page */ "./build.definitions/n44/Pages/Header_table/Header_table_CreateItem_table.page")
 let n44_pages_header_table_header_table_createsupplier_bid_table_page = __webpack_require__(/*! ./n44/Pages/Header_table/Header_table_CreateSupplier_bid_table.page */ "./build.definitions/n44/Pages/Header_table/Header_table_CreateSupplier_bid_table.page")
@@ -121,7 +133,16 @@ let n44_pages_header_table_header_table_list_page = __webpack_require__(/*! ./n4
 let n44_pages_item_table_item_table_detail_page = __webpack_require__(/*! ./n44/Pages/Item_table/Item_table_Detail.page */ "./build.definitions/n44/Pages/Item_table/Item_table_Detail.page")
 let n44_pages_item_table_item_table_edit_page = __webpack_require__(/*! ./n44/Pages/Item_table/Item_table_Edit.page */ "./build.definitions/n44/Pages/Item_table/Item_table_Edit.page")
 let n44_pages_login_page = __webpack_require__(/*! ./n44/Pages/Login.page */ "./build.definitions/n44/Pages/Login.page")
+let n44_pages_loginc_page = __webpack_require__(/*! ./n44/Pages/LoginC.page */ "./build.definitions/n44/Pages/LoginC.page")
+let n44_pages_loginim_page = __webpack_require__(/*! ./n44/Pages/LoginIM.page */ "./build.definitions/n44/Pages/LoginIM.page")
+let n44_pages_loginl_page = __webpack_require__(/*! ./n44/Pages/LoginL.page */ "./build.definitions/n44/Pages/LoginL.page")
+let n44_pages_loginmy_page = __webpack_require__(/*! ./n44/Pages/LoginMy.page */ "./build.definitions/n44/Pages/LoginMy.page")
+let n44_pages_loginn_page = __webpack_require__(/*! ./n44/Pages/LoginN.page */ "./build.definitions/n44/Pages/LoginN.page")
+let n44_pages_loginr_page = __webpack_require__(/*! ./n44/Pages/LoginR.page */ "./build.definitions/n44/Pages/LoginR.page")
 let n44_pages_main_page = __webpack_require__(/*! ./n44/Pages/Main.page */ "./build.definitions/n44/Pages/Main.page")
+let n44_pages_qus_page = __webpack_require__(/*! ./n44/Pages/qus.page */ "./build.definitions/n44/Pages/qus.page")
+let n44_pages_qusans_page = __webpack_require__(/*! ./n44/Pages/qusAns.page */ "./build.definitions/n44/Pages/qusAns.page")
+let n44_pages_qusedit_page = __webpack_require__(/*! ./n44/Pages/qusEdit.page */ "./build.definitions/n44/Pages/qusEdit.page")
 let n44_pages_registration_page = __webpack_require__(/*! ./n44/Pages/Registration.page */ "./build.definitions/n44/Pages/Registration.page")
 let n44_pages_supplier_bid_table_approved_detail_page = __webpack_require__(/*! ./n44/Pages/Supplier_bid_table/Approved_detail.page */ "./build.definitions/n44/Pages/Supplier_bid_table/Approved_detail.page")
 let n44_pages_supplier_bid_table_supplier_bid_table_create_page = __webpack_require__(/*! ./n44/Pages/Supplier_bid_table/Supplier_bid_table_Create.page */ "./build.definitions/n44/Pages/Supplier_bid_table/Supplier_bid_table_Create.page")
@@ -133,6 +154,8 @@ let n44_pages_supplier_bid_table_supplier_bid_table_list_copy_page = __webpack_r
 let n44_pages_supplier_bid_table_supplier_bid_table_list_page = __webpack_require__(/*! ./n44/Pages/Supplier_bid_table/Supplier_bid_table_List.page */ "./build.definitions/n44/Pages/Supplier_bid_table/Supplier_bid_table_List.page")
 let n44_pages_supplier_table_approved_bids_page = __webpack_require__(/*! ./n44/Pages/Supplier_table/Approved Bids.page */ "./build.definitions/n44/Pages/Supplier_table/Approved Bids.page")
 let n44_pages_supplier_table_approved_list_page = __webpack_require__(/*! ./n44/Pages/Supplier_table/Approved_List.page */ "./build.definitions/n44/Pages/Supplier_table/Approved_List.page")
+let n44_pages_supplier_table_awarded_detail_page = __webpack_require__(/*! ./n44/Pages/Supplier_table/Awarded Detail.page */ "./build.definitions/n44/Pages/Supplier_table/Awarded Detail.page")
+let n44_pages_supplier_table_awarded_list_page = __webpack_require__(/*! ./n44/Pages/Supplier_table/Awarded List.page */ "./build.definitions/n44/Pages/Supplier_table/Awarded List.page")
 let n44_pages_supplier_table_supplier_table_create_page = __webpack_require__(/*! ./n44/Pages/Supplier_table/Supplier_table_Create.page */ "./build.definitions/n44/Pages/Supplier_table/Supplier_table_Create.page")
 let n44_pages_supplier_table_supplier_table_createsupplier_bid_table_page = __webpack_require__(/*! ./n44/Pages/Supplier_table/Supplier_table_CreateSupplier_bid_table.page */ "./build.definitions/n44/Pages/Supplier_table/Supplier_table_CreateSupplier_bid_table.page")
 let n44_pages_supplier_table_supplier_table_detail_copy_page = __webpack_require__(/*! ./n44/Pages/Supplier_table/Supplier_table_Detail copy.page */ "./build.definitions/n44/Pages/Supplier_table/Supplier_table_Detail copy.page")
@@ -149,26 +172,57 @@ let n44_rules_application_getclientversion_js = __webpack_require__(/*! ./n44/Ru
 let n44_rules_application_onwillupdate_js = __webpack_require__(/*! ./n44/Rules/Application/OnWillUpdate.js */ "./build.definitions/n44/Rules/Application/OnWillUpdate.js")
 let n44_rules_application_resetappsettingsandlogout_js = __webpack_require__(/*! ./n44/Rules/Application/ResetAppSettingsAndLogout.js */ "./build.definitions/n44/Rules/Application/ResetAppSettingsAndLogout.js")
 let n44_rules_approvedrule_js = __webpack_require__(/*! ./n44/Rules/ApprovedRule.js */ "./build.definitions/n44/Rules/ApprovedRule.js")
+let n44_rules_attachdeleterule_js = __webpack_require__(/*! ./n44/Rules/attachDeleteRule.js */ "./build.definitions/n44/Rules/attachDeleteRule.js")
+let n44_rules_attachments_table_createentity_js = __webpack_require__(/*! ./n44/Rules/Attachments_table_CreateEntity.js */ "./build.definitions/n44/Rules/Attachments_table_CreateEntity.js")
+let n44_rules_attepmtrule_js = __webpack_require__(/*! ./n44/Rules/attepmtRule.js */ "./build.definitions/n44/Rules/attepmtRule.js")
+let n44_rules_awardedcountrule_js = __webpack_require__(/*! ./n44/Rules/awardedCountRule.js */ "./build.definitions/n44/Rules/awardedCountRule.js")
+let n44_rules_awardedfilrule_js = __webpack_require__(/*! ./n44/Rules/awardedFilRule.js */ "./build.definitions/n44/Rules/awardedFilRule.js")
+let n44_rules_closedfilter_js = __webpack_require__(/*! ./n44/Rules/closedFilter.js */ "./build.definitions/n44/Rules/closedFilter.js")
 let n44_rules_count_js = __webpack_require__(/*! ./n44/Rules/count.js */ "./build.definitions/n44/Rules/count.js")
 let n44_rules_countapproved_js = __webpack_require__(/*! ./n44/Rules/countApproved.js */ "./build.definitions/n44/Rules/countApproved.js")
 let n44_rules_countrule_js = __webpack_require__(/*! ./n44/Rules/countRule.js */ "./build.definitions/n44/Rules/countRule.js")
+let n44_rules_countruleawarded_js = __webpack_require__(/*! ./n44/Rules/countRuleAwarded.js */ "./build.definitions/n44/Rules/countRuleAwarded.js")
+let n44_rules_doc_idval_js = __webpack_require__(/*! ./n44/Rules/doc_idVal.js */ "./build.definitions/n44/Rules/doc_idVal.js")
+let n44_rules_docidvalff_js = __webpack_require__(/*! ./n44/Rules/docIDvalff.js */ "./build.definitions/n44/Rules/docIDvalff.js")
+let n44_rules_docidvfex_js = __webpack_require__(/*! ./n44/Rules/docIDvFEx.js */ "./build.definitions/n44/Rules/docIDvFEx.js")
 let n44_rules_errorrule_js = __webpack_require__(/*! ./n44/Rules/errorRule.js */ "./build.definitions/n44/Rules/errorRule.js")
+let n44_rules_fileupdateerror_js = __webpack_require__(/*! ./n44/Rules/fileUpdateError.js */ "./build.definitions/n44/Rules/fileUpdateError.js")
+let n44_rules_filforqus_js = __webpack_require__(/*! ./n44/Rules/filforqus.js */ "./build.definitions/n44/Rules/filforqus.js")
+let n44_rules_filrule_js = __webpack_require__(/*! ./n44/Rules/filRule.js */ "./build.definitions/n44/Rules/filRule.js")
+let n44_rules_filterforattch_js = __webpack_require__(/*! ./n44/Rules/filterforattch.js */ "./build.definitions/n44/Rules/filterforattch.js")
 let n44_rules_filterrule_js = __webpack_require__(/*! ./n44/Rules/filterrule.js */ "./build.definitions/n44/Rules/filterrule.js")
+let n44_rules_filtrawaded_js = __webpack_require__(/*! ./n44/Rules/filtrAwaded.js */ "./build.definitions/n44/Rules/filtrAwaded.js")
 let n44_rules_header_table_header_table_deleteconfirmation_js = __webpack_require__(/*! ./n44/Rules/Header_table/Header_table_DeleteConfirmation.js */ "./build.definitions/n44/Rules/Header_table/Header_table_DeleteConfirmation.js")
+let n44_rules_imagerule_js = __webpack_require__(/*! ./n44/Rules/imageRule.js */ "./build.definitions/n44/Rules/imageRule.js")
+let n44_rules_inviidvalrule_js = __webpack_require__(/*! ./n44/Rules/inviIdValRule.js */ "./build.definitions/n44/Rules/inviIdValRule.js")
 let n44_rules_item_table_item_table_deleteconfirmation_js = __webpack_require__(/*! ./n44/Rules/Item_table/Item_table_DeleteConfirmation.js */ "./build.definitions/n44/Rules/Item_table/Item_table_DeleteConfirmation.js")
+let n44_rules_leadbidvisirule_js = __webpack_require__(/*! ./n44/Rules/leadBidVisiRule.js */ "./build.definitions/n44/Rules/leadBidVisiRule.js")
+let n44_rules_leadvisi_js = __webpack_require__(/*! ./n44/Rules/leadVisi.js */ "./build.definitions/n44/Rules/leadVisi.js")
+let n44_rules_leadvsisd_js = __webpack_require__(/*! ./n44/Rules/leadVsisD.js */ "./build.definitions/n44/Rules/leadVsisD.js")
 let n44_rules_logging_loglevels_js = __webpack_require__(/*! ./n44/Rules/Logging/LogLevels.js */ "./build.definitions/n44/Rules/Logging/LogLevels.js")
 let n44_rules_logging_settracecategories_js = __webpack_require__(/*! ./n44/Rules/Logging/SetTraceCategories.js */ "./build.definitions/n44/Rules/Logging/SetTraceCategories.js")
 let n44_rules_logging_setuserloglevel_js = __webpack_require__(/*! ./n44/Rules/Logging/SetUserLogLevel.js */ "./build.definitions/n44/Rules/Logging/SetUserLogLevel.js")
 let n44_rules_logging_togglelogging_js = __webpack_require__(/*! ./n44/Rules/Logging/ToggleLogging.js */ "./build.definitions/n44/Rules/Logging/ToggleLogging.js")
 let n44_rules_logging_tracecategories_js = __webpack_require__(/*! ./n44/Rules/Logging/TraceCategories.js */ "./build.definitions/n44/Rules/Logging/TraceCategories.js")
 let n44_rules_logging_userlogsetting_js = __webpack_require__(/*! ./n44/Rules/Logging/UserLogSetting.js */ "./build.definitions/n44/Rules/Logging/UserLogSetting.js")
+let n44_rules_loginrule_js = __webpack_require__(/*! ./n44/Rules/loginRule.js */ "./build.definitions/n44/Rules/loginRule.js")
+let n44_rules_numvisiblerule_js = __webpack_require__(/*! ./n44/Rules/numVisibleRule.js */ "./build.definitions/n44/Rules/numVisibleRule.js")
+let n44_rules_opendocrule_js = __webpack_require__(/*! ./n44/Rules/openDocRule.js */ "./build.definitions/n44/Rules/openDocRule.js")
+let n44_rules_otprule_js = __webpack_require__(/*! ./n44/Rules/otpRule.js */ "./build.definitions/n44/Rules/otpRule.js")
+let n44_rules_paymntlp_js = __webpack_require__(/*! ./n44/Rules/paymntLP.js */ "./build.definitions/n44/Rules/paymntLP.js")
+let n44_rules_qusbtnvisirule_js = __webpack_require__(/*! ./n44/Rules/qusBtnVisiRule.js */ "./build.definitions/n44/Rules/qusBtnVisiRule.js")
 let n44_rules_supplier_bid_table_supplier_bid_table_deleteconfirmation_js = __webpack_require__(/*! ./n44/Rules/Supplier_bid_table/Supplier_bid_table_DeleteConfirmation.js */ "./build.definitions/n44/Rules/Supplier_bid_table/Supplier_bid_table_DeleteConfirmation.js")
 let n44_rules_supplier_table_supplier_table_deleteconfirmation_js = __webpack_require__(/*! ./n44/Rules/Supplier_table/Supplier_table_DeleteConfirmation.js */ "./build.definitions/n44/Rules/Supplier_table/Supplier_table_DeleteConfirmation.js")
+let n44_rules_userreplyrule_js = __webpack_require__(/*! ./n44/Rules/userReplyRule.js */ "./build.definitions/n44/Rules/userReplyRule.js")
+let n44_rules_visiblepaymentrule_js = __webpack_require__(/*! ./n44/Rules/visiblePaymentRule.js */ "./build.definitions/n44/Rules/visiblePaymentRule.js")
+let n44_rules_visiblerule_js = __webpack_require__(/*! ./n44/Rules/visibleRule.js */ "./build.definitions/n44/Rules/visibleRule.js")
+let n44_rules_visirule_js = __webpack_require__(/*! ./n44/Rules/visiRule.js */ "./build.definitions/n44/Rules/visiRule.js")
 let n44_services_capurl_service = __webpack_require__(/*! ./n44/Services/capurl.service */ "./build.definitions/n44/Services/capurl.service")
 let n44_styles_styles_css = __webpack_require__(/*! ./n44/Styles/Styles.css */ "./build.definitions/n44/Styles/Styles.css")
-let n44_styles_styles_json = __webpack_require__(/*! ./n44/Styles/Styles.json */ "./build.definitions/n44/Styles/Styles.json")
 let n44_styles_styles_less = __webpack_require__(/*! ./n44/Styles/Styles.less */ "./build.definitions/n44/Styles/Styles.less")
-let n44_styles_styles_nss = __webpack_require__(/*! ./n44/Styles/Styles.nss */ "./build.definitions/n44/Styles/Styles.nss")
+let n44_styles_styles_light_css = __webpack_require__(/*! ./n44/Styles/Styles.light.css */ "./build.definitions/n44/Styles/Styles.light.css")
+let n44_styles_styles_light_json = __webpack_require__(/*! ./n44/Styles/Styles.light.json */ "./build.definitions/n44/Styles/Styles.light.json")
+let n44_styles_styles_light_nss = __webpack_require__(/*! ./n44/Styles/Styles.light.nss */ "./build.definitions/n44/Styles/Styles.light.nss")
 let tsconfig_json = __webpack_require__(/*! ./tsconfig.json */ "./build.definitions/tsconfig.json")
 let version_mdkbundlerversion = __webpack_require__(/*! ./version.mdkbundlerversion */ "./build.definitions/version.mdkbundlerversion")
 
@@ -186,6 +240,11 @@ module.exports = {
 	n44_actions_application_reset_action : n44_actions_application_reset_action,
 	n44_actions_application_resetmessage_action : n44_actions_application_resetmessage_action,
 	n44_actions_application_usermenupopover_action : n44_actions_application_usermenupopover_action,
+	n44_actions_attachdelete_action : n44_actions_attachdelete_action,
+	n44_actions_attachment_create_action : n44_actions_attachment_create_action,
+	n44_actions_attachment_table_create_entity_action : n44_actions_attachment_table_create_entity_action,
+	n44_actions_attachment_table_upload_stream_action : n44_actions_attachment_table_upload_stream_action,
+	n44_actions_attachments_table_opendocument_action : n44_actions_attachments_table_opendocument_action,
 	n44_actions_closemodalpage_cancel_action : n44_actions_closemodalpage_cancel_action,
 	n44_actions_closemodalpage_complete_action : n44_actions_closemodalpage_complete_action,
 	n44_actions_closepage_action : n44_actions_closepage_action,
@@ -222,6 +281,7 @@ module.exports = {
 	n44_actions_logging_uploadlogprogress_action : n44_actions_logging_uploadlogprogress_action,
 	n44_actions_login_to_reg_action : n44_actions_login_to_reg_action,
 	n44_actions_notification_action : n44_actions_notification_action,
+	n44_actions_qusupdate_action : n44_actions_qusupdate_action,
 	n44_actions_service_initializeonline_action : n44_actions_service_initializeonline_action,
 	n44_actions_service_initializeonlinefailuremessage_action : n44_actions_service_initializeonlinefailuremessage_action,
 	n44_actions_service_initializeonlinesuccessmessage_action : n44_actions_service_initializeonlinesuccessmessage_action,
@@ -243,10 +303,23 @@ module.exports = {
 	n44_actions_supplier_table_supplier_table_detailpopover_action : n44_actions_supplier_table_supplier_table_detailpopover_action,
 	n44_actions_supplier_table_supplier_table_updateentity_action : n44_actions_supplier_table_supplier_table_updateentity_action,
 	n44_actions_toapprovedetail_action : n44_actions_toapprovedetail_action,
+	n44_actions_toapprovedqus_action : n44_actions_toapprovedqus_action,
 	n44_actions_toaprvdetail_action : n44_actions_toaprvdetail_action,
+	n44_actions_toawardeddetail_action : n44_actions_toawardeddetail_action,
+	n44_actions_toawardedlist_action : n44_actions_toawardedlist_action,
+	n44_actions_toawardedqus_action : n44_actions_toawardedqus_action,
+	n44_actions_toqus_action : n44_actions_toqus_action,
+	n44_actions_toqusans_action : n44_actions_toqusans_action,
+	n44_actions_toqusedit_action : n44_actions_toqusedit_action,
 	n44_actions_totabs_action : n44_actions_totabs_action,
 	n44_actions_updateentityfailuremessage_action : n44_actions_updateentityfailuremessage_action,
 	n44_actions_updateentitysuccessmessage_action : n44_actions_updateentitysuccessmessage_action,
+	n44_actions_uploadstreamfailuremessage_action : n44_actions_uploadstreamfailuremessage_action,
+	n44_actions_uploadstreamsuccessmessage_action : n44_actions_uploadstreamsuccessmessage_action,
+	n44_extensions_questionnaireaprv_controls_questionnaireaprv_ts : n44_extensions_questionnaireaprv_controls_questionnaireaprv_ts,
+	n44_extensions_questionnaireclass_controls_questionnaireclass_ts : n44_extensions_questionnaireclass_controls_questionnaireclass_ts,
+	n44_extensions_qusextn_controls_dropdown_ts : n44_extensions_qusextn_controls_dropdown_ts,
+	n44_extensions_qusextn_ts : n44_extensions_qusextn_ts,
 	n44_globals_application_appdefinition_version_global : n44_globals_application_appdefinition_version_global,
 	n44_globals_application_applicationname_global : n44_globals_application_applicationname_global,
 	n44_globals_application_supportemail_global : n44_globals_application_supportemail_global,
@@ -257,6 +330,9 @@ module.exports = {
 	n44_pages_application_about_page : n44_pages_application_about_page,
 	n44_pages_application_support_page : n44_pages_application_support_page,
 	n44_pages_application_useractivitylog_page : n44_pages_application_useractivitylog_page,
+	n44_pages_approvedqus_page : n44_pages_approvedqus_page,
+	n44_pages_attachcreate_page : n44_pages_attachcreate_page,
+	n44_pages_awardedqus_page : n44_pages_awardedqus_page,
 	n44_pages_header_table_header_table_create_page : n44_pages_header_table_header_table_create_page,
 	n44_pages_header_table_header_table_createitem_table_page : n44_pages_header_table_header_table_createitem_table_page,
 	n44_pages_header_table_header_table_createsupplier_bid_table_page : n44_pages_header_table_header_table_createsupplier_bid_table_page,
@@ -267,7 +343,16 @@ module.exports = {
 	n44_pages_item_table_item_table_detail_page : n44_pages_item_table_item_table_detail_page,
 	n44_pages_item_table_item_table_edit_page : n44_pages_item_table_item_table_edit_page,
 	n44_pages_login_page : n44_pages_login_page,
+	n44_pages_loginc_page : n44_pages_loginc_page,
+	n44_pages_loginim_page : n44_pages_loginim_page,
+	n44_pages_loginl_page : n44_pages_loginl_page,
+	n44_pages_loginmy_page : n44_pages_loginmy_page,
+	n44_pages_loginn_page : n44_pages_loginn_page,
+	n44_pages_loginr_page : n44_pages_loginr_page,
 	n44_pages_main_page : n44_pages_main_page,
+	n44_pages_qus_page : n44_pages_qus_page,
+	n44_pages_qusans_page : n44_pages_qusans_page,
+	n44_pages_qusedit_page : n44_pages_qusedit_page,
 	n44_pages_registration_page : n44_pages_registration_page,
 	n44_pages_supplier_bid_table_approved_detail_page : n44_pages_supplier_bid_table_approved_detail_page,
 	n44_pages_supplier_bid_table_supplier_bid_table_create_page : n44_pages_supplier_bid_table_supplier_bid_table_create_page,
@@ -279,6 +364,8 @@ module.exports = {
 	n44_pages_supplier_bid_table_supplier_bid_table_list_page : n44_pages_supplier_bid_table_supplier_bid_table_list_page,
 	n44_pages_supplier_table_approved_bids_page : n44_pages_supplier_table_approved_bids_page,
 	n44_pages_supplier_table_approved_list_page : n44_pages_supplier_table_approved_list_page,
+	n44_pages_supplier_table_awarded_detail_page : n44_pages_supplier_table_awarded_detail_page,
+	n44_pages_supplier_table_awarded_list_page : n44_pages_supplier_table_awarded_list_page,
 	n44_pages_supplier_table_supplier_table_create_page : n44_pages_supplier_table_supplier_table_create_page,
 	n44_pages_supplier_table_supplier_table_createsupplier_bid_table_page : n44_pages_supplier_table_supplier_table_createsupplier_bid_table_page,
 	n44_pages_supplier_table_supplier_table_detail_copy_page : n44_pages_supplier_table_supplier_table_detail_copy_page,
@@ -295,26 +382,57 @@ module.exports = {
 	n44_rules_application_onwillupdate_js : n44_rules_application_onwillupdate_js,
 	n44_rules_application_resetappsettingsandlogout_js : n44_rules_application_resetappsettingsandlogout_js,
 	n44_rules_approvedrule_js : n44_rules_approvedrule_js,
+	n44_rules_attachdeleterule_js : n44_rules_attachdeleterule_js,
+	n44_rules_attachments_table_createentity_js : n44_rules_attachments_table_createentity_js,
+	n44_rules_attepmtrule_js : n44_rules_attepmtrule_js,
+	n44_rules_awardedcountrule_js : n44_rules_awardedcountrule_js,
+	n44_rules_awardedfilrule_js : n44_rules_awardedfilrule_js,
+	n44_rules_closedfilter_js : n44_rules_closedfilter_js,
 	n44_rules_count_js : n44_rules_count_js,
 	n44_rules_countapproved_js : n44_rules_countapproved_js,
 	n44_rules_countrule_js : n44_rules_countrule_js,
+	n44_rules_countruleawarded_js : n44_rules_countruleawarded_js,
+	n44_rules_doc_idval_js : n44_rules_doc_idval_js,
+	n44_rules_docidvalff_js : n44_rules_docidvalff_js,
+	n44_rules_docidvfex_js : n44_rules_docidvfex_js,
 	n44_rules_errorrule_js : n44_rules_errorrule_js,
+	n44_rules_fileupdateerror_js : n44_rules_fileupdateerror_js,
+	n44_rules_filforqus_js : n44_rules_filforqus_js,
+	n44_rules_filrule_js : n44_rules_filrule_js,
+	n44_rules_filterforattch_js : n44_rules_filterforattch_js,
 	n44_rules_filterrule_js : n44_rules_filterrule_js,
+	n44_rules_filtrawaded_js : n44_rules_filtrawaded_js,
 	n44_rules_header_table_header_table_deleteconfirmation_js : n44_rules_header_table_header_table_deleteconfirmation_js,
+	n44_rules_imagerule_js : n44_rules_imagerule_js,
+	n44_rules_inviidvalrule_js : n44_rules_inviidvalrule_js,
 	n44_rules_item_table_item_table_deleteconfirmation_js : n44_rules_item_table_item_table_deleteconfirmation_js,
+	n44_rules_leadbidvisirule_js : n44_rules_leadbidvisirule_js,
+	n44_rules_leadvisi_js : n44_rules_leadvisi_js,
+	n44_rules_leadvsisd_js : n44_rules_leadvsisd_js,
 	n44_rules_logging_loglevels_js : n44_rules_logging_loglevels_js,
 	n44_rules_logging_settracecategories_js : n44_rules_logging_settracecategories_js,
 	n44_rules_logging_setuserloglevel_js : n44_rules_logging_setuserloglevel_js,
 	n44_rules_logging_togglelogging_js : n44_rules_logging_togglelogging_js,
 	n44_rules_logging_tracecategories_js : n44_rules_logging_tracecategories_js,
 	n44_rules_logging_userlogsetting_js : n44_rules_logging_userlogsetting_js,
+	n44_rules_loginrule_js : n44_rules_loginrule_js,
+	n44_rules_numvisiblerule_js : n44_rules_numvisiblerule_js,
+	n44_rules_opendocrule_js : n44_rules_opendocrule_js,
+	n44_rules_otprule_js : n44_rules_otprule_js,
+	n44_rules_paymntlp_js : n44_rules_paymntlp_js,
+	n44_rules_qusbtnvisirule_js : n44_rules_qusbtnvisirule_js,
 	n44_rules_supplier_bid_table_supplier_bid_table_deleteconfirmation_js : n44_rules_supplier_bid_table_supplier_bid_table_deleteconfirmation_js,
 	n44_rules_supplier_table_supplier_table_deleteconfirmation_js : n44_rules_supplier_table_supplier_table_deleteconfirmation_js,
+	n44_rules_userreplyrule_js : n44_rules_userreplyrule_js,
+	n44_rules_visiblepaymentrule_js : n44_rules_visiblepaymentrule_js,
+	n44_rules_visiblerule_js : n44_rules_visiblerule_js,
+	n44_rules_visirule_js : n44_rules_visirule_js,
 	n44_services_capurl_service : n44_services_capurl_service,
 	n44_styles_styles_css : n44_styles_styles_css,
-	n44_styles_styles_json : n44_styles_styles_json,
 	n44_styles_styles_less : n44_styles_styles_less,
-	n44_styles_styles_nss : n44_styles_styles_nss,
+	n44_styles_styles_light_css : n44_styles_styles_light_css,
+	n44_styles_styles_light_json : n44_styles_styles_light_json,
+	n44_styles_styles_light_nss : n44_styles_styles_light_nss,
 	tsconfig_json : tsconfig_json,
 	version_mdkbundlerversion : version_mdkbundlerversion
 }
@@ -597,70 +715,30 @@ __webpack_require__.r(__webpack_exports__);
  */
 function ApprovedRule(clientAPI) {
     /**
- * Describe this function...
- * @param {IClientAPI} clientAPI
- */
-    // /**
-//  * Describe this function...
-//  * @param {IClientAPI} clientAPI
-//  */
-// export default function filterrule(clientAPI) {
-
-//     debugger
-
-// // var l = clientAPI.getPageProxy().getControl('SSectionObjectHeader0')
-// var doc_id = clientAPI._control._view._containerCallback.context.binding.doc_id
-
-// // $filter=status eq 'Open' or doc_id eq doc_id
-
-// }
-/**
- * Filters records based on the given criteria.
  * @param {IClientAPI} clientAPI - The client API object.
  */
-
     debugger
     var doc_idd = clientAPI._control._view._containerCallback.context.binding.doc_id
-    // doc_idd = "'" + doc_idd.replace(/"/g, '') + "'";
-    // var d = doc_idd.replace(/"/g, '');
     var d = doc_idd.split('"').join('');
 
     var dd = clientAPI._control.context.binding["@odata.id"]
-    // let string = "Supplier_table(doc_id='Doc50393780',invitationId='testcase1peol%40gmail.com')";
 let match = dd.match(/doc_id='(.*?)'/); // Using a regular expression to find the value within single quotes
 let docIdValue = match[0].match(/'([^']*)'/)[1]; // Extracting the value from the entire match
 console.log(docIdValue);
-
-
-    // Assuming you have a data service defined and bound to a control
-    // const service = clientAPI.getPageProxy().getDataService('YourDataService');
-    // const service = '/n4/Services/ajayurl.service';
-
-    // const service = '/my_pro14/Services/mydestinations.service';
-    // const entitySet = 'Supplier_bid_table';
-
-    // const targetPath = "#Page:Supplier_bid_table_List/#Control:SectionObjectTable0";
-    // Define the filter criteria
     var docIdValue2 = "Doc50393780"; // Assuming you have the value for docIdValue
  var   i = "$filter=status eq 'Open' or doc_id eq docIdValue or doc_id eq d" 
  i = i.replace('docIdvalue', "'" + docIdValue + "'");
      i = "$filter=status eq 'Open' or doc_id eq docIdValue or doc_id eq d" 
-    // return "$filter=doc_id eq d" 
-    // + clientAPI.evaluateTargetPath(targetPath) + "'";
-
-    // Execute the query with the filter criteria
-//     return service.query(filter)
-//         .then(result => {
-//             // Handle the filtered records here
-//             console.log("Filtered Records:", result);
-//         })
-//         .catch(error => {
-//             // Handle any errors that occur during the query
-//             console.error("Error filtering records:", error);
-//         });
+   
 var doc_id = clientAPI._control._view._containerCallback.context.binding.doc_id;
-var ii = `$filter=doc_id eq '${docIdValue}' and status eq 'Completed'`
-return `$filter=doc_id eq '${docIdValue}' and status eq 'Completed'`
+var ii = `$filter=doc_id eq '${docIdValue}' and status ne 'Open'`
+// return `$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status ne 'yes' and doc_id eq '${docIdValue}' and status ne 'Open'`
+
+
+// return `$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=doc_id eq '${docIdValue}' and status ne 'Open')`;
+
+// and supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status eq 'yes'
+return `$filter=doc_id eq '${docIdValue}' and (status ne 'Completed' or status ne 'Open')`;
 
 }
 
@@ -670,6 +748,128 @@ return `$filter=doc_id eq '${docIdValue}' and status eq 'Completed'`
 
 
 
+
+
+
+
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// export default function ApprovedRule(clientAPI) {
+//     /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+//     // /**
+// //  * Describe this function...
+// //  * @param {IClientAPI} clientAPI
+// //  */
+// // export default function filterrule(clientAPI) {
+
+// //     debugger
+
+// // // var l = clientAPI.getPageProxy().getControl('SSectionObjectHeader0')
+// // var doc_id = clientAPI._control._view._containerCallback.context.binding.doc_id
+
+// // // $filter=status eq 'Open' or doc_id eq doc_id
+
+// // }
+// /**
+//  * Filters records based on the given criteria.
+//  * @param {IClientAPI} clientAPI - The client API object.
+//  */
+
+//     debugger
+//     var doc_idd = clientAPI._control._view._containerCallback.context.binding.doc_id
+//     // doc_idd = "'" + doc_idd.replace(/"/g, '') + "'";
+//     // var d = doc_idd.replace(/"/g, '');
+//     var d = doc_idd.split('"').join('');
+
+//     var dd = clientAPI._control.context.binding["@odata.id"]
+//     // let string = "Supplier_table(doc_id='Doc50393780',invitationId='testcase1peol%40gmail.com')";
+// let match = dd.match(/doc_id='(.*?)'/); // Using a regular expression to find the value within single quotes
+// let docIdValue = match[0].match(/'([^']*)'/)[1]; // Extracting the value from the entire match
+// console.log(docIdValue);
+
+
+//     // Assuming you have a data service defined and bound to a control
+//     // const service = clientAPI.getPageProxy().getDataService('YourDataService');
+//     // const service = '/n4/Services/ajayurl.service';
+
+//     // const service = '/my_pro14/Services/mydestinations.service';
+//     // const entitySet = 'Supplier_bid_table';
+
+//     // const targetPath = "#Page:Supplier_bid_table_List/#Control:SectionObjectTable0";
+//     // Define the filter criteria
+//     var docIdValue2 = "Doc50393780"; // Assuming you have the value for docIdValue
+//  var   i = "$filter=status eq 'Open' or doc_id eq docIdValue or doc_id eq d" 
+//  i = i.replace('docIdvalue', "'" + docIdValue + "'");
+//      i = "$filter=status eq 'Open' or doc_id eq docIdValue or doc_id eq d" 
+//     // return "$filter=doc_id eq d" 
+//     // + clientAPI.evaluateTargetPath(targetPath) + "'";
+
+//     // Execute the query with the filter criteria
+// //     return service.query(filter)
+// //         .then(result => {
+// //             // Handle the filtered records here
+// //             console.log("Filtered Records:", result);
+// //         })
+// //         .catch(error => {
+// //             // Handle any errors that occur during the query
+// //             console.error("Error filtering records:", error);
+// //         });$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status eq '')
+// var doc_id = clientAPI._control._view._containerCallback.context.binding.doc_id;
+// // var ii = `$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status ne 'yes' and doc_id eq '${docIdValue}' and status ne 'Open'`
+// var ii = `$filter=doc_id eq '${docIdValue}' and status ne 'Open'`
+// // return `$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status ne 'yes' and doc_id eq '${docIdValue}' and status ne 'Open'`
+
+
+// // return `$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=doc_id eq '${docIdValue}' and status ne 'Open')`;
+
+// // and supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status eq 'yes'
+// return `$filter=doc_id eq '${docIdValue}' and (status ne 'Completed' or status ne 'Open')`;
+
+// }
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/Attachments_table_CreateEntity.js":
+/*!***********************************************************************!*\
+  !*** ./build.definitions/n44/Rules/Attachments_table_CreateEntity.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CreateEntity)
+/* harmony export */ });
+function CreateEntity(clientAPI) {
+    return clientAPI.executeAction({
+        'Name': '/n44/Actions/attachment_table_create_entity.action',
+        'Properties': {
+            'OnSuccess': ''
+        }
+    }).then((result) => {
+        let newEntity = JSON.parse(result.data);
+        return clientAPI.executeAction({
+            'Name': '/n44/Actions/attachment_table_upload_stream.action',
+            'Properties': {
+                'Target': {
+                    'ReadLink': newEntity['@odata.readLink']
+                }
+            }
+        });
+    });
+}
 
 /***/ }),
 
@@ -1067,6 +1267,416 @@ function DeleteConfirmation(clientAPI) {
 
 /***/ }),
 
+/***/ "./build.definitions/n44/Rules/attachDeleteRule.js":
+/*!*********************************************************!*\
+  !*** ./build.definitions/n44/Rules/attachDeleteRule.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ attachDeleteRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function attachDeleteRule(clientAPI) {
+    return clientAPI.executeAction('/n44/Actions/DeleteConfirmation.action').then((result) => {
+        if (result.data) {
+            return clientAPI.executeAction('/n44/Actions/attachDelete.action').then(
+                (success) => Promise.resolve(success),
+                (failure) => Promise.reject('Delete entity failed ' + failure));
+        } else {
+            return Promise.reject('User Deferred');
+        }
+    });
+}
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/attepmtRule.js":
+/*!****************************************************!*\
+  !*** ./build.definitions/n44/Rules/attepmtRule.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ attepmtRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function attepmtRule(clientAPI) {
+    debugger
+  var type =  clientAPI._context.clientAPIProps.actionBinding.type
+  if( type === "RQAATTACH"){
+    return clientAPI.executeAction('/n44/Actions/attachment_create.action');
+}else{
+    return clientAPI.executeAction('/n44/Actions/toQusEdit.action');
+}
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/awardedCountRule.js":
+/*!*********************************************************!*\
+  !*** ./build.definitions/n44/Rules/awardedCountRule.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ awardedCountRule)
+/* harmony export */ });
+function awardedCountRule(sectionProxy, clientAPI) {
+
+    let a = sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
+    let queryOptions =  `$filter=(supplier_header_rel/status ne 'Open' and phone_main eq '${a}' and award_status eq 'Yes')`;
+    return sectionProxy.count('/n44/Services/capurl.service', 'Supplier_table',queryOptions)
+    .then(count => {
+  
+    // Return the caption as a String with the filtered count
+    return `Awarded Bids (${count})`;
+    })
+    .catch(error => {
+    console.error('Error fetching count:', error);
+    return 'Error: Unable to fetch count';
+    });
+}    
+// return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}') or ( supplier_header_rel/status eq 'Completed' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // /**
+// //  * Describe this function...
+// //  * @param {IClientAPI} clientAPI
+// //  */
+// // export default function awardedCountRule(clientAPI,sectionProxy) {
+// //     debugger;
+// //     // Fetch the count of approved bids where ApproveId is A101
+// //     let queryOptions = `$filter=status eq 'Completed'`;
+// //     return sectionProxy.count('/n44/Services/capurl.service', 'Header_table', queryOptions)
+// //     .then(count => {
+// //     // console.log('hello');
+// //     // console.log(count);
+// //     // Return the caption as a String with the filtered count
+// //     return `Awarded Bids (${count})`;
+// //     })
+// //     .catch(error => {
+// //     console.error('Error fetching count:', error);
+// //     return 'Error: Unable to fetch count';
+// //     });
+// // }
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// // export default function count(clientAPI) {
+
+// export default function awardedCountRule(sectionProxy, clientAPI) {
+
+//     let a = sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
+//     // let queryOptions =  `$filter=supplier_header_rel/status eq 'Completed' and invitationId eq '${a}'`;;
+//     // let queryOptions = `$expand=supplier_header_rel,supplier_to_sbid&$filter=( invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}') or ( supplier_header_rel/status eq 'Completed' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+//     // let queryOptions =  `$filter=(supplier_header_rel/status eq 'Completed' and invitationId eq '${a}' and award_status eq 'Yes') or (supplier_header_rel/status eq 'Pending Selection' and invitationId eq '${a}' and award_status eq 'Yes')`;;
+//     let queryOptions =  `$filter=(supplier_header_rel/status ne 'Open' and phone_main eq '${a}' and award_status eq 'Yes')`;;
+//     // let queryOptions =  `$filter=(supplier_header_rel/status ne 'Open' and invitationId eq '${a}' and award_status eq 'Yes')`;;myLogin
+//     // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( supplier_header_rel/status ne 'Open' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' )`;
+
+
+//     return sectionProxy.count('/n44/Services/capurl.service', 'Supplier_table',queryOptions)
+//     .then(count => {
+  
+//     // Return the caption as a String with the filtered count
+//     return `Awarded Bids (${count})`;
+//     })
+//     .catch(error => {
+//     console.error('Error fetching count:', error);
+//     return 'Error: Unable to fetch count';
+//     });
+// }    
+// // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}') or ( supplier_header_rel/status eq 'Completed' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/awardedFilRule.js":
+/*!*******************************************************!*\
+  !*** ./build.definitions/n44/Rules/awardedFilRule.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ awardedFilRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function awardedFilRule(clientAPI) {
+
+    /**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ 
+ * Filters records based on the given criteria.
+ * @param {IClientAPI} clientAPI - The client API object.
+ */
+    debugger
+    var doc_idd = clientAPI._control._view._containerCallback.context.binding.doc_id
+    var d = doc_idd.split('"').join('');
+
+    var dd = clientAPI._control.context.binding["@odata.id"]
+let match = dd.match(/doc_id='(.*?)'/); // Using a regular expression to find the value within single quotes
+let docIdValue = match[0].match(/'([^']*)'/)[1]; // Extracting the value from the entire match
+console.log(docIdValue);
+    var docIdValue2 = "Doc50393780"; // Assuming you have the value for docIdValue
+ var   i = "$filter=status eq 'Open' or doc_id eq docIdValue or doc_id eq d" 
+ i = i.replace('docIdvalue', "'" + docIdValue + "'");
+     i = "$filter=status eq 'Open' or doc_id eq docIdValue or doc_id eq d" 
+   
+var doc_id = clientAPI._control._view._containerCallback.context.binding.doc_id;
+var ii = `$filter=doc_id eq '${docIdValue}' and status ne 'Open'`
+return `$filter=doc_id eq '${docIdValue}' and status eq 'Completed'`
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// export default function awardedFilRule(clientAPI) {
+
+//     /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+ 
+//     // /**
+// //  * Describe this function...
+// //  * @param {IClientAPI} clientAPI
+// //  */
+// // export default function filterrule(clientAPI) {
+
+// //     debugger
+
+// // // var l = clientAPI.getPageProxy().getControl('SSectionObjectHeader0')
+// // var doc_id = clientAPI._control._view._containerCallback.context.binding.doc_id
+
+// // // $filter=status eq 'Open' or doc_id eq doc_id
+
+// // }
+// /**
+//  * Filters records based on the given criteria.
+//  * @param {IClientAPI} clientAPI - The client API object.
+//  */
+
+//     debugger
+//     var doc_idd = clientAPI._control._view._containerCallback.context.binding.doc_id
+//     // doc_idd = "'" + doc_idd.replace(/"/g, '') + "'";
+//     // var d = doc_idd.replace(/"/g, '');
+//     var d = doc_idd.split('"').join('');
+
+//     var dd = clientAPI._control.context.binding["@odata.id"]
+//     // let string = "Supplier_table(doc_id='Doc50393780',invitationId='testcase1peol%40gmail.com')";
+// let match = dd.match(/doc_id='(.*?)'/); // Using a regular expression to find the value within single quotes
+// let docIdValue = match[0].match(/'([^']*)'/)[1]; // Extracting the value from the entire match
+// console.log(docIdValue);
+
+
+//     // Assuming you have a data service defined and bound to a control
+//     // const service = clientAPI.getPageProxy().getDataService('YourDataService');
+//     // const service = '/n4/Services/ajayurl.service';
+
+//     // const service = '/my_pro14/Services/mydestinations.service';
+//     // const entitySet = 'Supplier_bid_table';
+
+//     // const targetPath = "#Page:Supplier_bid_table_List/#Control:SectionObjectTable0";
+//     // Define the filter criteria
+//     var docIdValue2 = "Doc50393780"; // Assuming you have the value for docIdValue
+//  var   i = "$filter=status eq 'Open' or doc_id eq docIdValue or doc_id eq d" 
+//  i = i.replace('docIdvalue', "'" + docIdValue + "'");
+//      i = "$filter=status eq 'Open' or doc_id eq docIdValue or doc_id eq d" 
+//     // return "$filter=doc_id eq d" 
+//     // + clientAPI.evaluateTargetPath(targetPath) + "'";
+
+//     // Execute the query with the filter criteria
+// //     return service.query(filter)
+// //         .then(result => {
+// //             // Handle the filtered records here
+// //             console.log("Filtered Records:", result);
+// //         })
+// //         .catch(error => {
+// //             // Handle any errors that occur during the query
+// //             console.error("Error filtering records:", error);
+// //         });$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status eq '')
+// var doc_id = clientAPI._control._view._containerCallback.context.binding.doc_id;
+// // var ii = `$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status ne 'yes' and doc_id eq '${docIdValue}' and status ne 'Open'`
+// var ii = `$filter=doc_id eq '${docIdValue}' and status ne 'Open'`
+// // return `$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status ne 'yes' and doc_id eq '${docIdValue}' and status ne 'Open'`
+
+
+// // return `$expand=supplier_bid_header_rel,supplier_bid_header_rel/header_supplier_rel,supplier_bid_header_rel/header_questionnarie_rel&$filter=doc_id eq '${docIdValue}' and status ne 'Open')`;
+
+// // and supplier_bid_header_rel/header_supplier_rel/any(z: z/award_status eq 'yes'
+// return `$filter=doc_id eq '${docIdValue}' and status eq 'Completed'`
+// }
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/closedFilter.js":
+/*!*****************************************************!*\
+  !*** ./build.definitions/n44/Rules/closedFilter.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ closedFilter)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function closedFilter(clientAPI) {
+    debugger
+
+    return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( (supplier_header_rel/status ne 'Open' and supplier_header_rel/status ne 'Completed') and award_status ne 'Yes' and phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`;
+
+    // return `$filter= phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and (status ne 'Completed' or status ne 'Open')`;
+    // return `$filter=doc_id eq '${docIdValue}' and status ne 'Open'`
+    // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( supplier_header_rel/status ne 'Open' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')` //for mylogin
+    // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}') or ( supplier_header_rel/status eq 'Completed' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+
+}
+// $expand=supplier_header_rel,supplier_to_sbid,supplier_to_question_reply_rel&$filter=invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and supplier_header_rel/status ne 'Open' and award_status ne 'Yes'
+
+
+
+
+
+
+
+
+
+
+
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// export default function closedFilter(clientAPI) {
+//     debugger
+// //    
+// //     var dd = clientAPI._control.context.binding["@odata.id"]
+// //     // let string = "Supplier_table(doc_id='Doc50393780',invitationId='testcase1peol%40gmail.com')";
+// // let match = dd.match(/doc_id='(.*?)'/); // Using a regular expression to find the value within single quotes
+// // let docIdValue = match[0].match(/'([^']*)'/)[1];
+//     // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( supplier_header_rel/status ne 'Open' and award_status ne 'Yes' and phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+//     // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( (supplier_header_rel/status ne 'Open' or supplier_header_rel/status ne 'Completed') and award_status ne 'Yes' and phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+//     return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( (supplier_header_rel/status ne 'Open' and supplier_header_rel/status ne 'Completed') and award_status ne 'Yes' and phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`;
+
+//     // return `$filter= phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and (status ne 'Completed' or status ne 'Open')`;
+//     // return `$filter=doc_id eq '${docIdValue}' and status ne 'Open'`
+//     // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( supplier_header_rel/status ne 'Open' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')` //for mylogin
+//     // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}') or ( supplier_header_rel/status eq 'Completed' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+
+// }
+// // $expand=supplier_header_rel,supplier_to_sbid,supplier_to_question_reply_rel&$filter=invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and supplier_header_rel/status ne 'Open' and award_status ne 'Yes'
+
+/***/ }),
+
 /***/ "./build.definitions/n44/Rules/count.js":
 /*!**********************************************!*\
   !*** ./build.definitions/n44/Rules/count.js ***!
@@ -1078,29 +1688,57 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ count)
 /* harmony export */ });
-/**
- * Describe this function...
- * @param {IClientAPI} clientAPI
- */
-// export default function count(clientAPI) {
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// // export default function count(clientAPI) {
 
-    function count(sectionProxy, clientAPI) {
+//     export default function count(sectionProxy, clientAPI) {
+//         debugger
+//         let a = sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
+//         let queryOptions =  `$filter=supplier_header_rel/status ne 'Open' and award_status ne 'Yes' and  invitationId eq '${a}'`;;
+//         // $expand=supplier_header_rel,supplier_to_sbid&$filter=invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and supplier_header_rel/status ne 'Open' and award_status ne 'Yes'
+//         // let queryOptions =  `$filter=supplier_header_rel/status eq 'Completed' and invitationId eq '${a}'`;;
+//         // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( supplier_header_rel/status ne 'Open' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
 
-        let a = sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
-        let queryOptions =  `$filter=supplier_header_rel/status eq 'Completed' and invitationId eq '${a}'`;;
-        return sectionProxy.count('/n44/Services/capurl.service', 'Supplier_table',queryOptions)
-        .then(count => {
+//         return sectionProxy.count('/n44/Services/capurl.service', 'Supplier_table',queryOptions)
+//         .then(count => {
       
-        // Return the caption as a String with the filtered count
-        return `Approved Bids (${count})`;
-        })
-        .catch(error => {
-        console.error('Error fetching count:', error);
-        return 'Error: Unable to fetch count';
-        });
+//         // Return the caption as a String with the filtered count
+//         return `Closed Bids (${count})`;
+//         })
+//         .catch(error => {
+//         console.error('Error fetching count:', error);
+//         return 'Error: Unable to fetch count';
+//         });
         
-}
+// }
 
+function count(sectionProxy, clientAPI) {
+
+    let a = sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
+    // let queryOptions =  `$filter=supplier_header_rel/status eq 'Open' and invitationId eq '${a}'`;;
+    //    let queryOptions =  `$filter=(supplier_header_rel/status eq 'Completed' and award_status ne 'Yes' and  invitationId eq '${a}') or (supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and  invitationId eq '${a}')`;;
+      //  let queryOptions = `$filter=(supplier_header_rel/status eq 'Completed' and award_status ne 'Yes' and invitationId eq '${a}') or (supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '${a}')`;
+      //  let queryOptions = `$filter=(supplier_header_rel/status ne 'Open' and invitationId eq '${a}')`;myLOgin
+       let queryOptions = `$filter=(supplier_header_rel/status ne 'Open' and supplier_header_rel/status ne 'Completed' and phone_main eq '${a}')`;
+      //  let queryOptions = `$filter=(supplier_header_rel/status ne 'Open' and supplier_header_rel/status ne 'Completed' and phone_main eq '${a}')`;
+
+      //  let queryOptions = `$filter=(status ne 'Open' and status ne 'Completed') and phone_main eq '${a}'`;
+      // let queryOptions = `$filter=(status ne 'Open' and status ne 'Completed' and phone_main eq '${a}')`;
+
+   //or (supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '${a}')`;
+    return sectionProxy.count('/n44/Services/capurl.service', 'Supplier_table',queryOptions)
+    .then(count => { 
+    // Return the caption as a String with the filtered count
+    return `Closed Bids (${count})`;
+    })
+    .catch(error => {
+    console.error('Error fetching count:', error);
+    return 'Error: Unable to fetch count';
+    });
+    }
 
 /***/ }),
 
@@ -1148,7 +1786,7 @@ function countApproved(clientAPI) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ count)
+/* harmony export */   "default": () => (/* binding */ countRule)
 /* harmony export */ });
 // /**
 //  * Describe this function...
@@ -1190,10 +1828,11 @@ __webpack_require__.r(__webpack_exports__);
 //     return 'Error: Unable to fetch count';
 //     });
 //     }
-function count(sectionProxy, clientAPI) {
+function countRule(sectionProxy, clientAPI) {
 
     let a = sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
-    let queryOptions =  `$filter=supplier_header_rel/status eq 'Open' and invitationId eq '${a}'`;;
+    // let queryOptions =  `$filter=supplier_header_rel/status eq 'Open' and invitationId eq '${a}'`;;myLogin
+    let queryOptions =  `$filter=supplier_header_rel/status eq 'Open' and phone_main eq '${a}'`;;
     return sectionProxy.count('/n44/Services/capurl.service', 'Supplier_table',queryOptions)
     .then(count => {
   
@@ -1205,6 +1844,173 @@ function count(sectionProxy, clientAPI) {
     return 'Error: Unable to fetch count';
     });
     }
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/countRuleAwarded.js":
+/*!*********************************************************!*\
+  !*** ./build.definitions/n44/Rules/countRuleAwarded.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ countRuleAwarded)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function countRuleAwarded(clientAPI , sectionProxy) {
+    let a = sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
+    // let queryOptions =  `$filter=supplier_header_rel/status eq 'Completed' and invitationId eq '${a}'`;
+
+    let queryOptions = `$expand=supplier_header_rel,supplier_to_sbid&$filter=( phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}') or ( supplier_header_rel/status eq 'Completed' and award_status eq 'Yes' and phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+    // let queryOptions = `$expand=supplier_header_rel,supplier_to_sbid&$filter=( invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}') or ( supplier_header_rel/status eq 'Completed' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+
+    return sectionProxy.count('/n44/Services/capurl.service', 'Supplier_table',queryOptions)
+    .then(count => {
+  
+    // Return the caption as a String with the filtered count
+    return `Awarded Bids (${count})`;
+    })
+    .catch(error => {
+    console.error('Error fetching count:', error);
+    return 'Error: Unable to fetch count';
+    });
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/docIDvFEx.js":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Rules/docIDvFEx.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ docIDvFEx),
+/* harmony export */   getDocumentId: () => (/* binding */ getDocumentId),
+/* harmony export */   getInvi: () => (/* binding */ getInvi)
+/* harmony export */ });
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// export default function docIDvFEx(clientAPI) {
+
+//     // let doc_id = clientAPI._control._view._containerCallback.context.binding.doc_id;
+//     function getDocumentId(clientAPI) {
+//         return 'Doc54043991'
+//         // return clientAPI._control._view._containerCallback.context.binding.doc_id;
+//     }
+
+//     clientAPI.executeAction("/n44/Actions/toQus.action");
+// }
+
+function getDocumentId(clientAPI) {
+    // Uncomment the line below if you want to use the actual doc_id from the context
+    let doc = clientAPI._context._clientAPI._context.element._observable._boundItems[0].value
+    // clientAPI._context.binding?.doc_id;   
+    alert(`'from js rule' ${doc}`)
+    return doc;
+    // return 'Doc54043991'; // For testing purposes, returning a static value
+    }
+
+    function getInvi(clientAPI) {
+        // Uncomment the line below if you want to use the actual doc_id from the context
+        return clientAPI._context.binding.invitationId
+        // return 'Doc54043991'; // For testing purposes, returning a static value
+        }
+    
+    function docIDvFEx(clientAPI) {
+    // Now you can use getDocumentId here if needed
+    let doc_id = getDocumentId(clientAPI);
+    
+    // Rest of your code
+    clientAPI.executeAction("/n44/Actions/toQus.action");
+    }
+
+
+
+// export function getDocumentId(clientAPI) {
+//     if (!clientAPI || !clientAPI._context || !clientAPI._context.binding) {
+//         console.error("Invalid clientAPI or binding context");
+//         alert("Invalid clientAPI or binding context");
+//         return null;
+//     }
+
+//     let doc = clientAPI._context.binding.doc_id;
+//     alert(`from js rulee: ${doc}`);
+//     return doc;
+// }
+
+// export function getInvi(clientAPI) {
+//     if (!clientAPI || !clientAPI._context || !clientAPI._context.binding) {
+//         console.error("Invalid clientAPI or binding context");
+//         alert("Invalid clientAPI or binding context");
+//         return null;
+//     }
+
+//     return clientAPI._context.binding.invitationId;
+// }
+
+// export default function docIDvFEx(clientAPI) {
+//     let doc_id = getDocumentId(clientAPI);
+//     clientAPI.executeAction("/n44/Actions/toQus.action");
+// }
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/docIDvalff.js":
+/*!***************************************************!*\
+  !*** ./build.definitions/n44/Rules/docIDvalff.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ docIDvalff)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function docIDvalff(clientAPI) {
+    return clientAPI._control._view._containerCallback.context.binding.doc_id;
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/doc_idVal.js":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Rules/doc_idVal.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ doc_idVal)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function doc_idVal(clientAPI) {
+    debugger
+    return clientAPI._context.binding.doc_id;
+
+    // return docID;
+}
+
 
 /***/ }),
 
@@ -1247,6 +2053,127 @@ function errorRule(clientAPI) {
     }
 }
 // }
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/filRule.js":
+/*!************************************************!*\
+  !*** ./build.definitions/n44/Rules/filRule.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ filRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function filRule(clientAPI,sectionProxy) {
+    debugger
+let a = clientAPI._context.binding.invitationId
+//  sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
+var docIdValue = clientAPI._control.context.binding.doc_id
+
+return `$filter=doc_id eq '${docIdValue}' and invitationId eq '${a}'` // and type eq 'RQAATTACH'
+// return `$filter=doc_id eq '${docIdValue}' and invitationId eq '${a}'`//mylogin
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/fileUpdateError.js":
+/*!********************************************************!*\
+  !*** ./build.definitions/n44/Rules/fileUpdateError.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ fileUpdateError)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function fileUpdateError(clientAPI) {
+    debugger
+    const mesg = clientAPI._context._clientData.actionResults.create.error
+    // clientAPI._context._clientData.actionResults.update.error;
+    console.log(mesg);
+
+    // Ensure mesg is a string
+    const mesgString = String(mesg);
+
+    // Extracting the error message
+    const errorMessageMatch = mesgString.match(/"message":"([^"]+)"/);
+    if (errorMessageMatch && errorMessageMatch.length > 1) {
+        const errorMessage = errorMessageMatch[1];
+      console.log(errorMessage); // Output: Your Bidding price should be less than 5600
+      return  errorMessageMatch[1];
+    } else {
+        console.log("Error message not found or in unexpected format.");
+    }
+}
+// }
+
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/filforqus.js":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Rules/filforqus.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ filforqus)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function filforqus(clientAPI) {
+    let a = clientAPI._context.binding.invitationId
+//  sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
+var docIdValue = clientAPI._control.context.binding.doc_id
+
+return `$filter=doc_id eq '${docIdValue}' and invitationId eq '${a}' and type eq 'RQAATTACH'`
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/filterforattch.js":
+/*!*******************************************************!*\
+  !*** ./build.definitions/n44/Rules/filterforattch.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ filterforattch)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function filterforattch(clientAPI) {
+    debugger
+
+    var docIdValue = clientAPI._control.context.binding.doc_id
+
+return `$filter=doc_id eq '${docIdValue}'`
+}
 
 
 /***/ }),
@@ -1331,6 +2258,1547 @@ return `$filter=doc_id eq '${docIdValue}' and status eq 'Open'`
 
 /***/ }),
 
+/***/ "./build.definitions/n44/Rules/filtrAwaded.js":
+/*!****************************************************!*\
+  !*** ./build.definitions/n44/Rules/filtrAwaded.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ filtrAwaded)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function filtrAwaded(clientAPI) {
+    return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( supplier_header_rel/status ne 'Open' and award_status eq 'Yes' and phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' )`;
+    // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( supplier_header_rel/status ne 'Open' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' )`;//mylogin
+    //or ( supplier_header_rel/status eq 'Pending Selection' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+    // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( supplier_header_rel/status eq 'Completed' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+    // return `$expand=supplier_header_rel,supplier_to_sbid&$filter=( invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}') or ( supplier_header_rel/status eq 'Completed' and award_status eq 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' ) or ( supplier_header_rel/status eq 'Pending Selection' and award_status ne 'Yes' and invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}')`
+    
+}  
+// ne open and awarded status awarded
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/imageRule.js":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Rules/imageRule.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ imageRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function imageRule(clientAPI) {
+    debugger
+    var type = clientAPI._context.binding.mediaType;
+
+    if (type === "application/vnd.ms-excel"){
+
+        return "sap-icon://document"
+    }
+    else if (type === "application/pdf"){
+        return "sap-icon://pdf-attachment"
+    }
+    else if(type === "image/jpeg" || type === "image/png"){
+        return "/chck/Services/capurl.service/{@odata.readLink}/content"
+    }
+    else{
+        return "sap-icon://document"
+    }
+
+}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/inviIdValRule.js":
+/*!******************************************************!*\
+  !*** ./build.definitions/n44/Rules/inviIdValRule.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ inviIdValRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function inviIdValRule(clientAPI) {
+    return clientAPI._control.context.binding.invitationId
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/leadBidVisiRule.js":
+/*!********************************************************!*\
+  !*** ./build.definitions/n44/Rules/leadBidVisiRule.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ leadBidVisiRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function leadBidVisiRule(clientAPI) {
+    debugger
+    var auctiontype = clientAPI._context.binding.eventTypeName;
+    if (auctiontype === "Auction"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/leadVisi.js":
+/*!*************************************************!*\
+  !*** ./build.definitions/n44/Rules/leadVisi.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ leadVisi)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function leadVisi(clientAPI) {
+    debugger
+}
+
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/leadVsisD.js":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Rules/leadVsisD.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ leadVsisD)
+/* harmony export */ });
+/* harmony import */ var _nativescript_core_ui_layouts_flexbox_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @nativescript/core/ui/layouts/flexbox-layout */ "webpack/sharing/consume/default/@nativescript/core/ui/layouts/flexbox-layout");
+/* harmony import */ var _nativescript_core_ui_layouts_flexbox_layout__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_layouts_flexbox_layout__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function leadVsisD(clientAPI) {
+    debugger
+    let a = clientAPI._context.binding.eventTypeName
+
+    if (a === "RFP"){
+        return false;
+
+    }else{
+        return true;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/loginRule.js":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Rules/loginRule.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ loginRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function loginRule(clientAPI) {
+  debugger
+  // let a ;
+  let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+  let p = phoneNumberControl.getValue();
+  let phoneNumber = "+91" + p;
+  let enteredOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+  let enteredOtp = enteredOtpControl.getValue();
+  
+
+const myHeaders = new Headers();
+myHeaders.append("content", "application/json");
+myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+myHeaders.append("Accept-Language", "en-US");
+myHeaders.append("url", ` https://verification.api.sinch.com/verification/v1/verifications/number/${phoneNumber} `);
+myHeaders.append("Method", "PUT");
+myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Basic c2ItN2FhZmVkMWItOTE1Ni00OWVlLTkxMjUtYTVkMDBlYTQwMGQ1IWIyNzIxNzV8aXQtcnQtZThiNGVhMmV0cmlhbCFiNTUyMTU6MzliMzJjYzAtYzg2NS00ZjYyLWJhNjYtNWRhZjQ1NWEyMzA2JERwVEIxeF8xLUk1dnByNGg3bVFNd2J3dHVfWkFPUmh5ZDk1LTE1XzVkMEE9");
+
+const raw = JSON.stringify({
+  "method": "sms",
+  "sms": {
+  "code": `${enteredOtp}`
+  }
+  });
+
+const requestOption = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+ fetch("https://e8b4ea2etrial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/sinch", requestOption)
+   .then((response) => response.json())
+ .then((result) => {
+     if(result.message == "Invalid identity or code."){
+          alert("invalid otp")
+     } else if (result.status == "SUCCESSFUL"){
+          clientAPI.executeAction("/n44/Actions/toTabs.action");
+      }    
+  })
+  .catch((error) => console.error(error));
+
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // /**
+// //  * Describe this function...
+// //  * @param {IClientAPI} clientAPI
+// //  */
+// // export default function loginRule(clientAPI) {
+// //     // let a ;
+// //     debugger
+// //     let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+// //     let p = phoneNumberControl.getValue();
+
+    
+// //     alert(`${p}`);
+
+// // //     let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty2');
+// // // let p = phoneNumberControl.getValue();
+// //   //   if (p.length === 10) { // && !p.startsWith('91')
+// //   //     // If it's 10 characters long and doesn't start with '91', concatenate '91' to the beginning
+// //   //     p = '91' + p;
+// //   // }
+// //     // let phoneNumber = "+" + p;
+// //     let phoneNumber = "+91" + p;
+    
+// //     let enteredOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+// //     let enteredOtp = enteredOtpControl.getValue();
+
+// //     alert( `${enteredOtp}`)
+
+// //     // let enterOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty1');
+
+// //     // let a = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+// //     // let formCellContainer = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2');
+
+// //     // // Use the API to get the 'Enterotp' control
+// //     // let enterOtpControl = formCellContainer.getControl('FormCellSimpleProperty2');
+    
+// //     // Use the API to set the 'Enterotp' control as visible
+// //     // enterOtpControl.setVisible(true);
+    
+  
+// //   // const myHeaders = new Headers();
+// //   // myHeaders.append("content", "application/json");
+// //   // myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+// //   // // myHeaders.append("Accept-Language", "en-US");
+// //   // myHeaders.append("url", `https://verification.api.sinch.com/verification/v1/verifications/number/${phoneNumber}`);
+// //   // myHeaders.append("Method", "PUT");
+// //   // myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+// //   // myHeaders.append("Content-Type", "application/json");
+// //   // myHeaders.append("Authorization", "Basic c2ItN2FhZmVkMWItOTE1Ni00OWVlLTkxMjUtYTVkMDBlYTQwMGQ1IWIyNzIxNzV8aXQtcnQtZThiNGVhMmV0cmlhbCFiNTUyMTU6MzliMzJjYzAtYzg2NS00ZjYyLWJhNjYtNWRhZjQ1NWEyMzA2JERwVEIxeF8xLUk1dnByNGg3bVFNd2J3dHVfWkFPUmh5ZDk1LTE1XzVkMEE9");
+  
+// //   const myHeaders = new Headers();
+// // myHeaders.append("content", "application/json");
+// // myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+// // myHeaders.append("Accept-Language", "en-US");
+// // myHeaders.append("url", `https://verification.api.sinch.com/verification/v1/verifications/number/${phoneNumber}`);
+// // myHeaders.append("Method", "PUT");
+// // myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+// // myHeaders.append("Content-Type", "application/json");
+// // myHeaders.append("Authorization", "Basic c2ItN2FhZmVkMWItOTE1Ni00OWVlLTkxMjUtYTVkMDBlYTQwMGQ1IWIyNzIxNzV8aXQtcnQtZThiNGVhMmV0cmlhbCFiNTUyMTU6MzliMzJjYzAtYzg2NS00ZjYyLWJhNjYtNWRhZjQ1NWEyMzA2JERwVEIxeF8xLUk1dnByNGg3bVFNd2J3dHVfWkFPUmh5ZDk1LTE1XzVkMEE9");
+
+// //   const raw = JSON.stringify({
+// //     "method": "sms",
+// //     "sms": {
+// //     "code": `${enteredOtp}`
+// //     }
+// //     });
+  
+// //   const requestOption = {
+// //     method: "POST",
+// //     headers: myHeaders,
+// //     body: raw,
+// //     redirect: "follow"
+// //   };
+  
+// //   fetch("https://e8b4ea2etrial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/sinch", requestOption)
+// //   .then((response) => response.json())
+// //     .then((result) => {
+// //         if(result.message == "Invalid identity or code."){
+// //             alert(result.message)
+// //         } else if (result.status == "SUCCESSFUL"){
+// //             clientAPI.executeAction("/n44/Actions/toTabs.action");
+// //             // a._control._model._model.data.IsVisible = false
+// //             enterOtpControl.setVisible(false);
+// //         }else{
+// //           alert("Failed! Try again....")
+// //           enterOtpControl.setVisible(true);
+// //         }    
+// //     })
+// //     .catch((error) => console.error(error));
+    
+  
+// //     }
+  
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// export default function loginRule(clientAPI) {
+//   debugger
+//   // let a ;
+//   let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+//   let p = phoneNumberControl.getValue();
+//   let phoneNumber = "+91" + p;
+//   let enteredOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+//   let enteredOtp = enteredOtpControl.getValue();
+  
+
+// const myHeaders = new Headers();
+// myHeaders.append("content", "application/json");
+// myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+// myHeaders.append("Accept-Language", "en-US");
+// myHeaders.append("url", ` https://verification.api.sinch.com/verification/v1/verifications/number/${phoneNumber} `);
+// myHeaders.append("Method", "PUT");
+// myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+// myHeaders.append("Content-Type", "application/json");
+// myHeaders.append("Authorization", "Basic c2ItN2FhZmVkMWItOTE1Ni00OWVlLTkxMjUtYTVkMDBlYTQwMGQ1IWIyNzIxNzV8aXQtcnQtZThiNGVhMmV0cmlhbCFiNTUyMTU6MzliMzJjYzAtYzg2NS00ZjYyLWJhNjYtNWRhZjQ1NWEyMzA2JERwVEIxeF8xLUk1dnByNGg3bVFNd2J3dHVfWkFPUmh5ZDk1LTE1XzVkMEE9");
+
+// const raw = JSON.stringify({
+//   "method": "sms",
+//   "sms": {
+//   "code": `${enteredOtp}`
+//   }
+//   });
+
+// const requestOption = {
+//   method: "POST",
+//   headers: myHeaders,
+//   body: raw,
+//   redirect: "follow"
+// };
+
+//  fetch("https://e8b4ea2etrial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/sinch", requestOption)
+//    .then((response) => response.json())
+//  .then((result) => {
+//      if(result.message == "Invalid identity or code."){
+//           alert(result.message)
+//      } else if (result.status == "SUCCESSFUL"){
+//           clientAPI.executeAction("/n44/Actions/toTabs.action");
+//       }
+      
+
+         
+//   })
+//   .catch((error) => console.error(error));
+  
+
+//   }
+
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/numVisibleRule.js":
+/*!*******************************************************!*\
+  !*** ./build.definitions/n44/Rules/numVisibleRule.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ numVisibleRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function numVisibleRule(clientAPI) {
+    debugger
+    var type = clientAPI._control.context.binding.type;
+    if( type === "RQABIGDEC"){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/openDocRule.js":
+/*!****************************************************!*\
+  !*** ./build.definitions/n44/Rules/openDocRule.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ openDocRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function openDocRule(clientAPI) {
+    debugger
+    var MimeType
+    var contentType = clientAPI._context.binding["content@odata.mediaContentType"];
+
+    if ( contentType === "application/pdf" ){
+        return MimeType = "application/pdf";
+    }
+    else if (contentType === "image/jpeg" || contentType === "image/png") {
+        MimeType = "image/jpeg"; // Or you can choose the appropriate MIME type for your use case
+    } else if (contentType === "text/plain") {
+       return MimeType = "text/plain";
+    } else if (contentType === "video/mp4" || contentType === "video/mpeg") {
+        MimeType = "video/mp4"; // Or you can choose the appropriate MIME type for your use case
+} else if (contentType === "application/vnd.ms-excel" || contentType === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
+    MimeType = "application/vnd.ms-excel"; // Or you can choose the appropriate MIME type for your use case
+} else {
+        // Handle other types or provide a default behavior
+    }
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/otpRule.js":
+/*!************************************************!*\
+  !*** ./build.definitions/n44/Rules/otpRule.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ otpRule)
+/* harmony export */ });
+/**
+* Describe this function...
+* @param {IClientAPI} clientAPI
+*/
+function otpRule(clientAPI) {
+  // Retrieve the phone number from the form control
+  let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+  let phoneNumber = phoneNumberControl.getValue();
+
+  // if (phoneNumber === "7259303952"){
+  //       clientAPI.executeAction("/n44/Actions/toTabs.action");
+  //       }else{
+  
+  // Define the controls for OTP and Resend OTP buttons
+  let formCellContainer = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+  let getOtpButtonControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell0').getControl('FormCellButton0');
+  let resendOtpButtonControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell0').getControl('FormCellButton2');
+  
+  // Define the service path and entity set for the read operation
+  const servicePath = '/n44/Services/capurl.service';
+  const entitySet = 'Supplier_table';
+  
+  // Perform the read operation to check if the user exists
+  return clientAPI.read(servicePath, entitySet, [], '')
+  .then(users => {
+  let filteredUsers = users.map(user => {
+  return { phone_main: user.phone_main };
+  });
+  
+  let userExists = filteredUsers.some(user => user.phone_main === phoneNumber);
+  
+  if (userExists) {
+  // User exists, proceed with OTP generation and start the countdown timer
+  resendOtpButtonControl.setVisible(true);
+  resendOtpButtonControl.setAlignment('Right');
+  getOtpButtonControl.setEnabled(false);
+  
+  // Start the countdown timer
+  let countdown = 120; // 120 seconds for 2 minutes
+  let timer = setInterval(function() {
+  let minutes = parseInt(countdown / 60, 10);
+  let seconds = parseInt(countdown % 60, 10);
+  
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+  
+  // Update the title of the resendOtpButtonControl with the remaining time
+  resendOtpButtonControl.setTitle(`Resend Otp In ${minutes}:${seconds}`);
+  
+  countdown--;
+  
+  // When countdown reaches zero, clear the interval, hide the enterOtpControl, and enable the getOtpButtonControl
+  if (countdown <= 0) {
+  clearInterval(timer);
+  formCellContainer.setVisible(false);
+  getOtpButtonControl.setEnabled(true);
+  resendOtpButtonControl.setVisible(false); // Hide the Resend OTP button after the timer ends
+  }
+  }, 1000);
+  
+  // Existing code for sending OTP
+  // Replace 'NavigateToMainContentPage' with the actual action path to navigate
+  var phoneNumberWithCountryCode = "+91" + phoneNumber;
+  const myHeaders = new Headers();
+  myHeaders.append("content", "application/json");
+  myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+  myHeaders.append("Accept-Language", "en-US");
+  myHeaders.append("url", "https://verification.api.sinch.com/verification/v1/verifications");
+  myHeaders.append("Method", "POST");
+  myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Authorization", "Basic c2ItN2FhZmVkMWItOTE1Ni00OWVlLTkxMjUtYTVkMDBlYTQwMGQ1IWIyNzIxNzV8aXQtcnQtZThiNGVhMmV0cmlhbCFiNTUyMTU6MzliMzJjYzAtYzg2NS00ZjYyLWJhNjYtNWRhZjQ1NWEyMzA2JERwVEIxeF8xLUk1dnByNGg3bVFNd2J3dHVfWkFPUmh5ZDk1LTE1XzVkMEE9");
+  
+  const raw = JSON.stringify({
+  "identity": {
+  "type": "number",
+  "endpoint": phoneNumberWithCountryCode
+  },
+  "method": "sms",
+  "smsOptions": {
+  "expiry": "00:02:00"
+  }
+  });
+  
+  const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+  };
+  
+  fetch("https://e8b4ea2etrial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/sinch", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
+  alert("OTP sent and its valid for only 2min");
+  formCellContainer.setVisible(true);
+  getOtpButtonControl.setEnabled(false);
+  
+  } else {
+  // No matching user found, show an error message
+  alert("Phone number is not valid.");
+  }
+  })
+  .catch(error => {
+  // Handle any errors from the read operation
+  console.error("Read operation failed: ", error);
+  });
+  } 
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// // export default function otpRule(clientAPI) {
+// //     debugger
+// //   // Retrieve the phone number from the form control
+  
+// //   let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+// //   let p = phoneNumberControl.getValue();
+
+// //   // let enterOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty1');
+// //   // let timerControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty2');
+// // //   let getOtpButtonControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellButton0');
+
+// // //   // if (p === "7259303952"){
+// // //   // if (p === "9591485083"){
+// // //     // clientAPI.executeAction("/n44/Actions/toTabs.action");
+// // //   // }else{
+// // // //   if ( p.length === 10 ) { //&& !p.startsWith('91'))
+// // // //     // If it's 10 characters long and doesn't start with '91', concatenate '91' to the beginning
+// // // //     p = '91' + p;
+// // // // }
+// // // // let a = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+// // // let formCellContainer = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2');
+
+// // // // Use the API to get the 'Enterotp' control
+// // // let enterOtpControl = formCellContainer.getControl('FormCellSimpleProperty1');
+
+// // // // Use the API to set the 'Enterotp' control as visible
+// // //   const servicePath = '/n44/Services/capurl.service';
+// // //   const entitySet = 'Supplier_table';
+// // //   return clientAPI.read(servicePath, entitySet, [], '')
+// // //   .then(users => {
+     
+// // //       let filteredUsers = users.map(user => {
+// // //           return { phone_main: user.phone_main};
+// // //           });
+     
+// //   let userExists = filteredUsers.some(user => user.phone_main === p);
+// //   if (userExists ){
+// // //   // Replace 'NavigateToMainContentPage' with the actual action path to navigate
+// // //   // var phoneNumber = "+" + p;
+// // //   // Make the Enterotp control visible
+// // // enterOtpControl.setVisible(true);
+// // // timerControl.setVisible(true);
+// // // phoneNumberControl._control._observable._control.context.element.context.element._model._model.data.IsVisible(false);
+// // // // clientAPI._control._builder._builtData.Enabled = false;
+// // // getOtpButtonControl.setEnabled(false);
+
+// // // // Initialize a countdown timer for 2 minutes
+// // // let countdown = 120; // 120 seconds for 2 minutes
+
+// // // // Update the countdown timer every second
+// // // let timer = setInterval(function() {
+// // // // Calculate the minutes and seconds from countdown
+// // // let minutes = parseInt(countdown / 60, 10);
+// // // let seconds = parseInt(countdown % 60, 10);
+
+// // // // Ensure that minutes and seconds are two digits
+// // // minutes = minutes < 10 ? "0" + minutes : minutes;
+// // // seconds = seconds < 10 ? "0" + seconds : seconds;
+
+// // // // Update the value of the Timer control with the remaining time
+// // // // timerControl.setCaption("hiiii");
+// // // // timerControl.setValue(`${minutes}:${seconds}`);
+// // // timerControl.setValue(`${minutes}:${seconds}`);
+// // // // enterOtpControl.setCaption(`OTP ( ${minutes}:${seconds} )`);
+
+// // // // Decrease the countdown timer
+// // // countdown--;
+
+// // // // If the countdown reaches 0, clear the interval, hide the OTP control, and re-enable the 'Get OTP' button
+// // // if (countdown <= 0) {
+// // // clearInterval(timer);
+// // // enterOtpControl.setVisible(false);
+// // // timerControl.setVisible(false);
+// // // getOtpButtonControl.setEnabled(true);
+
+// // // // Re-enable the 'Get OTP' button
+
+// // // }
+// // // }, 1000);
+
+  
+// //   var phoneNumber = "+91" + p;
+// //   const myHeaders = new Headers();
+// //   myHeaders.append("content", "application/json");
+// //   myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+// //   myHeaders.append("Accept-Language", "en-US");
+// //   myHeaders.append("url", "https://verification.api.sinch.com/verification/v1/verifications");
+// //   myHeaders.append("Method", "POST");
+// //   myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+// //   myHeaders.append("Content-Type", "application/json");
+// //   myHeaders.append("Authorization", "Basic c2ItODBiNjFkMjItMmQ0My00YWYzLTkyZjUtMmY3NmRkM2EzMzMzIWIyNzQ2MTl8aXQtcnQtZjY2MjNhNTB0cmlhbCFiMjY2NTU6YmE2NGE3ZTEtMTJiMS00YTNlLTlhNzItZjkxZTI1YTA4YzZkJEVCYzlzWUJQelZkOVJ2Zlp6UmZTZHdTQ1hQcHhEQ2FWT18zZVY2d0ZzazQ9");
+  
+// //   const raw = JSON.stringify({
+// //     "identity": {
+// //       "type": "number",
+// //       "endpoint": `${phoneNumber}`
+// //     },
+// //     "method": "sms",
+// //     "smsOptions": {
+// //         "expiry":"00:02:00"
+// //     } 
+// //   });
+  
+// //   const requestOptions = {
+// //     method: "POST",
+// //     headers: myHeaders,
+// //     body: raw,
+// //     redirect: "follow"
+// //   };
+  
+// //   fetch("https://f6623a50trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com/f6623a50trial/http/sinch", requestOptions)
+// //     .then((response) => response.text())
+// //     .then((result) => console.log(result))
+// //     .catch((error) => console.error(error));
+// //     alert("OTP sent and its valid for only 2min");
+// //     // a._control._model._model.data.IsVisible = true
+// //     enterOtpControl.setVisible(true);
+
+  
+// // }
+// // else {
+// //  // If no matching user is found, show an error message
+// //  // Replace 'ShowInvalidCredentialsMessage' with the actual action path to show the message
+// //   alert("Phone no is Not Valid");
+// //  }
+// // // })
+// // }
+// // // }
+
+// // =======================================================================================================
+// // let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+// // let phoneNumber = phoneNumberControl.getValue();
+
+// // // Get the 'Get OTP' button control
+
+// // // Use the API to get the 'Enterotp' and 'Timer' controls
+// // let enterOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty1');
+// // let timerControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty2');
+// // let getOtpButtonControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellButton0');
+
+// // // Disable the 'Get OTP' button to prevent multiple clicks
+
+// // // Check if the entered phone number is valid (replace with your validation logic)
+// // if (phoneNumber === "123") {
+// // // Disable the 'Get OTP' button to prevent multiple clicks
+
+
+// // // Existing code to send OTP...
+// // // ...
+
+// // // Make the Enterotp control visible
+// // enterOtpControl.setVisible(true);
+// // timerControl.setVisible(true);
+// // // phoneNumberControl._control._observable._control.context.element.context.element._model._model.data.IsVisible(false);
+// // // clientAPI._control._builder._builtData.Enabled = false;
+// // getOtpButtonControl.setEnabled(false);
+
+// // // Initialize a countdown timer for 2 minutes
+// // let countdown = 120; // 120 seconds for 2 minutes
+
+// // // Update the countdown timer every second
+// // let timer = setInterval(function() {
+// // // Calculate the minutes and seconds from countdown
+// // let minutes = parseInt(countdown / 60, 10);
+// // let seconds = parseInt(countdown % 60, 10);
+
+// // // Ensure that minutes and seconds are two digits
+// // minutes = minutes < 10 ? "0" + minutes : minutes;
+// // seconds = seconds < 10 ? "0" + seconds : seconds;
+
+// // // Update the value of the Timer control with the remaining time
+// // timerControl.setValue(`${minutes}:${seconds}`);
+
+// // // Decrease the countdown timer
+// // countdown--;
+
+// // // If the countdown reaches 0, clear the interval, hide the OTP control, and re-enable the 'Get OTP' button
+// // if (countdown <= 0) {
+// // clearInterval(timer);
+// // enterOtpControl.setVisible(false);
+// // timerControl.setVisible(false);
+// // getOtpButtonControl.setEnabled(true);
+
+// // // Re-enable the 'Get OTP' button
+
+// // }
+// // }, 1000);
+// // } else {
+// // // If the phone number is not valid, show an error message and re-enable the 'Get OTP' button
+// // alert('Invalid phone number. Please try again');
+// // // Re-enable the 'Get OTP' button
+
+// // }
+
+
+// // export default function otpRule(clientAPI) {
+// //   debugger
+// // // Retrieve the phone number from the form control
+// // let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+// // let phoneNumber = phoneNumberControl.getValue();
+
+// // // Get the 'Get OTP' button control
+
+// // // Use the API to get the 'Enterotp' and 'Timer' controls
+// // let enterOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty1');
+// // let timerControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty2');
+// // let getOtpButtonControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellButton0');
+
+// // // Disable the 'Get OTP' button to prevent multiple clicks
+
+// // // Check if the entered phone number is valid (replace with your validation logic)
+// // if (phoneNumber === "123") {
+// // // Disable the 'Get OTP' button to prevent multiple clicks
+
+
+// // // Existing code to send OTP...
+// // // ...
+
+// // // Make the Enterotp control visible
+// // enterOtpControl.setVisible(true);
+// // timerControl.setVisible(true);
+// // // phoneNumberControl._control._observable._control.context.element.context.element._model._model.data.IsVisible(false);
+// // // clientAPI._control._builder._builtData.Enabled = false;
+// // getOtpButtonControl.setEnabled(false);
+
+// // // Initialize a countdown timer for 2 minutes
+// // let countdown = 120; // 120 seconds for 2 minutes
+
+// // // Update the countdown timer every second
+// // let timer = setInterval(function() {
+// // // Calculate the minutes and seconds from countdown
+// // let minutes = parseInt(countdown / 60, 10);
+// // let seconds = parseInt(countdown % 60, 10);
+
+// // // Ensure that minutes and seconds are two digits
+// // minutes = minutes < 10 ? "0" + minutes : minutes;
+// // seconds = seconds < 10 ? "0" + seconds : seconds;
+
+// // // Update the value of the Timer control with the remaining time
+// // timerControl.setValue(`${minutes}:${seconds}`);
+
+// // // Decrease the countdown timer
+// // countdown--;
+
+// // // If the countdown reaches 0, clear the interval, hide the OTP control, and re-enable the 'Get OTP' button
+// // if (countdown <= 0) {
+// // clearInterval(timer);
+// // enterOtpControl.setVisible(false);
+// // timerControl.setVisible(false);
+// // getOtpButtonControl.setEnabled(true);
+
+// // // Re-enable the 'Get OTP' button
+
+// // }
+// // }, 1000);
+// // } else {
+// // // If the phone number is not valid, show an error message and re-enable the 'Get OTP' button
+// // alert('Invalid phone number. Please try again');
+// // // Re-enable the 'Get OTP' button
+
+// // }
+// // }
+// // ================================================================================
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// // export default function otpRule(clientAPI) {
+// //   debugger
+// // // Retrieve the phone number from the form control
+
+// // let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+// // let p = phoneNumberControl.getValue();
+
+// // if (p === "7259303952"){
+// //   clientAPI.executeAction("/n44/Actions/toTabs.action");
+// // }else{
+// // //   if ( p.length === 10 ) { //&& !p.startsWith('91'))
+// // //     // If it's 10 characters long and doesn't start with '91', concatenate '91' to the beginning
+// // //     p = '91' + p;
+// // // }
+// // // let a = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+// // let formCellContainer = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2');
+
+// // // Use the API to get the 'Enterotp' control
+// // let enterOtpControl = formCellContainer.getControl('FormCellSimpleProperty1');
+
+// // // Use the API to set the 'Enterotp' control as visible
+// // const servicePath = '/n44/Services/capurl.service';
+// // const entitySet = 'Supplier_table';
+// // return clientAPI.read(servicePath, entitySet, [], '')
+// // .then(users => {
+   
+// //     let filteredUsers = users.map(user => {
+// //         return { phone_main: user.phone_main};
+// //         });
+   
+// // let userExists = filteredUsers.some(user => user.phone_main === p);
+// // if (userExists ){
+// // // Replace 'NavigateToMainContentPage' with the actual action path to navigate
+// // // var phoneNumber = "+" + p;
+// // var phoneNumber = "+91" + p;
+// // const myHeaders = new Headers();
+// // myHeaders.append("content", "application/json");
+// // myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+// // myHeaders.append("Accept-Language", "en-US");
+// // myHeaders.append("url", "https://verification.api.sinch.com/verification/v1/verifications");
+// // myHeaders.append("Method", "POST");
+// // myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+// // myHeaders.append("Content-Type", "application/json");
+// // myHeaders.append("Authorization", "Basic c2ItODBiNjFkMjItMmQ0My00YWYzLTkyZjUtMmY3NmRkM2EzMzMzIWIyNzQ2MTl8aXQtcnQtZjY2MjNhNTB0cmlhbCFiMjY2NTU6YmE2NGE3ZTEtMTJiMS00YTNlLTlhNzItZjkxZTI1YTA4YzZkJEVCYzlzWUJQelZkOVJ2Zlp6UmZTZHdTQ1hQcHhEQ2FWT18zZVY2d0ZzazQ9");
+
+// // const raw = JSON.stringify({
+// //   "identity": {
+// //     "type": "number",
+// //     "endpoint": `${phoneNumber}`
+// //   },
+// //   "method": "sms",
+// //   "smsOptions": {
+// //       "expiry":"00:02:00"
+// //   } 
+// // });
+
+// // const requestOptions = {
+// //   method: "POST",
+// //   headers: myHeaders,
+// //   body: raw,
+// //   redirect: "follow"
+// // };
+
+// // fetch("https://f6623a50trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com/f6623a50trial/http/sinch", requestOptions)
+// //   .then((response) => response.text())
+// //   .then((result) => console.log(result))
+// //   .catch((error) => console.error(error));
+// //   alert("OTP sent and its valid for only 2min");
+// //   // a._control._model._model.data.IsVisible = true
+// //   enterOtpControl.setVisible(true);
+
+
+// // }
+// // else {
+// // // If no matching user is found, show an error message
+// // // Replace 'ShowInvalidCredentialsMessage' with the actual action path to show the message
+// // alert("Phone no is Not Valid");
+// // }
+// // })
+// // }
+// // }
+
+
+// // export default function otpRule(clientAPI) {
+// //   debugger
+// // // Retrieve the phone number from the form control
+// // let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+// // let p = phoneNumberControl.getValue();
+
+// // // Get the 'Get OTP' button control
+
+// // // Use the API to get the 'Enterotp' and 'Timer' controls
+// // let enterOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty1');
+// // let timerControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty3');
+// // let getOtpButtonControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellButton0');
+
+// // // Disable the 'Get OTP' button to prevent multiple clicks
+
+// // // Check if the entered phone number is valid (replace with your validation logic)
+// // // if (p === "7259303952"){
+// // //     clientAPI.executeAction("/n44/Actions/toTabs.action");
+// // //   }else{
+// // const servicePath = '/n44/Services/capurl.service';
+// // const entitySet = 'Supplier_table';
+// // return clientAPI.read(servicePath, entitySet, [], '')
+// // .then(users => {
+   
+// //     let filteredUsers = users.map(user => {
+// //         return { phone_main: user.phone_main};
+// //         });
+   
+// // let userExists = filteredUsers.some(user => user.phone_main === p);
+// // if (userExists ){
+// // // Disable the 'Get OTP' button to prevent multiple clicks
+
+
+// // // Existing code to send OTP...
+// // // ...
+
+// // // Make the Enterotp control visible
+// // enterOtpControl.setVisible(true);
+// // timerControl.setVisible(true);
+// // // phoneNumberControl._control._observable._control.context.element.context.element._model._model.data.IsVisible(false);
+// // // clientAPI._control._builder._builtData.Enabled = false;
+// // getOtpButtonControl.setEnabled(false);
+
+// // // Initialize a countdown timer for 2 minutes
+// // let countdown = 120; // 120 seconds for 2 minutes
+
+// // // Update the countdown timer every second
+// // let timer = setInterval(function() {
+// // // Calculate the minutes and seconds from countdown
+// // let minutes = parseInt(countdown / 60, 10);
+// // let seconds = parseInt(countdown % 60, 10);
+
+// // // Ensure that minutes and seconds are two digits
+// // minutes = minutes < 10 ? "0" + minutes : minutes;
+// // seconds = seconds < 10 ? "0" + seconds : seconds;
+
+// // // Update the value of the Timer control with the remaining time
+// // timerControl.setValue(`${minutes}:${seconds}`);
+
+// // // Decrease the countdown timer
+// // countdown--;
+
+// // // If the countdown reaches 0, clear the interval, hide the OTP control, and re-enable the 'Get OTP' button
+// // if (countdown <= 0) {
+// // clearInterval(timer);
+// // enterOtpControl.setVisible(false);
+// // timerControl.setVisible(false);
+// // getOtpButtonControl.setEnabled(true);
+
+// // // Re-enable the 'Get OTP' button
+
+// // }
+// // }, 1000);
+// // var phoneNumber = "+91" + p;
+// // const myHeaders = new Headers();
+// // myHeaders.append("content", "application/json");
+// // myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+// // myHeaders.append("Accept-Language", "en-US");
+// // myHeaders.append("url", "https://verification.api.sinch.com/verification/v1/verifications");
+// // myHeaders.append("Method", "POST");
+// // myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+// // myHeaders.append("Content-Type", "application/json");
+// // myHeaders.append("Authorization", "Basic c2ItODBiNjFkMjItMmQ0My00YWYzLTkyZjUtMmY3NmRkM2EzMzMzIWIyNzQ2MTl8aXQtcnQtZjY2MjNhNTB0cmlhbCFiMjY2NTU6YmE2NGE3ZTEtMTJiMS00YTNlLTlhNzItZjkxZTI1YTA4YzZkJEVCYzlzWUJQelZkOVJ2Zlp6UmZTZHdTQ1hQcHhEQ2FWT18zZVY2d0ZzazQ9");
+
+// // const raw = JSON.stringify({
+// //   "identity": {
+// //     "type": "number",
+// //     "endpoint": `${phoneNumber}`
+// //   },
+// //   "method": "sms",
+// //   "smsOptions": {
+// //       "expiry":"00:02:00"
+// //   } 
+// // });
+
+// // const requestOptions = {
+// //   method: "POST",
+// //   headers: myHeaders,
+// //   body: raw,
+// //   redirect: "follow"
+// // };
+
+// // fetch("https://f6623a50trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com/f6623a50trial/http/sinch", requestOptions)
+// //   .then((response) => response.text())
+// //   .then((result) => console.log(result))
+// //   .catch((error) => console.error(error));
+// //   alert("OTP sent and its valid for only 2min");
+// //   // a._control._model._model.data.IsVisible = true
+// //   enterOtpControl.setVisible(true);
+
+
+// // }
+// // else {
+// // // If no matching user is found, show an error message
+// // // Replace 'ShowInvalidCredentialsMessage' with the actual action path to show the message
+// // alert("Phone no is Not Valid");
+// // }
+// // })
+// // }
+// // // }
+
+
+
+
+
+
+
+
+// // /**
+// //  * Describe this function...
+// //  * @param {IClientAPI} clientAPI
+// //  */
+// // export default function otpRule(clientAPI) {
+// //   debugger
+// // // Retrieve the phone number from the form control
+
+// // let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+// // let p = phoneNumberControl.getValue();
+// // //   if ( p.length === 10 ) { //&& !p.startsWith('91'))
+// // //     // If it's 10 characters long and doesn't start with '91', concatenate '91' to the beginning
+// // //     p = '91' + p;
+// // // }
+// // let enterOtpControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty1');
+// // let timerControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellSimpleProperty2')
+// // let getOtpButtonControl = clientAPI.getPageProxy().getControl('SectionedTable0').getSection('SectionFormCell2').getControl('FormCellButton0');
+
+// // if (p === "7259303952"){
+// //     clientAPI.executeAction("/n44/Actions/toTabs.action");
+// //     }else{
+// // const servicePath = '/n44/Services/capurl.service';
+// // const entitySet = 'Supplier_table';
+// // return clientAPI.read(servicePath, entitySet, [], '')
+// // .then(users => {
+   
+// //     let filteredUsers = users.map(user => {
+// //         return { phone_main: user.phone_main};
+// //         });
+   
+// // let userExists = filteredUsers.some(user => user.phone_main === p);
+// // if (userExists ){
+// // // Replace 'NavigateToMainContentPage' with the actual action path to navigate
+// // // var phoneNumber = "+" + p;
+
+// // enterOtpControl.setVisible(true);
+// // timerControl.setVisible(true);
+// // // phoneNumberControl._control._observable._control.context.element.context.element._model._model.data.IsVisible(false);
+// // // clientAPI._control._builder._builtData.Enabled = false;
+// // getOtpButtonControl.setEnabled(false);
+
+// // // Initialize a countdown timer for 2 minutes
+// // let countdown = 120; // 120 seconds for 2 minutes
+
+// // // Update the countdown timer every second
+// // let timer = setInterval(function() {
+// // // Calculate the minutes and seconds from countdown
+// // let minutes = parseInt(countdown / 60, 10);
+// // let seconds = parseInt(countdown % 60, 10);
+
+// // // Ensure that minutes and seconds are two digits
+// // minutes = minutes < 10 ? "0" + minutes : minutes;
+// // seconds = seconds < 10 ? "0" + seconds : seconds;
+
+// // // Update the value of the Timer control with the remaining time
+// // timerControl.setValue(`${minutes}:${seconds}`);
+
+
+// // // Decrease the countdown timer
+// // countdown--;
+
+// // // If the countdown reaches 0, clear the interval, hide the OTP control, and re-enable the 'Get OTP' button
+// // if (countdown <= 0) {
+// // clearInterval(timer);
+// // enterOtpControl.setVisible(false);
+// // timerControl.setVisible(false);
+// // getOtpButtonControl.setEnabled(true);
+
+// // // Re-enable the 'Get OTP' button
+
+// // }
+// // }, 1000);
+// // var phoneNumber = "+91" + p;
+// // const myHeaders = new Headers();
+// // myHeaders.append("content", "application/json");
+// // myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+// // myHeaders.append("Accept-Language", "en-US");
+// // myHeaders.append("url", "https://verification.api.sinch.com/verification/v1/verifications");
+// // myHeaders.append("Method", "POST");
+// // myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+// // myHeaders.append("Content-Type", "application/json");
+// // myHeaders.append("Authorization", "Basic c2ItODBiNjFkMjItMmQ0My00YWYzLTkyZjUtMmY3NmRkM2EzMzMzIWIyNzQ2MTl8aXQtcnQtZjY2MjNhNTB0cmlhbCFiMjY2NTU6YmE2NGE3ZTEtMTJiMS00YTNlLTlhNzItZjkxZTI1YTA4YzZkJEVCYzlzWUJQelZkOVJ2Zlp6UmZTZHdTQ1hQcHhEQ2FWT18zZVY2d0ZzazQ9");
+
+// // const raw = JSON.stringify({
+// //   "identity": {
+// //     "type": "number",
+// //     "endpoint": `${phoneNumber}`
+// //   },
+// //   "method": "sms",
+// //   "smsOptions": {
+// //       "expiry":"00:10:00"
+// //   } 
+// // });
+
+// // const requestOptions = {
+// //   method: "POST",
+// //   headers: myHeaders,
+// //   body: raw,
+// //   redirect: "follow"
+// // };
+
+// // fetch("https://f6623a50trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com/f6623a50trial/http/sinch", requestOptions)
+// //   .then((response) => response.text())
+// //   .then((result) => console.log(result))
+// //   .catch((error) => console.error(error));
+// //   alert("OTP sent and its valid for only 2min");
+
+// // }
+// // else {
+// // // If no matching user is found, show an error message
+// // // Replace 'ShowInvalidCredentialsMessage' with the actual action path to show the message
+// // alert("Phone no is Not Valid");
+// // }
+// // })
+// // }
+// // }
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// export default function otpRule(clientAPI) {
+ 
+//   // Retrieve the phone number from the form control
+  
+//   let phoneNumberControl = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty0');
+//   let p = phoneNumberControl.getValue();
+//   //   if ( p.length === 10 ) { //&& !p.startsWith('91'))
+//   //     // If it's 10 characters long and doesn't start with '91', concatenate '91' to the beginning
+//   //     p = '91' + p;
+//   // }
+//   // let a = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+//   let formCellContainer = clientAPI.getPageProxy().getControl('SectionedTable0').getControl('FormCellSimpleProperty1');
+
+//  if (p === "7259303952"){
+//     clientAPI.executeAction("/n44/Actions/toTabs.action");
+//     }else{
+//   // Use the API to set the 'Enterotp' control as visible
+//   const servicePath = '/n44/Services/capurl.service';
+//   const entitySet = 'Supplier_table';
+//   return clientAPI.read(servicePath, entitySet, [], '')
+//   .then(users => {
+     
+//       let filteredUsers = users.map(user => {
+//           return { phone_main: user.phone_main};
+//           });
+     
+//   let userExists = filteredUsers.some(user => user.phone_main === p);
+//   if (userExists ){
+//   // Replace 'NavigateToMainContentPage' with the actual action path to navigate
+//   // var phoneNumber = "+" + p;
+//   var phoneNumber = "+91" + p;
+//   const myHeaders = new Headers();
+//   myHeaders.append("content", "application/json");
+//   myHeaders.append("Auth", "Basic OGMyYWQxZDktMWMwMi00YzRhLWFkMjEtZDgwMTM5ZGE3ZjA0Ok9BN21nd0tNTWtxeXFxMHlzR2orb2c9PQ==");
+//   myHeaders.append("Accept-Language", "en-US");
+//   myHeaders.append("url", "https://verification.api.sinch.com/verification/v1/verifications");
+//   myHeaders.append("Method", "POST");
+//   myHeaders.append("apikey", "BUZEaciAGzAoYG5PPYEl8LJWzeMgfVaP");
+//   myHeaders.append("Content-Type", "application/json");
+//   myHeaders.append("Authorization", "Basic c2ItN2FhZmVkMWItOTE1Ni00OWVlLTkxMjUtYTVkMDBlYTQwMGQ1IWIyNzIxNzV8aXQtcnQtZThiNGVhMmV0cmlhbCFiNTUyMTU6MzliMzJjYzAtYzg2NS00ZjYyLWJhNjYtNWRhZjQ1NWEyMzA2JERwVEIxeF8xLUk1dnByNGg3bVFNd2J3dHVfWkFPUmh5ZDk1LTE1XzVkMEE9");
+  
+//   const raw = JSON.stringify({
+//     "identity": {
+//       "type": "number",
+//       "endpoint": `${phoneNumber}`
+//     },
+//     "method": "sms",
+//     "smsOptions": {
+//         "expiry":"00:02:00"
+//     } 
+//   });
+  
+//   const requestOptions = {
+//     method: "POST",
+//     headers: myHeaders,
+//     body: raw,
+//     redirect: "follow"
+//   };
+  
+//   fetch("https://e8b4ea2etrial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/sinch", requestOptions)
+//     .then((response) => response.text())
+//     .then((result) => console.log(result))
+//     .catch((error) => console.error(error));
+//     alert("OTP sent and its valid for only 2min");
+//     // a._control._model._model.data.IsVisible = true
+//     formCellContainer.setVisible(true);
+  
+  
+//   }
+//   else {
+//   // If no matching user is found, show an error message
+//   // Replace 'ShowInvalidCredentialsMessage' with the actual action path to show the message
+//   alert("Phone no is Not Valid");
+//   }
+//   })
+//   }
+  
+// }
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/paymntLP.js":
+/*!*************************************************!*\
+  !*** ./build.definitions/n44/Rules/paymntLP.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ paymntLP)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function paymntLP(clientAPI,sectionProxy) {
+    debugger
+    var inviId = clientAPI._control.context.binding.invitationId;
+    var docId = clientAPI._control.context.binding.doc_id;
+    var qus_id = clientAPI._context.binding.questionnaire_id;
+
+    return qus_id
+
+
+
+
+
+    // var readPromise = sectionProxy.read('/n44/Services/capurl.service', 'Attachments_table','');
+    // console.log(readPromise);
+    // return readPromise.then((result)=> {
+    //     //the result is an ObservableArray (https://docs.nativescript.org/ns-framework-modules/observable-array)
+    //     alert("length: " + result.length);
+    //     var returnArray = [];
+    //     for (var i = 0; i < result.length; i++)
+    //     {
+    //       var item = result.getItem(i);
+    //       // Only add item with OrderNumber less than 100 to the return array;
+    //       // This is just an example, you should change this according to your need
+    //     //   if (item.OrderNumber < 100) {
+    //     //      returnArray.push(item);
+    //     //   }
+    //     }
+    //     // Finally, return the filtered array
+    //     // return returnArray;
+    //   }); 
+
+}
+
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} context
+//  */
+// export default function paymntLP(context) {
+//     debugger    
+//     console.log('DirectEntityReadTest');
+//     let productId = '06ccaa6e-ae41-48d2-8557-6c4497c41bfb';
+//     return context.read('/n44/Services/capurl.service',`Attachments_table`,[]).then(function(results) {
+//         console.log('Read Success');
+//         if (results.length > 0) {
+//             let prod = results.getItem(0);
+//             console.log(`Product Name: ${prod.Name}`);
+//             return context.executeAction({
+//                 // 'Name': "/SalesOrder/Actions/GenericToastMessage.action",
+//                 // 'Properties': {
+//                 //     "Message": `Product Name: ${prod.Name}`
+//                 // }
+//             });
+//         }
+//     });
+// }
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/qusBtnVisiRule.js":
+/*!*******************************************************!*\
+  !*** ./build.definitions/n44/Rules/qusBtnVisiRule.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ qusBtnVisiRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function qusBtnVisiRule(clientAPI) {
+    debugger
+    // var auctiontype = clientAPI._context.binding.eventTypeName    
+    var auctiontype = clientAPI._context._clientAPI._context.binding.supplier_header_rel.eventTypeName    
+    //  clientAPI._context.binding.supplier_header_rel.eventTypeName;
+    // _context.binding.supplier_header_rel.eventTypeName
+    if (auctiontype === "RFP"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+    
+
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/userReplyRule.js":
+/*!******************************************************!*\
+  !*** ./build.definitions/n44/Rules/userReplyRule.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ userReplyRule)
+/* harmony export */ });
+// /**
+//  * Describe this function...
+//  * @param {IClientAPI} clientAPI
+//  */
+// export default function userReplyRule(clientAPI) {
+//     debugger
+//    var type =  clientAPI._context.binding.type;
+//    if( type === "RQABOOLEAN"){
+//     return "#Control:user_reply2/#SelectedValue"
+//    }else if( type === "RQASTRINGListOfChoices"){
+//     return "#Control:userReply4/#SelectedValue"
+//    }
+//     else{
+//     return "#Control:user_reply3/#Value"
+//    }
+// }
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function userReplyRule(clientAPI) {
+    debugger;
+    var type = clientAPI._context.binding.type;
+    if (type === "RQABOOLEAN") {
+        return "#Control:user_reply2/#SelectedValue";
+    } else if (type === "RQASTRINGListOfChoices") {
+        return "#Control:userReply4/#SelectedValue";
+    } else {
+        // Default case: Return a default value or handle it as needed
+        return "#Control:user_reply3/#Value";
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/visiRule.js":
+/*!*************************************************!*\
+  !*** ./build.definitions/n44/Rules/visiRule.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ visiRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function visiRule(clientAPI) {
+    debugger
+    var type = clientAPI._control.context.binding.type;
+    if( type === "RQASTRING"){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/visiblePaymentRule.js":
+/*!***********************************************************!*\
+  !*** ./build.definitions/n44/Rules/visiblePaymentRule.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ visiblePaymentRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function visiblePaymentRule(clientAPI) {
+    debugger
+    var type = clientAPI._control.context.binding.type;
+    if( type === "RQASTRINGListOfChoices"){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Rules/visibleRule.js":
+/*!****************************************************!*\
+  !*** ./build.definitions/n44/Rules/visibleRule.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ visibleRule)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function visibleRule(clientAPI) {
+    debugger
+    var type = clientAPI._control.context.binding.type;
+    if( type === "RQABOOLEAN"){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./build.definitions/n44/Styles/Styles.css":
 /*!*************************************************!*\
   !*** ./build.definitions/n44/Styles/Styles.css ***!
@@ -1350,7 +3818,7 @@ Examples:
 @mdkRed1: #ff0000;
 
 //// By-Type style: All Pages in the application will now have a yellow background
-div.MDKPage
+Page
 
 { background-color: @mdkYellow1; }
 //// By-Name style: All Buttons with _Name == "BlueButton" will now have this style
@@ -1363,11 +3831,11 @@ div.MDKPage
 
 { color: @mdkYellow1; background-color: @mdkRed1; }
 */
-ui5-mdk-bar.actionbar {
+ActionBar {
   color: #ffffff;
   background-color: #51abf1;
 }
-ui5-mdk-overflow-toolbar.toolbar {
+Toolbar {
   color: #ffffff;
   background-color: #51abf1;
 }
@@ -1402,7 +3870,7 @@ ui5-mdk-overflow-toolbar.toolbar {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
-.ui5-textarea.nfcValue {
+.NoteFormCellValue {
   background-color: #cfcfe6;
   color: black;
   font-style: body;
@@ -1453,7 +3921,7 @@ MDKPage {
   color: #0d0d0e;
   background-color: #eeeefd;
 }
-`, "",{"version":3,"sources":["webpack://./build.definitions/n44/Styles/Styles.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC;AACD;EACE,cAAc;EACd,yBAAyB;AAC3B;AACA;EACE,cAAc;EACd,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,cAAc;EACd,mBAAmB;EACnB,eAAe;EACf,+BAA+B;EAC/B,gCAAgC;EAChC,6BAA6B;EAC7B,4BAA4B;AAC9B;AACA;EACE,uBAAuB;AACzB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,uBAAuB;EACvB,yBAAyB;EACzB,cAAc;EACd,eAAe;EACf,kBAAkB;EAClB,yBAAyB;EACzB,+BAA+B;EAC/B,gCAAgC;EAChC,6BAA6B;EAC7B,4BAA4B;AAC9B;AACA;EACE,yBAAyB;EACzB,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,cAAc;EACd,gBAAgB;EAChB,eAAe;EACf,uBAAuB;EACvB,kBAAkB;AACpB;AACA;EACE,yBAAyB;EACzB,kBAAkB;AACpB;AACA;EACE,yBAAyB;EACzB,YAAY;EACZ,eAAe;AACjB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,iBAAiB;EACjB,6BAA6B;EAC7B,8BAA8B;EAC9B,uBAAuB;EACvB,aAAa;AACf;AACA;EACE,uBAAuB;EACvB,cAAc;EACd,eAAe;AACjB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,yBAAyB;AAC3B","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\ndiv.MDKPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\nui5-mdk-bar.actionbar {\n  color: #ffffff;\n  background-color: #51abf1;\n}\nui5-mdk-overflow-toolbar.toolbar {\n  color: #ffffff;\n  background-color: #51abf1;\n}\n.button1 {\n  background-color: #51abf1;\n  color: #ffffff;\n  font-typeface: bold;\n  font-size: 16px;\n  border-bottom-left-radius: 20px;\n  border-bottom-right-radius: 20px;\n  border-top-right-radius: 20px;\n  border-top-left-radius: 20px;\n}\n.header1 {\n  text-align-last: center;\n}\n.label1 {\n  text-align: center;\n}\n.MYINFO {\n  text-align: center;\n}\n.rbutton1 {\n  border: 1px solid black;\n  border: 2px solid #007bff;\n  color: #f3f7f9;\n  font-size: 26px;\n  padding: 10px 20px;\n  background-color: #7d9cb5;\n  border-bottom-left-radius: 20px;\n  border-bottom-right-radius: 20px;\n  border-top-right-radius: 20px;\n  border-top-left-radius: 20px;\n}\n.ui5-textarea.nfcValue {\n  background-color: #cfcfe6;\n  color: black;\n  font-style: body;\n  font-typeface: bold;\n  font-size: 24px;\n}\n.Form {\n  color: black;\n  font-style: body;\n  font-typeface: bold;\n  font-size: 26px;\n}\n.Formm {\n  color: #7575d4;\n  font-style: bold;\n  font-size: 26px;\n  text-align-last: center;\n  text-align: center;\n}\n.fr {\n  background-color: #d7d7e9;\n  border-radius: 50%;\n}\n.AdditionalTextStyle {\n  background-color: #d7d7e9;\n  color: black;\n  font-size: 20px;\n}\n.f {\n  text-align-last: center;\n}\n.ff {\n  border-radius: 75;\n  border-bottom-left-radius: 20;\n  border-bottom-right-radius: 20;\n  text-align-last: center;\n  font-size: 8x;\n}\n.e {\n  text-align-last: center;\n  color: #7575d4;\n  font-size: 11px;\n}\n.t {\n  border-radius: 20%;\n}\nMDKPage {\n  color: #0d0d0e;\n  background-color: #eeeefd;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./build.definitions/n44/Styles/Styles.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC;AACD;EACE,cAAc;EACd,yBAAyB;AAC3B;AACA;EACE,cAAc;EACd,yBAAyB;AAC3B;AACA;EACE,yBAAyB;EACzB,cAAc;EACd,mBAAmB;EACnB,eAAe;EACf,+BAA+B;EAC/B,gCAAgC;EAChC,6BAA6B;EAC7B,4BAA4B;AAC9B;AACA;EACE,uBAAuB;AACzB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,uBAAuB;EACvB,yBAAyB;EACzB,cAAc;EACd,eAAe;EACf,kBAAkB;EAClB,yBAAyB;EACzB,+BAA+B;EAC/B,gCAAgC;EAChC,6BAA6B;EAC7B,4BAA4B;AAC9B;AACA;EACE,yBAAyB;EACzB,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,cAAc;EACd,gBAAgB;EAChB,eAAe;EACf,uBAAuB;EACvB,kBAAkB;AACpB;AACA;EACE,yBAAyB;EACzB,kBAAkB;AACpB;AACA;EACE,yBAAyB;EACzB,YAAY;EACZ,eAAe;AACjB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,iBAAiB;EACjB,6BAA6B;EAC7B,8BAA8B;EAC9B,uBAAuB;EACvB,aAAa;AACf;AACA;EACE,uBAAuB;EACvB,cAAc;EACd,eAAe;AACjB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,yBAAyB;AAC3B","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\nActionBar {\n  color: #ffffff;\n  background-color: #51abf1;\n}\nToolbar {\n  color: #ffffff;\n  background-color: #51abf1;\n}\n.button1 {\n  background-color: #51abf1;\n  color: #ffffff;\n  font-typeface: bold;\n  font-size: 16px;\n  border-bottom-left-radius: 20px;\n  border-bottom-right-radius: 20px;\n  border-top-right-radius: 20px;\n  border-top-left-radius: 20px;\n}\n.header1 {\n  text-align-last: center;\n}\n.label1 {\n  text-align: center;\n}\n.MYINFO {\n  text-align: center;\n}\n.rbutton1 {\n  border: 1px solid black;\n  border: 2px solid #007bff;\n  color: #f3f7f9;\n  font-size: 26px;\n  padding: 10px 20px;\n  background-color: #7d9cb5;\n  border-bottom-left-radius: 20px;\n  border-bottom-right-radius: 20px;\n  border-top-right-radius: 20px;\n  border-top-left-radius: 20px;\n}\n.NoteFormCellValue {\n  background-color: #cfcfe6;\n  color: black;\n  font-style: body;\n  font-typeface: bold;\n  font-size: 24px;\n}\n.Form {\n  color: black;\n  font-style: body;\n  font-typeface: bold;\n  font-size: 26px;\n}\n.Formm {\n  color: #7575d4;\n  font-style: bold;\n  font-size: 26px;\n  text-align-last: center;\n  text-align: center;\n}\n.fr {\n  background-color: #d7d7e9;\n  border-radius: 50%;\n}\n.AdditionalTextStyle {\n  background-color: #d7d7e9;\n  color: black;\n  font-size: 20px;\n}\n.f {\n  text-align-last: center;\n}\n.ff {\n  border-radius: 75;\n  border-bottom-left-radius: 20;\n  border-bottom-right-radius: 20;\n  text-align-last: center;\n  font-size: 8x;\n}\n.e {\n  text-align-last: center;\n  color: #7575d4;\n  font-size: 11px;\n}\n.t {\n  border-radius: 20%;\n}\nMDKPage {\n  color: #0d0d0e;\n  background-color: #eeeefd;\n}\n"],"sourceRoot":""}]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -1607,10 +4075,118 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ "./build.definitions/n44/Styles/Styles.nss":
-/*!*************************************************!*\
-  !*** ./build.definitions/n44/Styles/Styles.nss ***!
-  \*************************************************/
+/***/ "./build.definitions/n44/Styles/Styles.light.css":
+/*!*******************************************************!*\
+  !*** ./build.definitions/n44/Styles/Styles.light.css ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// Imports
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../../../css-loader/dist/runtime/sourceMaps.js */ "../../../../css-loader/dist/runtime/sourceMaps.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../css-loader/dist/runtime/api.js */ "../../../../css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.ns-light ActionBar {
+	color: #ffffff;
+	background-color: #51abf1;
+}
+.ns-light Toolbar {
+	color: #ffffff;
+	background-color: #51abf1;
+}
+.ns-light .button1 {
+	background-color: #51abf1;
+	color: #ffffff;
+	font-typeface: bold;
+	font-size: 16px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+}
+.ns-light .header1 {
+	text-align-last: center;
+}
+.ns-light .label1 {
+	text-align: center;
+}
+.ns-light .MYINFO {
+	text-align: center;
+}
+.ns-light .rbutton1 {
+	border: 1px solid black;
+	border: 2px solid #007bff;
+	color: #f3f7f9;
+	font-size: 26px;
+	padding: 10px 20px;
+	background-color: #7d9cb5;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+}
+.ns-light .NoteFormCellValue {
+	background-color: #cfcfe6;
+	color: black;
+	font-style: body;
+	font-typeface: bold;
+	font-size: 24px;
+}
+.ns-light .Form {
+	color: black;
+	font-style: body;
+	font-typeface: bold;
+	font-size: 26px;
+}
+.ns-light .Formm {
+	color: #7575d4;
+	font-style: bold;
+	font-size: 26px;
+	text-align-last: center;
+	text-align: center;
+}
+.ns-light .fr {
+	background-color: #d7d7e9;
+	border-radius: 50%;
+}
+.ns-light .AdditionalTextStyle {
+	background-color: #d7d7e9;
+	color: black;
+	font-size: 20px;
+}
+.ns-light .f {
+	text-align-last: center;
+}
+.ns-light .ff {
+	border-radius: 75;
+	border-bottom-left-radius: 20;
+	border-bottom-right-radius: 20;
+	text-align-last: center;
+	font-size: 8x;
+}
+.ns-light .e {
+	text-align-last: center;
+	color: #7575d4;
+	font-size: 11px;
+}
+.ns-light .t {
+	border-radius: 20%;
+}
+.ns-light MDKPage {
+	color: #0d0d0e;
+	background-color: #eeeefd;
+}
+`, "",{"version":3,"sources":["webpack://./build.definitions/n44/Styles/Styles.light.css"],"names":[],"mappings":"AAAA;CACC,cAAc;CACd,yBAAyB;AAC1B;AACA;CACC,cAAc;CACd,yBAAyB;AAC1B;AACA;CACC,yBAAyB;CACzB,cAAc;CACd,mBAAmB;CACnB,eAAe;CACf,+BAA+B;CAC/B,gCAAgC;CAChC,6BAA6B;CAC7B,4BAA4B;AAC7B;AACA;CACC,uBAAuB;AACxB;AACA;CACC,kBAAkB;AACnB;AACA;CACC,kBAAkB;AACnB;AACA;CACC,uBAAuB;CACvB,yBAAyB;CACzB,cAAc;CACd,eAAe;CACf,kBAAkB;CAClB,yBAAyB;CACzB,+BAA+B;CAC/B,gCAAgC;CAChC,6BAA6B;CAC7B,4BAA4B;AAC7B;AACA;CACC,yBAAyB;CACzB,YAAY;CACZ,gBAAgB;CAChB,mBAAmB;CACnB,eAAe;AAChB;AACA;CACC,YAAY;CACZ,gBAAgB;CAChB,mBAAmB;CACnB,eAAe;AAChB;AACA;CACC,cAAc;CACd,gBAAgB;CAChB,eAAe;CACf,uBAAuB;CACvB,kBAAkB;AACnB;AACA;CACC,yBAAyB;CACzB,kBAAkB;AACnB;AACA;CACC,yBAAyB;CACzB,YAAY;CACZ,eAAe;AAChB;AACA;CACC,uBAAuB;AACxB;AACA;CACC,iBAAiB;CACjB,6BAA6B;CAC7B,8BAA8B;CAC9B,uBAAuB;CACvB,aAAa;AACd;AACA;CACC,uBAAuB;CACvB,cAAc;CACd,eAAe;AAChB;AACA;CACC,kBAAkB;AACnB;AACA;CACC,cAAc;CACd,yBAAyB;AAC1B","sourcesContent":[".ns-light ActionBar {\n\tcolor: #ffffff;\n\tbackground-color: #51abf1;\n}\n.ns-light Toolbar {\n\tcolor: #ffffff;\n\tbackground-color: #51abf1;\n}\n.ns-light .button1 {\n\tbackground-color: #51abf1;\n\tcolor: #ffffff;\n\tfont-typeface: bold;\n\tfont-size: 16px;\n\tborder-bottom-left-radius: 20px;\n\tborder-bottom-right-radius: 20px;\n\tborder-top-right-radius: 20px;\n\tborder-top-left-radius: 20px;\n}\n.ns-light .header1 {\n\ttext-align-last: center;\n}\n.ns-light .label1 {\n\ttext-align: center;\n}\n.ns-light .MYINFO {\n\ttext-align: center;\n}\n.ns-light .rbutton1 {\n\tborder: 1px solid black;\n\tborder: 2px solid #007bff;\n\tcolor: #f3f7f9;\n\tfont-size: 26px;\n\tpadding: 10px 20px;\n\tbackground-color: #7d9cb5;\n\tborder-bottom-left-radius: 20px;\n\tborder-bottom-right-radius: 20px;\n\tborder-top-right-radius: 20px;\n\tborder-top-left-radius: 20px;\n}\n.ns-light .NoteFormCellValue {\n\tbackground-color: #cfcfe6;\n\tcolor: black;\n\tfont-style: body;\n\tfont-typeface: bold;\n\tfont-size: 24px;\n}\n.ns-light .Form {\n\tcolor: black;\n\tfont-style: body;\n\tfont-typeface: bold;\n\tfont-size: 26px;\n}\n.ns-light .Formm {\n\tcolor: #7575d4;\n\tfont-style: bold;\n\tfont-size: 26px;\n\ttext-align-last: center;\n\ttext-align: center;\n}\n.ns-light .fr {\n\tbackground-color: #d7d7e9;\n\tborder-radius: 50%;\n}\n.ns-light .AdditionalTextStyle {\n\tbackground-color: #d7d7e9;\n\tcolor: black;\n\tfont-size: 20px;\n}\n.ns-light .f {\n\ttext-align-last: center;\n}\n.ns-light .ff {\n\tborder-radius: 75;\n\tborder-bottom-left-radius: 20;\n\tborder-bottom-right-radius: 20;\n\ttext-align-last: center;\n\tfont-size: 8x;\n}\n.ns-light .e {\n\ttext-align-last: center;\n\tcolor: #7575d4;\n\tfont-size: 11px;\n}\n.ns-light .t {\n\tborder-radius: 20%;\n}\n.ns-light MDKPage {\n\tcolor: #0d0d0e;\n\tbackground-color: #eeeefd;\n}\n"],"sourceRoot":""}]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Styles/Styles.light.nss":
+/*!*******************************************************!*\
+  !*** ./build.definitions/n44/Styles/Styles.light.nss ***!
+  \*******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
@@ -1700,7 +4276,7 @@ e {
 t {
 	border-radius: 20%;
 }
-`, "",{"version":3,"sources":["webpack://./build.definitions/n44/Styles/Styles.nss"],"names":[],"mappings":"AAAA;CACC,mBAAmB;CACnB,yBAAyB;AAC1B;AACA;CACC,yBAAyB;CACzB,mBAAmB;CACnB,mBAAmB;CACnB,eAAe;CACf,+BAA+B;CAC/B,gCAAgC;CAChC,6BAA6B;CAC7B,4BAA4B;AAC7B;AACA;CACC,uBAAuB;AACxB;AACA;CACC,kBAAkB;AACnB;AACA;CACC,kBAAkB;AACnB;AACA;CACC,uBAAuB;CACvB,yBAAyB;CACzB,mBAAmB;CACnB,eAAe;CACf,kBAAkB;CAClB,yBAAyB;CACzB,+BAA+B;CAC/B,gCAAgC;CAChC,6BAA6B;CAC7B,4BAA4B;AAC7B;AACA;CACC,yBAAyB;CACzB,iBAAiB;CACjB,gBAAgB;CAChB,mBAAmB;CACnB,eAAe;AAChB;AACA;CACC,iBAAiB;CACjB,gBAAgB;CAChB,mBAAmB;CACnB,eAAe;AAChB;AACA;CACC,mBAAmB;CACnB,gBAAgB;CAChB,eAAe;CACf,uBAAuB;CACvB,kBAAkB;AACnB;AACA;CACC,yBAAyB;CACzB,kBAAkB;AACnB;AACA;CACC,yBAAyB;CACzB,iBAAiB;CACjB,eAAe;AAChB;AACA;CACC,uBAAuB;AACxB;AACA;CACC,iBAAiB;CACjB,6BAA6B;CAC7B,8BAA8B;CAC9B,uBAAuB;CACvB,aAAa;AACd;AACA;CACC,uBAAuB;CACvB,mBAAmB;CACnB,eAAe;AAChB;AACA;CACC,kBAAkB;AACnB","sourcesContent":["ActionBar {\n\tfont-color: #ffffff;\n\tbackground-color: #51abf1;\n}\nbutton1 {\n\tbackground-color: #51abf1;\n\tfont-color: #ffffff;\n\tfont-typeface: bold;\n\tfont-size: 16px;\n\tborder-bottom-left-radius: 20px;\n\tborder-bottom-right-radius: 20px;\n\tborder-top-right-radius: 20px;\n\tborder-top-left-radius: 20px;\n}\nheader1 {\n\ttext-align-last: center;\n}\nlabel1 {\n\ttext-align: center;\n}\nMYINFO {\n\ttext-align: center;\n}\nrbutton1 {\n\tborder: 1px solid black;\n\tborder: 2px solid #007bff;\n\tfont-color: #f3f7f9;\n\tfont-size: 26px;\n\tpadding: 10px 20px;\n\tbackground-color: #7d9cb5;\n\tborder-bottom-left-radius: 20px;\n\tborder-bottom-right-radius: 20px;\n\tborder-top-right-radius: 20px;\n\tborder-top-left-radius: 20px;\n}\nNoteFormCellValue {\n\tbackground-color: #cfcfe6;\n\tfont-color: black;\n\tfont-style: body;\n\tfont-typeface: bold;\n\tfont-size: 24px;\n}\nForm {\n\tfont-color: black;\n\tfont-style: body;\n\tfont-typeface: bold;\n\tfont-size: 26px;\n}\nFormm {\n\tfont-color: #7575d4;\n\tfont-style: bold;\n\tfont-size: 26px;\n\ttext-align-last: center;\n\ttext-align: center;\n}\nfr {\n\tbackground-color: #d7d7e9;\n\tborder-radius: 50%;\n}\nAdditionalTextStyle {\n\tbackground-color: #d7d7e9;\n\tfont-color: black;\n\tfont-size: 20px;\n}\nf {\n\ttext-align-last: center;\n}\nff {\n\tborder-radius: 75;\n\tborder-bottom-left-radius: 20;\n\tborder-bottom-right-radius: 20;\n\ttext-align-last: center;\n\tfont-size: 8x;\n}\ne {\n\ttext-align-last: center;\n\tfont-color: #7575d4;\n\tfont-size: 11px;\n}\nt {\n\tborder-radius: 20%;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./build.definitions/n44/Styles/Styles.light.nss"],"names":[],"mappings":"AAAA;CACC,mBAAmB;CACnB,yBAAyB;AAC1B;AACA;CACC,yBAAyB;CACzB,mBAAmB;CACnB,mBAAmB;CACnB,eAAe;CACf,+BAA+B;CAC/B,gCAAgC;CAChC,6BAA6B;CAC7B,4BAA4B;AAC7B;AACA;CACC,uBAAuB;AACxB;AACA;CACC,kBAAkB;AACnB;AACA;CACC,kBAAkB;AACnB;AACA;CACC,uBAAuB;CACvB,yBAAyB;CACzB,mBAAmB;CACnB,eAAe;CACf,kBAAkB;CAClB,yBAAyB;CACzB,+BAA+B;CAC/B,gCAAgC;CAChC,6BAA6B;CAC7B,4BAA4B;AAC7B;AACA;CACC,yBAAyB;CACzB,iBAAiB;CACjB,gBAAgB;CAChB,mBAAmB;CACnB,eAAe;AAChB;AACA;CACC,iBAAiB;CACjB,gBAAgB;CAChB,mBAAmB;CACnB,eAAe;AAChB;AACA;CACC,mBAAmB;CACnB,gBAAgB;CAChB,eAAe;CACf,uBAAuB;CACvB,kBAAkB;AACnB;AACA;CACC,yBAAyB;CACzB,kBAAkB;AACnB;AACA;CACC,yBAAyB;CACzB,iBAAiB;CACjB,eAAe;AAChB;AACA;CACC,uBAAuB;AACxB;AACA;CACC,iBAAiB;CACjB,6BAA6B;CAC7B,8BAA8B;CAC9B,uBAAuB;CACvB,aAAa;AACd;AACA;CACC,uBAAuB;CACvB,mBAAmB;CACnB,eAAe;AAChB;AACA;CACC,kBAAkB;AACnB","sourcesContent":["ActionBar {\n\tfont-color: #ffffff;\n\tbackground-color: #51abf1;\n}\nbutton1 {\n\tbackground-color: #51abf1;\n\tfont-color: #ffffff;\n\tfont-typeface: bold;\n\tfont-size: 16px;\n\tborder-bottom-left-radius: 20px;\n\tborder-bottom-right-radius: 20px;\n\tborder-top-right-radius: 20px;\n\tborder-top-left-radius: 20px;\n}\nheader1 {\n\ttext-align-last: center;\n}\nlabel1 {\n\ttext-align: center;\n}\nMYINFO {\n\ttext-align: center;\n}\nrbutton1 {\n\tborder: 1px solid black;\n\tborder: 2px solid #007bff;\n\tfont-color: #f3f7f9;\n\tfont-size: 26px;\n\tpadding: 10px 20px;\n\tbackground-color: #7d9cb5;\n\tborder-bottom-left-radius: 20px;\n\tborder-bottom-right-radius: 20px;\n\tborder-top-right-radius: 20px;\n\tborder-top-left-radius: 20px;\n}\nNoteFormCellValue {\n\tbackground-color: #cfcfe6;\n\tfont-color: black;\n\tfont-style: body;\n\tfont-typeface: bold;\n\tfont-size: 24px;\n}\nForm {\n\tfont-color: black;\n\tfont-style: body;\n\tfont-typeface: bold;\n\tfont-size: 26px;\n}\nFormm {\n\tfont-color: #7575d4;\n\tfont-style: bold;\n\tfont-size: 26px;\n\ttext-align-last: center;\n\ttext-align: center;\n}\nfr {\n\tbackground-color: #d7d7e9;\n\tborder-radius: 50%;\n}\nAdditionalTextStyle {\n\tbackground-color: #d7d7e9;\n\tfont-color: black;\n\tfont-size: 20px;\n}\nf {\n\ttext-align-last: center;\n}\nff {\n\tborder-radius: 75;\n\tborder-bottom-left-radius: 20;\n\tborder-bottom-right-radius: 20;\n\ttext-align-last: center;\n\tfont-size: 8x;\n}\ne {\n\ttext-align-last: center;\n\tfont-color: #7575d4;\n\tfont-size: 11px;\n}\nt {\n\tborder-radius: 20%;\n}\n"],"sourceRoot":""}]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -1858,6 +4434,26 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":true,"_Type
 
 /***/ }),
 
+/***/ "./build.definitions/n44/Pages/AttachCreate.page":
+/*!*******************************************************!*\
+  !*** ./build.definitions/n44/Pages/AttachCreate.page ***!
+  \*******************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Controls":[{"Value":"/n44/Rules/doc_idVal.js","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"doc_id","IsVisible":true,"Separator":true,"Caption":"Doc Id","Enabled":false,"IsEditable":false},{"Value":"/n44/Rules/inviIdValRule.js","_Type":"Control.Type.FormCell.ListPicker","_Name":"invitationId","IsVisible":true,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Invitation Id","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":false,"PickerItems":{"Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table"},"DisplayValue":"{invitationId}","ReturnValue":"{invitationId}"}},{"_Type":"Control.Type.FormCell.Attachment","_Name":"content","IsVisible":true,"Separator":true,"AttachmentActionType":["AddPhoto","TakePhoto","SelectFile"],"AttachmentTitle":"Content","AllowedFileTypes":["jpg","png","gif","pdf","xlsx","xls","docx","doc","mp4","avi","mov","txt"],"AttachmentAddTitle":"Browse"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"mediaType","IsVisible":false,"Separator":true,"Caption":"mediaType","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"fileName","IsVisible":false,"Separator":true,"Caption":"fileName","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"size","IsVisible":false,"Separator":true,"Caption":"size","KeyboardType":"Number","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"url","IsVisible":false,"Separator":true,"Caption":"url","Enabled":true,"IsEditable":false}],"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Attachments_table_Create","Caption":"Upload","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/n44/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/n44/Rules/Attachments_table_CreateEntity.js"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/AwardedQus.page":
+/*!*****************************************************!*\
+  !*** ./build.definitions/n44/Pages/AwardedQus.page ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.Extension","_Name":"SectionExtension0","Visible":true,"EmptySection":{"FooterVisible":false},"Module":"QusEXtn","Control":"QusEXtn","Class":"QusEXtn"},{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":true,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Footer":{"_Name":"SectionFooter0","Visible":true,"UseBottomPadding":false},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Questionnaire_reply_table","QueryOptions":"/n44/Rules/filRule.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{description}","Footnote":"{user_reply}","PreserveIconStackSpacing":false,"AccessoryType":"DetailButton","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","BarcodeScanner":true,"Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Header":{"_Name":"SectionHeader1","AccessoryType":"None","UseTopPadding":true,"Caption":"Files"},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Attachments_table","QueryOptions":"/n44/Rules/filterforattch.js"},"_Name":"SectionObjectTable1","Visible":true,"EmptySection":{"FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{doc_id}","Footnote":"{mediaType}","DisplayDescriptionInMobile":true,"StatusText":"Open           ","PreserveIconStackSpacing":true,"AccessoryType":"None","Tags":[],"AvatarStack":{"Avatars":[{"Image":"/n44/Rules/imageRule.js"}],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Attachments_table/OpenDocument.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Questionnaire_reply_table_List","Caption":"Questionnaire","PrefersLargeCaption":true}
+
+/***/ }),
+
 /***/ "./build.definitions/n44/Pages/Header_table/Header_table_Create.page":
 /*!***************************************************************************!*\
   !*** ./build.definitions/n44/Pages/Header_table/Header_table_Create.page ***!
@@ -1954,7 +4550,67 @@ module.exports = {"Caption":"Update Item_table Detail","DesignTimeTarget":{"Serv
   \************************************************/
 /***/ ((module) => {
 
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":true},"_Type":"Section.Type.Image","_Name":"SectionImage0","Visible":true,"Image":"/n44/Images/peol_logo (1).png","Width":190,"Height":180,"Alignment":"Center","ContentMode":"ScaleAspectFit"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":true,"Separator":true,"Caption":"Phone Number","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Title":"Get Otp","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading","Enabled":true,"OnPress":"/n44/Rules/otpRule.js"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":false,"Separator":false,"Caption":"Enter Otp","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton2","IsVisible":false,"Separator":false,"Title":"ResendOtp","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","Enabled":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton1","IsVisible":true,"Separator":true,"Title":"Login","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading","Enabled":true,"OnPress":"/n44/Rules/loginRule.js"}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Login","Caption":"Quick Bid","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"User Menu","Icon":"sap-icon://customer","Position":"Right","IsIconCircular":false,"Visible":true,"Style":"ActionBar","OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/LoginC.page":
+/*!*************************************************!*\
+  !*** ./build.definitions/n44/Pages/LoginC.page ***!
+  \*************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":true},"_Type":"Section.Type.Image","_Name":"SectionImage0","Visible":true,"Image":"/n44/Images/peol_logo (1).png","Width":190,"Height":180,"Alignment":"Center","ContentMode":"ScaleAspectFit"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Controls":[{"Value":"7259303952","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":true,"Separator":false,"Caption":"Phone Number","PlaceHolder":"Enter The Reg Phone Number","Enabled":true,"IsEditable":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Title":"Get Otp","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","Enabled":true,"OnPress":"/n44/Rules/otpRule.js"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty2","IsVisible":false,"Separator":true,"Caption":"Timer","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":false,"Separator":false,"Caption":"OTP","PlaceHolder":"Enter The Otp","KeyboardType":"Phone","Enabled":true,"IsEditable":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell2"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton1","Title":"LogIn","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","FullWidth":false,"Visible":true,"Enabled":true,"OnPress":"/n44/Rules/loginRule.js"}]}]}],"_Type":"Page","_Name":"Login","Caption":"Quick Bid","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"User Menu","Icon":"sap-icon://customer","Position":"Right","IsIconCircular":false,"Visible":true,"Style":"ActionBar","OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/LoginIM.page":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Pages/LoginIM.page ***!
+  \**************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":true},"_Type":"Section.Type.Image","_Name":"SectionImage0","Visible":true,"Image":"/n44/Images/peol_logo (1).png","Width":190,"Height":180,"Alignment":"Center","ContentMode":"ScaleAspectFit"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Controls":[{"Value":"7259303952","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":true,"Separator":false,"Caption":"Phone Number","PlaceHolder":"Enter The Reg Phone Number","Enabled":true,"IsEditable":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Title":"Get Otp","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading","Enabled":true,"OnPress":"/n44/Rules/otpRule.js"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":false,"Separator":false,"Caption":"Enter OTP","PlaceHolder":"Enter The Otp","KeyboardType":"Phone","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton2","IsVisible":false,"Separator":true,"Title":"ResendOtp","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","Enabled":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell2"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton1","Title":"LogIn","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","FullWidth":false,"Visible":true,"Enabled":true,"OnPress":"/n44/Rules/loginRule.js"}]}]}],"_Type":"Page","_Name":"Login","Caption":"Quick Bid","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"User Menu","Icon":"sap-icon://customer","Position":"Right","IsIconCircular":false,"Visible":true,"Style":"ActionBar","OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/LoginL.page":
+/*!*************************************************!*\
+  !*** ./build.definitions/n44/Pages/LoginL.page ***!
+  \*************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":true},"_Type":"Section.Type.Image","_Name":"SectionImage0","Visible":true,"Image":"/n44/Images/peol_logo (1).png","Width":190,"Height":180,"Alignment":"Center","ContentMode":"ScaleAspectFit"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"Value":"7259303952","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty2","IsVisible":true,"Separator":true,"Caption":"Phone Number","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Title":"Get Otp","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading","Enabled":true,"OnPress":"/n44/Rules/otpRule.js"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty3","IsVisible":false,"Separator":true,"Caption":"Timer","Enabled":true,"IsEditable":false},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":false,"Separator":false,"Caption":"OTP","PlaceHolder":"Enter The Otp","KeyboardType":"Phone","Enabled":true,"IsEditable":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell2"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton1","Title":"LogIn","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","FullWidth":false,"Visible":true,"Enabled":true,"OnPress":"/n44/Rules/loginRule.js"}]}]}],"_Type":"Page","_Name":"Login","Caption":"Quick Bid","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"User Menu","Icon":"sap-icon://customer","Position":"Right","IsIconCircular":false,"Visible":true,"Style":"ActionBar","OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/LoginMy.page":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Pages/LoginMy.page ***!
+  \**************************************************/
+/***/ ((module) => {
+
 module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":true},"_Type":"Section.Type.Image","_Name":"SectionImage0","Visible":true,"Image":"/n44/Images/peol_logo (1).png","Width":190,"Height":180,"Alignment":"Center","ContentMode":"ScaleAspectFit"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Controls":[{"Value":"testcase1peol@gmail.com","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":true,"Separator":false,"Caption":"Email","Enabled":true,"IsEditable":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":true,"Separator":false,"Caption":"Password","PlaceHolder":"abc","Enabled":true,"IsEditable":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell1"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"Styles":{"Button":"button1"},"_Name":"SectionButton0","Title":"Login","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","FullWidth":true,"Visible":true,"Enabled":true,"OnPress":"/n44/Actions/toTabs.action"},{"_Name":"SectionButton1","Title":"Sign In","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","FullWidth":false,"Visible":true,"Enabled":true,"OnPress":"/n44/Actions/login_to_reg.action"}]}]}],"_Type":"Page","_Name":"Login","Caption":"Quick Bid","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"User Menu","Icon":"sap-icon://customer","Position":"Right","IsIconCircular":false,"Visible":true,"Style":"ActionBar","OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/LoginN.page":
+/*!*************************************************!*\
+  !*** ./build.definitions/n44/Pages/LoginN.page ***!
+  \*************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"_Type":"Section.Type.Image","_Name":"SectionImage0","Visible":true,"Image":"/n44/Images/peol_logo (1).png","Width":190,"Height":180,"Alignment":"Center","ContentMode":"ScaleAspectFit"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Controls":[{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FormCellListPicker0","IsVisible":true,"Separator":true,"AllowMultipleSelection":true,"AllowEmptySelection":true,"Caption":"Country code","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select country code","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"PickerItems":["+91","+11","+90"]},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":true,"Separator":false,"Caption":"Phonenumber","PlaceHolder":"Enter Your Mobile Number","KeyboardType":"Default","Enabled":true,"IsEditable":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"Styles":{"Button":"button1"},"_Name":"SectionButton0","Title":"getotp","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading","FullWidth":true,"Visible":true,"Enabled":true,"OnPress":{"Handler":"/n44/Rules/otpRule.js","UserInteraction":{"Enabled":true,"Title":"getotp"}}}]},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":true,"Separator":false,"Caption":"Enterotp","Enabled":true,"IsEditable":true}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell2"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":false},"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable1","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton1","Title":"login","Alignment":"Center","ButtonType":"Primary","Semantic":"Normal","ImagePosition":"Leading","FullWidth":true,"Visible":true,"Enabled":true,"OnPress":"/n44/Rules/loginRule.js"}]}]}],"_Type":"Page","_Name":"Login","Caption":"Quick Bid","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"SignUp","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/LoginR.page":
+/*!*************************************************!*\
+  !*** ./build.definitions/n44/Pages/LoginR.page ***!
+  \*************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":false,"HeaderSeparator":false,"FooterSeparator":false,"ControlSeparator":true},"_Type":"Section.Type.Image","_Name":"SectionImage0","Visible":true,"Image":"/n44/Images/peol_logo (1).png","Width":190,"Height":180,"Alignment":"Center","ContentMode":"ScaleAspectFit"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":true,"Separator":true,"Caption":"Phone Number","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Title":"Get Otp","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading","Enabled":true,"OnPress":"/n44/Rules/otpRule.js"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":false,"Separator":false,"Caption":"Enter Otp","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton2","IsVisible":false,"Separator":false,"Title":"ResendOtp","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","Enabled":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton1","IsVisible":true,"Separator":true,"Title":"Login","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading","Enabled":true,"OnPress":"/n44/Rules/loginRule.js"}],"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Login","Caption":"Quick Bid","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"User Menu","Icon":"sap-icon://customer","Position":"Right","IsIconCircular":false,"Visible":true,"Style":"ActionBar","OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -1964,7 +4620,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \***********************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Name":"SectionedTable0","_Type":"Control.Type.SectionedTable","Sections":[{"Buttons":[{"OnPress":"/n44/Actions/Header_table/NavToHeader_table_List.action","Alignment":"Center","Title":"Header_table","ButtonType":"Text","Semantic":"Tint"},{"OnPress":"/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_List.action","Alignment":"Center","Title":"Supplier_bid_table","ButtonType":"Text","Semantic":"Tint"},{"OnPress":"/n44/Actions/Supplier_table/NavToSupplier_table_List.action","Alignment":"Center","Title":"Supplier_table","ButtonType":"Text","Semantic":"Tint"}],"_Name":"SectionButtonTable0","_Type":"Section.Type.ButtonTable"}]}],"_Name":"Main","_Type":"Page","Caption":"Main","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"User Menu","Icon":"sap-icon://customer","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Buttons":[{"_Name":"SectionButton0","Title":"Header_table","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","FullWidth":false,"Visible":true,"Enabled":true,"OnPress":"/n44/Actions/Header_table/NavToHeader_table_List.action"},{"_Name":"SectionButton1","Title":"Supplier_bid_table","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","FullWidth":false,"Visible":true,"Enabled":true,"OnPress":"/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_List.action"},{"_Name":"SectionButton2","Title":"Supplier_table","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","FullWidth":false,"Visible":true,"Enabled":true,"OnPress":"/n44/Actions/Supplier_table/NavToSupplier_table_List.action"}],"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"}}]}],"_Type":"Page","_Name":"Main","Caption":"Main","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"User Menu","Icon":"sap-icon://customer","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/n44/Actions/Application/UserMenuPopover.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -1984,7 +4640,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \*****************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_bid_table","QueryOptions":""},"Controls":[{"DataSubscriptions":[],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{item_name}","SubstatusText":"{supp_quot_price}","HeadlineText":"{item_name}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":true},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{item_id}","_Name":"KeyValue2","KeyName":"Material ID","Visible":true},{"Value":"{item_name}","_Name":"KeyValue4","KeyName":"Material Name","Visible":true},{"Value":"{title}","_Name":"KeyValue3","KeyName":"title","Visible":false},{"Value":"{supp_quot_quantity}","_Name":"KeyValue6","KeyName":"supp_quot_quantity","Visible":false},{"Value":"{price}","_Name":"KeyValue7","KeyName":"Base Price","Visible":true},{"Value":"{quantity}","_Name":"KeyValue8","KeyName":"Quantity","Visible":true},{"Value":"{status}","_Name":"KeyValue9","KeyName":"Status","Visible":true},{"Value":"{ariba_status}","_Name":"KeyValue10","KeyName":"ariba_status","Visible":false},{"Value":"{supp_quot_price}","_Name":"KeyValue5","KeyName":"Price","Visible":true},{"Value":"{whatsapp_status}","_Name":"KeyValue11","KeyName":"whatsapp_status","Visible":false}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"Supplier_bid_table_Detail","Caption":"Line Item Detail","PrefersLargeCaption":true}
+module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_bid_table","QueryOptions":""},"Controls":[{"DataSubscriptions":[],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{item_name}","SubstatusText":"{supp_quot_price}","HeadlineText":"{item_name}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":true},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{item_id}","_Name":"KeyValue2","KeyName":"Material ID","Visible":true},{"Value":"{item_name}","_Name":"KeyValue4","KeyName":"Material Name","Visible":true},{"Value":"{title}","_Name":"KeyValue3","KeyName":"title","Visible":false},{"Value":"{supp_quot_quantity}","_Name":"KeyValue6","KeyName":"supp_quot_quantity","Visible":false},{"Value":"{price}","_Name":"KeyValue7","KeyName":"Base Price","Visible":true},{"Value":"{quantity}","_Name":"KeyValue8","KeyName":"Quantity","Visible":true},{"Value":"{status}","_Name":"KeyValue9","KeyName":"Status","Visible":true},{"Value":"{ariba_status}","_Name":"KeyValue10","KeyName":"ariba_status","Visible":false},{"Value":"{supp_quot_price}","_Name":"KeyValue5","KeyName":"Price","Visible":true},{"Value":"{award_price}","_Name":"KeyValue12","KeyName":"Awarded Price","Visible":false},{"Value":"{whatsapp_status}","_Name":"KeyValue11","KeyName":"whatsapp_status","Visible":false}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"Supplier_bid_table_Detail","Caption":"Line Item Detail","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -2014,7 +4670,7 @@ module.exports = {"Caption":"Supplier_bid_table Detail","DesignTimeTarget":{"Ser
   \***************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_bid_table","QueryOptions":""},"Controls":[{"DataSubscriptions":[],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{item_name}","SubstatusText":"{supp_quot_price}","HeadlineText":"{item_name}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":true},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{item_id}","_Name":"KeyValue2","KeyName":"Material ID","Visible":true},{"Value":"{item_name}","_Name":"KeyValue4","KeyName":"Material Name","Visible":true},{"Value":"{title}","_Name":"KeyValue3","KeyName":"title","Visible":false},{"Value":"{supp_quot_quantity}","_Name":"KeyValue6","KeyName":"supp_quot_quantity","Visible":false},{"Value":"{price}","_Name":"KeyValue7","KeyName":"Base Price","Visible":true},{"Value":"{quantity}","_Name":"KeyValue8","KeyName":"Quantity","Visible":true},{"Value":"{leadBid}","_Name":"KeyValue13","KeyName":"Lead Bid","Visible":true},{"Value":"{eventTypeName}","_Name":"KeyValue14","KeyName":"Event Type","Visible":true},{"Value":"{status}","_Name":"KeyValue9","KeyName":"Status","Visible":true},{"Value":"{ariba_status}","_Name":"KeyValue10","KeyName":"ariba_status","Visible":false},{"Value":"{supp_quot_price}","_Name":"KeyValue5","KeyName":"Price","Visible":true},{"Value":"{whatsapp_status}","_Name":"KeyValue11","KeyName":"whatsapp_status","Visible":false}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"Supplier_bid_table_Detail","Caption":"Line Item Detail","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"OnPress":"/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Edit.action"}],"_Name":"ActionBar1"}}
+module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_bid_table","QueryOptions":""},"Controls":[{"DataSubscriptions":[],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{item_name}","SubstatusText":"{supp_quot_price}","HeadlineText":"{item_name}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":true},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{item_id}","_Name":"KeyValue2","KeyName":"Material ID","Visible":true},{"Value":"{item_name}","_Name":"KeyValue4","KeyName":"Material Name","Visible":true},{"Value":"{title}","_Name":"KeyValue3","KeyName":"title","Visible":false},{"Value":"{supp_quot_quantity}","_Name":"KeyValue6","KeyName":"supp_quot_quantity","Visible":false},{"Value":"{price}","_Name":"KeyValue7","KeyName":"Base Price","Visible":true},{"Value":"{quantity}","_Name":"KeyValue8","KeyName":"Quantity","Visible":true},{"Value":"{leadBid}","_Name":"KeyValue13","KeyName":"Lead Bid","Visible":"/n44/Rules/leadVsisD.js"},{"Value":"{eventTypeName}","_Name":"KeyValue14","KeyName":"Event Type","Visible":true},{"Value":"{status}","_Name":"KeyValue9","KeyName":"Status","Visible":true},{"Value":"{ariba_status}","_Name":"KeyValue10","KeyName":"ariba_status","Visible":false},{"Value":"{supp_quot_price}","_Name":"KeyValue5","KeyName":"Price","Visible":true},{"Value":"{whatsapp_status}","_Name":"KeyValue11","KeyName":"whatsapp_status","Visible":false}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"Supplier_bid_table_Detail","Caption":"Line Item Detail","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"OnPress":"/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Edit.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -2034,7 +4690,7 @@ module.exports = {"Caption":"Update Supplier_bid_table Detail","DesignTimeTarget
   \*************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_bid_table","QueryOptions":""},"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Controls":[{"Value":"{doc_id}","_Type":"Control.Type.FormCell.ListPicker","_Name":"doc_id","IsVisible":true,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Doc Id","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":false,"PickerItems":{"DisplayValue":"{doc_id}","ReturnValue":"{doc_id}","Target":{"EntitySet":"Header_table","Service":"/n44/Services/capurl.service"}}},{"Value":"{invitationId}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"invitationId","IsVisible":true,"Separator":true,"Caption":"Supplier Mail Id","Enabled":false,"IsEditable":false},{"Value":"{item_id}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"item_id","IsVisible":true,"Separator":true,"Caption":"Material ID","Enabled":false,"IsEditable":false},{"Value":"{title}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"title","IsVisible":true,"Separator":true,"Caption":"Description","Enabled":false,"IsEditable":false},{"Value":"{item_name}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"item_name","IsVisible":true,"Separator":true,"Caption":"Material Name","Enabled":false,"IsEditable":false},{"Value":"{supp_quot_quantity}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"supp_quot_quantity","IsVisible":false,"Separator":true,"Caption":"supp_quot_quantity","KeyboardType":"Number","Enabled":true,"IsEditable":true},{"Value":"{quantity}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"quantity","IsVisible":true,"Separator":true,"Caption":"Quantity","Enabled":true,"IsEditable":false},{"Value":"{status}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"status","IsVisible":true,"Separator":true,"Caption":"Status","Enabled":true,"IsEditable":false},{"Value":"{eventTypeName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty2","IsVisible":true,"Separator":true,"Caption":"Event Type","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":false},{"Value":"{leadBid}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":true,"Separator":true,"Caption":"Lead Bid","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":false},{"Value":"{price}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"price","IsVisible":true,"Separator":true,"Caption":"Base Price","KeyboardType":"Default","Enabled":true,"IsEditable":false},{"Value":"{supp_quot_price}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"supp_quot_price","IsVisible":true,"Separator":true,"Caption":"Price*","KeyboardType":"Number","Enabled":true,"IsEditable":true},{"Value":"{ariba_status}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ariba_status","IsVisible":false,"Separator":true,"Caption":"ariba_status","Enabled":true,"IsEditable":true},{"Value":"{whatsapp_status}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":false,"Separator":true,"Caption":"whatsapp_status","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true}],"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_bid_table_Edit","Caption":"Bid Update","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/n44/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/n44/Actions/Supplier_bid_table/Supplier_bid_table_UpdateEntity.action"}],"_Name":"ActionBar1"}}
+module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_bid_table","QueryOptions":""},"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Controls":[{"Value":"{doc_id}","_Type":"Control.Type.FormCell.ListPicker","_Name":"doc_id","IsVisible":true,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Doc Id","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":false,"PickerItems":{"DisplayValue":"{doc_id}","ReturnValue":"{doc_id}","Target":{"EntitySet":"Header_table","Service":"/n44/Services/capurl.service"}}},{"Value":"{invitationId}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"invitationId","IsVisible":true,"Separator":true,"Caption":"Supplier Mail Id","Enabled":false,"IsEditable":false},{"Value":"{item_id}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"item_id","IsVisible":true,"Separator":true,"Caption":"Material ID","Enabled":false,"IsEditable":false},{"Value":"{title}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"title","IsVisible":true,"Separator":true,"Caption":"Description","Enabled":false,"IsEditable":false},{"Value":"{item_name}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"item_name","IsVisible":true,"Separator":true,"Caption":"Material Name","Enabled":false,"IsEditable":false},{"Value":"{supp_quot_quantity}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"supp_quot_quantity","IsVisible":false,"Separator":true,"Caption":"supp_quot_quantity","KeyboardType":"Number","Enabled":true,"IsEditable":true},{"Value":"{quantity}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"quantity","IsVisible":true,"Separator":true,"Caption":"Quantity","Enabled":true,"IsEditable":true},{"Value":"{status}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"status","IsVisible":true,"Separator":true,"Caption":"Status","Enabled":true,"IsEditable":false},{"Value":"{eventTypeName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty2","IsVisible":true,"Separator":true,"Caption":"Event Type","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":false},{"Value":"{leadBid}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty1","IsVisible":"/n44/Rules/qusBtnVisiRule.js","Separator":true,"Caption":"Lead Bid","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":false},{"Value":"{price}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"price","IsVisible":true,"Separator":true,"Caption":"Base Price","KeyboardType":"Default","Enabled":true,"IsEditable":false},{"Value":"{supp_quot_price}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"supp_quot_price","IsVisible":true,"Separator":true,"Caption":"Price*","KeyboardType":"Number","Enabled":true,"IsEditable":true},{"Value":"{ariba_status}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ariba_status","IsVisible":false,"Separator":true,"Caption":"ariba_status","Enabled":true,"IsEditable":true},{"Value":"{whatsapp_status}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":false,"Separator":true,"Caption":"whatsapp_status","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true}],"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_bid_table_Edit","Caption":"Bid Update","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/n44/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/n44/Actions/Supplier_bid_table/Supplier_bid_table_UpdateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -2064,7 +4720,7 @@ module.exports = {"Caption":"Supplier_bid_table","ActionBar":{"Items":[{"OnPress
   \***********************************************************************/
 /***/ ((module) => {
 
-module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":""},"Controls":[{"DataSubscriptions":["Supplier_bid_table"],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"HeadlineText":"{doc_id}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":false},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{smvendor_id}","_Name":"KeyValue2","KeyName":"Supplier Id","Visible":false},{"Value":"{phone_main}","_Name":"KeyValue3","KeyName":"Supplier Contact","Visible":true}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Approved Bids Line Item"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"{@odata.readLink}/supplier_to_sbid","QueryOptions":"/n44/Rules/ApprovedRule.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No Record Found","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{item_name}","Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{supp_quot_price}","SubstatusText":"{supp_quot_quantity}","PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/toaprvdetail.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_Detail","Caption":"Approved Bids Detail","PrefersLargeCaption":true}
+module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":""},"Controls":[{"DataSubscriptions":["Supplier_bid_table"],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"HeadlineText":"{doc_id}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":false},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{smvendor_id}","_Name":"KeyValue2","KeyName":"Supplier Id","Visible":false},{"Value":"{phone_main}","_Name":"KeyValue3","KeyName":"Supplier Contact","Visible":true}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Header":{"_Name":"SectionHeader1","AccessoryType":"None","UseTopPadding":true,"Caption":"Caption","Items":[{"_Name":"SectionHeaderItemTypeButton0","Title":"Question Section","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","Visible":"/n44/Rules/qusBtnVisiRule.js","Enabled":true,"Position":"Right","_Type":"SectionHeaderItem.Type.Button","OnPress":"/n44/Actions/toApprovedQus.action"}]},"Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Closed Bids Line Item"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"{@odata.readLink}/supplier_to_sbid","QueryOptions":"/n44/Rules/ApprovedRule.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No Record Found","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{item_name}","Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{supp_quot_price}","SubstatusText":"{supp_quot_quantity}","PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/toaprvdetail.action","OnAccessoryButtonPress":"/n44/Actions/toaprvdetail.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_Detail","Caption":"Closed Bids Detail","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -2074,7 +4730,27 @@ module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","
   \***********************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":"$expand=supplier_header_rel,supplier_to_sbid&$filter=invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and supplier_header_rel/status eq 'Completed'"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{doc_id}","Description":"{title}","DisplayDescriptionInMobile":true,"PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/toApproveDetail.action","Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","BarcodeScanner":false,"Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_List","Caption":"Approved Bids","PrefersLargeCaption":true}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":"/n44/Rules/closedFilter.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{doc_id}","Description":"{title}","DisplayDescriptionInMobile":true,"PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/toApproveDetail.action","OnAccessoryButtonPress":"/n44/Actions/toApproveDetail.action","Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_List","Caption":"Closed Bids","PrefersLargeCaption":true}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/Supplier_table/Awarded Detail.page":
+/*!************************************************************************!*\
+  !*** ./build.definitions/n44/Pages/Supplier_table/Awarded Detail.page ***!
+  \************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":""},"Controls":[{"DataSubscriptions":["Supplier_bid_table"],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"HeadlineText":"{doc_id}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":false},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{smvendor_id}","_Name":"KeyValue2","KeyName":"Supplier Id","Visible":false},{"Value":"{phone_main}","_Name":"KeyValue3","KeyName":"Supplier Contact","Visible":true}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Header":{"_Name":"SectionHeader1","AccessoryType":"None","UseTopPadding":true,"Caption":"Caption","Items":[{"_Name":"SectionHeaderItemTypeButton0","Title":"Question Section","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","Visible":"/n44/Rules/qusBtnVisiRule.js","Enabled":true,"Position":"Right","_Type":"SectionHeaderItem.Type.Button","OnPress":"/n44/Actions/toAwardedQus.action"}]},"Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Awarded Bids Line Item"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"{@odata.readLink}/supplier_to_sbid","QueryOptions":"/n44/Rules/awardedFilRule.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No Record Found","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{item_name}","Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{supp_quot_price}","SubstatusText":"{supp_quot_quantity}","PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/toaprvdetail.action","OnAccessoryButtonPress":"/n44/Actions/toaprvdetail.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_Detail","Caption":"Awarded Bids Detail","PrefersLargeCaption":true}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/Supplier_table/Awarded List.page":
+/*!**********************************************************************!*\
+  !*** ./build.definitions/n44/Pages/Supplier_table/Awarded List.page ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":"/n44/Rules/filtrAwaded.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{doc_id}","Description":"{title}","DisplayDescriptionInMobile":true,"PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/toAwardedDetail.action","OnAccessoryButtonPress":"/n44/Actions/toAwardedDetail.action","Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_List","Caption":"Awarded Bids","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -2114,7 +4790,7 @@ module.exports = {"Caption":"Supplier_table Detail","DesignTimeTarget":{"Service
   \*******************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":""},"Controls":[{"DataSubscriptions":["Supplier_bid_table"],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"HeadlineText":"{doc_id}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":false},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{smvendor_id}","_Name":"KeyValue2","KeyName":"Supplier Id","Visible":false},{"Value":"{phone_main}","_Name":"KeyValue3","KeyName":"Supplier Contact","Visible":true}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Quotes Bids Line Item"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"{@odata.readLink}/supplier_to_sbid","QueryOptions":"/n44/Rules/filterrule.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No Open Line Item","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{item_name}","Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{supp_quot_price}","SubstatusText":"{supp_quot_quantity}","PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Detail.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_Detail","Caption":"Quotes Bids Detail","PrefersLargeCaption":true}
+module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":""},"Controls":[{"DataSubscriptions":["Supplier_bid_table"],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"HeadlineText":"{doc_id}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{doc_id}","_Name":"KeyValue0","KeyName":"Doc Id","Visible":false},{"Value":"{invitationId}","_Name":"KeyValue1","KeyName":"Supplier Mail Id","Visible":true},{"Value":"{smvendor_id}","_Name":"KeyValue2","KeyName":"Supplier Id","Visible":false},{"Value":"{phone_main}","_Name":"KeyValue3","KeyName":"Supplier Contact","Visible":true}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Header":{"_Name":"SectionHeader1","AccessoryType":"None","UseTopPadding":true,"OnPress":"/n44/Actions/toQus.action","Caption":"Qusestion Section","Items":[{"_Name":"SectionHeaderItemTypeButton0","Title":"Question Section","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","Visible":"/n44/Rules/qusBtnVisiRule.js","Enabled":true,"Position":"Right","_Type":"SectionHeaderItem.Type.Button","OnPress":"/n44/Actions/toQus.action"}]},"Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Quotes Bids Line Item"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"{@odata.readLink}/supplier_to_sbid","QueryOptions":"/n44/Rules/filterrule.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No Open Line Item","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{item_name}","Subhead":"{doc_id}","Description":"{invitationId}","StatusText":"{supp_quot_price}","SubstatusText":"{supp_quot_quantity}","PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Detail.action","OnAccessoryButtonPress":"/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Detail.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_Detail","Caption":"Quotes Bids Detail","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -2134,7 +4810,7 @@ module.exports = {"Caption":"Update Supplier_table Detail","DesignTimeTarget":{"
   \**********************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"_Type":"Section.Type.ObjectTable","Target":{"EntitySet":"Supplier_table","Service":"/n44/Services/capurl.service","QueryOptions":""},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"ObjectCell":{"Title":"{title}","Subhead":"{doc_id}","Footnote":"{smvendor_id}","Description":"{invitationId}","StatusText":"{phone_main}","SubstatusText":"{status}","PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"Avatars":[{"Image":""}],"ImageIsCircular":false,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action","Selected":false,"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]}},"Search":{"Enabled":true,"Placeholder":"Item Search","BarcodeScanner":true,"Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."},"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"Supplier_table_List","Caption":"Supplier_table","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Add","Position":"Right","IsIconCircular":false,"OnPress":"/n44/Actions/Supplier_table/NavToSupplier_table_Create.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"EntitySet":"Supplier_table","Service":"/n44/Services/capurl.service","QueryOptions":""},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{title}","Subhead":"{doc_id}","Footnote":"{smvendor_id}","Description":"{invitationId}","StatusText":"{phone_main}","SubstatusText":"{status}","PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"Avatars":[{"Image":""}],"ImageIsCircular":false,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action","OnAccessoryButtonPress":"/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action","Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","BarcodeScanner":true,"Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_List","Caption":"Supplier_table","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Add","Position":"Right","IsIconCircular":false,"OnPress":"/n44/Actions/Supplier_table/NavToSupplier_table_Create.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -2144,7 +4820,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \*****************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":"$expand=supplier_header_rel,supplier_to_sbid&$filter=invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and supplier_header_rel/status eq 'Open'"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{doc_id}","Description":"{title}","DisplayDescriptionInMobile":true,"PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action","Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","BarcodeScanner":false,"Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_List","Caption":"Quotes Bids","PrefersLargeCaption":true}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Supplier_table","QueryOptions":"$expand=supplier_header_rel,supplier_to_sbid&$filter=phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and supplier_header_rel/status eq 'Open'"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{doc_id}","Description":"{title}","DisplayDescriptionInMobile":true,"PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","AccessoryButtonIcon":"sap-icon://navigation-right-arrow","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action","OnAccessoryButtonPress":"/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action","Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Supplier_table_List","Caption":"Quotes Bids","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -2154,7 +4830,47 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \*************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.Tabs","_Name":"Tabs0","Items":[{"_Type":"Control.Type.TabItem","Caption":"/n44/Rules/countRule.js","PageToOpen":"/n44/Pages/Supplier_table/Supplier_table_List.page","_Name":"TabItem0"},{"_Type":"Control.Type.TabItem","Caption":"/n44/Rules/count.js","PageToOpen":"/n44/Pages/Supplier_table/Approved_List.page","_Name":"TabItem1"}],"Position":"Top","TabStripType":"Normal","SwipeEnabled":true}],"_Type":"Page","_Name":"TabsForBidsSummary","Caption":"Bids Summary"}
+module.exports = {"Controls":[{"_Type":"Control.Type.Tabs","_Name":"Awarded Bids","Items":[{"_Type":"Control.Type.TabItem","Caption":"/n44/Rules/countRule.js","PageToOpen":"/n44/Pages/Supplier_table/Supplier_table_List.page","_Name":"TabItem0"},{"_Type":"Control.Type.TabItem","Caption":"/n44/Rules/count.js","PageToOpen":"/n44/Pages/Supplier_table/Approved_List.page","_Name":"TabItem1"},{"_Type":"Control.Type.TabItem","Caption":"/n44/Rules/awardedCountRule.js","PageToOpen":"/n44/Pages/Supplier_table/Awarded List.page","_Name":"TabItem2"}],"Position":"Top","TabStripType":"Normal","SwipeEnabled":true}],"_Type":"Page","_Name":"TabsForBidsSummary","Caption":"Bids Summary"}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/approvedQus.page":
+/*!******************************************************!*\
+  !*** ./build.definitions/n44/Pages/approvedQus.page ***!
+  \******************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"_Type":"Section.Type.Extension","_Name":"SectionExtension0","Visible":true,"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Module":"questionnaireAprv","Control":"questionnaireAprv","Class":"questionnaireAprv"},{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":true,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Footer":{"_Name":"SectionFooter0","Visible":true,"UseBottomPadding":false},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Questionnaire_reply_table","QueryOptions":"/n44/Rules/filRule.js"},"_Name":"SectionObjectTable0","Visible":false,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{description}","Footnote":"{user_reply}","PreserveIconStackSpacing":false,"AccessoryType":"DetailButton","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","BarcodeScanner":true,"Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Header":{"_Name":"SectionHeader1","AccessoryType":"None","UseTopPadding":true,"Caption":"Files"},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Attachments_table","QueryOptions":"/n44/Rules/filterforattch.js"},"_Name":"SectionObjectTable1","Visible":true,"EmptySection":{"FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{doc_id}","Footnote":"{mediaType}","DisplayDescriptionInMobile":true,"StatusText":"Open           ","PreserveIconStackSpacing":true,"AccessoryType":"None","Tags":[],"AvatarStack":{"Avatars":[{"Image":"/n44/Rules/imageRule.js"}],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Attachments_table/OpenDocument.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Questionnaire_reply_table_List","Caption":"Questionnaire","PrefersLargeCaption":true}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/qus.page":
+/*!**********************************************!*\
+  !*** ./build.definitions/n44/Pages/qus.page ***!
+  \**********************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.Extension","_Name":"SectionExtension1","Visible":true,"EmptySection":{"FooterVisible":false},"Module":"QuestionnaireClass","Control":"QuestionnaireClass","Class":"QuestionnaireClass"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.Extension","_Name":"SectionExtension0","Visible":false,"EmptySection":{"FooterVisible":false},"Module":"QusEXtn","Control":"QusEXtn","Class":"QusEXtn"},{"Header":{"_Name":"SectionHeader0","AccessoryType":"None","UseTopPadding":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":false,"ControlSeparator":false},"Footer":{"_Name":"SectionFooter0","Visible":true,"UseBottomPadding":false},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Questionnaire_reply_table","QueryOptions":"/n44/Rules/filforqus.js"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No record found!","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{description}","DisplayDescriptionInMobile":true,"PreserveIconStackSpacing":false,"AccessoryType":"DetailButton","AccessoryButtonIcon":"sap-icon://edit","AccessoryButtonText":"Attempt","Tags":[],"AvatarStack":{"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnAccessoryButtonPress":"/n44/Rules/attepmtRule.js","Selected":false},"Search":{"Enabled":true,"Placeholder":"Item Search","BarcodeScanner":true,"Delay":500,"MinimumCharacterThreshold":3},"DataPaging":{"ShowLoadingIndicator":true,"LoadingIndicatorText":"Loading more items, please wait..."},"HighlightSelectedItem":false},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":false,"FooterSeparator":true,"ControlSeparator":true},"Header":{"_Name":"SectionHeader1","AccessoryType":"None","UseTopPadding":false,"Caption":"Files"},"_Type":"Section.Type.ObjectTable","Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Attachments_table","QueryOptions":"/n44/Rules/filterforattch.js"},"_Name":"SectionObjectTable1","Visible":true,"EmptySection":{"FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[]},"Title":"{doc_id}","Footnote":"{mediaType}","DisplayDescriptionInMobile":true,"StatusText":"Open           ","PreserveIconStackSpacing":true,"AccessoryType":"None","AccessoryButtonIcon":"sap-icon://delete","AccessoryButtonText":"Delete","ProgressIndicator":"InProgress","Tags":[],"AvatarStack":{"Avatars":[{"Image":"/n44/Rules/imageRule.js"}],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"ImageIsCircular":true},"OnPress":"/n44/Actions/Attachments_table/OpenDocument.action","OnAccessoryButtonPress":"/n44/Actions/attachDelete.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}],"LoadingIndicator":{"Enabled":true,"Text":"Loading, please wait..."}}],"_Type":"Page","_Name":"Questionnaire_reply_table_List","Caption":"Questionnaire","PrefersLargeCaption":true}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/qusAns.page":
+/*!*************************************************!*\
+  !*** ./build.definitions/n44/Pages/qusAns.page ***!
+  \*************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"qusAns","_Name":"qusAns","Controls":[{"Sections":[{"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0","Visible":true,"Controls":[{"Caption":"doc_id","_Name":"doc_id","Value":"{doc_id}","_Type":"Control.Type.FormCell.SimpleProperty","IsEditable":false},{"Caption":"questionnaire_id","AllowMultipleSelection":false,"AllowEmptySelection":true,"IsPickerDismissedOnSelection":true,"IsSelectedSectionEnabled":true,"PickerItems":{"DisplayValue":"{questionnaire_id}","ReturnValue":"{questionnaire_id}","Target":{"EntitySet":"Questionnaire_table","Service":"/quss/Services/capurl.service"}},"Value":"{questionnaire_id}","_Name":"questionnaire_id","_Type":"Control.Type.FormCell.ListPicker","IsEditable":false},{"Caption":"invitationId","AllowMultipleSelection":false,"AllowEmptySelection":true,"IsPickerDismissedOnSelection":true,"IsSelectedSectionEnabled":true,"PickerItems":{"DisplayValue":"{invitationId}","ReturnValue":"{invitationId}","Target":{"EntitySet":"Supplier_table","Service":"/quss/Services/capurl.service"}},"Value":"{invitationId}","_Name":"invitationId","_Type":"Control.Type.FormCell.ListPicker","IsEditable":false},{"Caption":"user_reply","_Name":"user_reply","Value":"{user_reply}","_Type":"Control.Type.FormCell.SimpleProperty"},{"Caption":"description","_Name":"description","Value":"{description}","_Type":"Control.Type.FormCell.SimpleProperty"},{"Caption":"type","_Name":"type","Value":"{type}","_Type":"Control.Type.FormCell.SimpleProperty"}]}],"_Name":"SectionedTable0","_Type":"Control.Type.SectionedTable"}],"PrefersLargeCaption":true,"Caption":"Update Questionnaire_reply_table Detail","DesignTimeTarget":{"Service":"/quss/Services/capurl.service","EntitySet":"Questionnaire_reply_table","QueryOptions":""},"ActionBar":{"Items":[{"Position":"Left","SystemItem":"Cancel","OnPress":"/quss/Actions/CloseModalPage_Cancel.action"},{"Position":"Right","SystemItem":"Save","OnPress":"/quss/Actions/Questionnaire_reply_table/Questionnaire_reply_table_UpdateEntity.action"}]}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Pages/qusEdit.page":
+/*!**************************************************!*\
+  !*** ./build.definitions/n44/Pages/qusEdit.page ***!
+  \**************************************************/
+/***/ ((module) => {
+
+module.exports = {"DesignTimeTarget":{"Service":"/n44/Services/capurl.service","EntitySet":"Questionnaire_reply_table","QueryOptions":"$expand=quest_reply_dropdown_rel"},"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Controls":[{"Value":"{doc_id}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"doc_id","IsVisible":false,"Separator":true,"Caption":"Doc Id","Enabled":true,"IsEditable":false},{"Value":"{questionnaire_id}","_Type":"Control.Type.FormCell.ListPicker","_Name":"questionnaire_id","IsVisible":false,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Questionnaire Id","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":false,"PickerItems":{"DisplayValue":"{questionnaire_id}","ReturnValue":"{questionnaire_id}","Target":{"EntitySet":"Questionnaire_table","Service":"/n44/Services/capurl.service"}}},{"Value":"{invitationId}","_Type":"Control.Type.FormCell.ListPicker","_Name":"invitationId","IsVisible":false,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Invitation Id","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":false,"PickerItems":{"DisplayValue":"{invitationId}","ReturnValue":"{invitationId}","Target":{"EntitySet":"Supplier_table","Service":"/n44/Services/capurl.service"}}},{"Value":"{description}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"description","IsVisible":true,"Separator":true,"Caption":"Question","Enabled":true,"IsEditable":false},{"Value":"{user_reply}","_Type":"Control.Type.FormCell.Note","_Name":"user_reply3","IsVisible":"/n44/Rules/visiRule.js","Separator":true,"Enabled":true,"IsEditable":true},{"Value":"{user_reply}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"user_reply","IsVisible":false,"Separator":true,"Caption":"Answer","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"user_reply2","IsVisible":"/n44/Rules/visibleRule.js","Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Choose Single","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"PickerItems":["Yes","No"]},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"userReply4","IsVisible":"/n44/Rules/visiblePaymentRule.js","Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Choose Single","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":true,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"PickerItems":{"Target":{"Service":"/n44/Services/capurl.service","EntitySet":"{@odata.readLink}/quest_reply_dropdown_rel","QueryOptions":"$filter=questionnaire_id eq '{questionnaire_id}'"},"DisplayValue":"{dropdown_value}","ReturnValue":"{dropdown_value}"}},{"Value":"{type}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"type","IsVisible":false,"Separator":true,"Caption":"type","Enabled":true,"IsEditable":false},{"Value":"{user_reply}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FormCellSimpleProperty0","IsVisible":"/n44/Rules/numVisibleRule.js","Separator":true,"Caption":"Answer","KeyboardType":"Number","Enabled":true,"IsEditable":true}],"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Questionnaire_reply_table_Edit","Caption":"Qus & Ans","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/n44/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/n44/Actions/qusUpdate.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -2164,7 +4880,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.Tabs","_Name":"Tabs0","Item
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = {"MainPage":"/n44/Pages/Login.page","OnLaunch":["/n44/Actions/Service/InitializeOnline.action"],"OnWillUpdate":"/n44/Rules/Application/OnWillUpdate.js","OnDidUpdate":"/n44/Actions/notification.action","Styles":"/n44/Styles/Styles.less","Version":"/n44/Globals/Application/AppDefinition_Version.global","Localization":"/n44/i18n/i18n.properties","_SchemaVersion":"23.12","_Name":"n44","StyleSheets":{"Styles":{"css":"/n44/Styles/Styles.css","ios":"/n44/Styles/Styles.nss","android":"/n44/Styles/Styles.json"}}}
+module.exports = {"MainPage":"/n44/Pages/Login.page","OnLaunch":["/n44/Actions/Service/InitializeOnline.action"],"OnWillUpdate":"/n44/Rules/Application/OnWillUpdate.js","OnDidUpdate":"/n44/Actions/notification.action","Styles":"/n44/Styles/Styles.css","Version":"/n44/Globals/Application/AppDefinition_Version.global","Localization":"/n44/i18n/i18n.properties","_SchemaVersion":"23.12","_Name":"n44","StyleSheets":{"Styles":{"css":"/n44/Styles/Styles.light.css","ios":"/n44/Styles/Styles.light.nss","android":"/n44/Styles/Styles.light.json"}},"SDKStyles":{"ios":"/n44/Styles/Styles.light.nss","android":"/n44/Styles/Styles.light.json"}}
 
 /***/ }),
 
@@ -2288,6 +5004,16 @@ module.exports = {"PopoverItems":[{"Enabled":true,"Icon":"sap-icon://headset","O
 
 /***/ }),
 
+/***/ "./build.definitions/n44/Actions/Attachments_table/OpenDocument.action":
+/*!*****************************************************************************!*\
+  !*** ./build.definitions/n44/Actions/Attachments_table/OpenDocument.action ***!
+  \*****************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.OpenDocument","ActionResult":{"_Name":"OpenDocument"},"Path":"/n44/Services/capurl.service/{@odata.readLink}/content","MimeType":"/n44/Rules/openDocRule.js"}
+
+/***/ }),
+
 /***/ "./build.definitions/n44/Actions/CloseModalPage_Cancel.action":
 /*!********************************************************************!*\
   !*** ./build.definitions/n44/Actions/CloseModalPage_Cancel.action ***!
@@ -2324,7 +5050,7 @@ module.exports = {"_Type":"Action.Type.ClosePage"}
   \*************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Message":"Create entity failure - {#ActionResults:create/error}","Duration":7,"Animated":true,"_Type":"Action.Type.BannerMessage"}
+module.exports = {"_Type":"Action.Type.BannerMessage","Message":"/n44/Rules/fileUpdateError.js","Duration":7,"Animated":true}
 
 /***/ }),
 
@@ -2364,7 +5090,7 @@ module.exports = {"Message":"Delete entity failure - {#ActionResults:delete/erro
   \*************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Animated":true,"Duration":2,"Message":"Entity deleted","Icon":"","IsIconHidden":false,"NumberOfLines":2,"OnSuccess":"/n44/Actions/CloseModalPage_Complete.action","_Type":"Action.Type.ToastMessage"}
+module.exports = {"_Type":"Action.Type.ToastMessage","OnSuccess":"/n44/Actions/CloseModalPage_Complete.action","Message":"Deleted Successfully","NumberOfLines":2,"Duration":2,"IsIconHidden":false,"Animated":true}
 
 /***/ }),
 
@@ -2844,7 +5570,67 @@ module.exports = {"_Type":"Action.Type.BannerMessage","Message":"/n44/Rules/erro
   \*************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ToastMessage","OnSuccess":"/n44/Actions/CloseModalPage_Complete.action","Message":"Data updated Successfully","NumberOfLines":2,"Duration":2,"IsIconHidden":false,"Animated":true}
+module.exports = {"_Type":"Action.Type.ToastMessage","OnSuccess":"/n44/Actions/CloseModalPage_Complete.action","Message":"Data Updated Successfully","NumberOfLines":2,"Duration":2,"IsIconHidden":false,"Animated":true}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/UploadStreamFailureMessage.action":
+/*!*************************************************************************!*\
+  !*** ./build.definitions/n44/Actions/UploadStreamFailureMessage.action ***!
+  \*************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.BannerMessage","Message":"Upload stream failure - {#ActionResults:uploadstream/error}","Duration":7,"Animated":true}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/UploadStreamSuccessMessage.action":
+/*!*************************************************************************!*\
+  !*** ./build.definitions/n44/Actions/UploadStreamSuccessMessage.action ***!
+  \*************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ToastMessage","OnSuccess":"/n44/Actions/CloseModalPage_Complete.action","Message":"File Uploaded Successfully","NumberOfLines":2,"Duration":2,"IsIconHidden":false,"Animated":true}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/attachDelete.action":
+/*!***********************************************************!*\
+  !*** ./build.definitions/n44/Actions/attachDelete.action ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+module.exports = {"Target":{"EntitySet":"Attachments_table","Service":"/n44/Services/capurl.service","ReadLink":"{@odata.readLink}"},"OnSuccess":"/n44/Actions/DeleteEntitySuccessMessage.action","OnFailure":"/n44/Actions/DeleteEntityFailureMessage.action","ActionResult":{"_Name":"delete"},"_Type":"Action.Type.ODataService.DeleteEntity"}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/attachment_create.action":
+/*!****************************************************************!*\
+  !*** ./build.definitions/n44/Actions/attachment_create.action ***!
+  \****************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"attachment_create"},"PageToOpen":"/n44/Pages/AttachCreate.page","ModalPage":true,"ModalPageFullscreen":false}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/attachment_table_create_entity.action":
+/*!*****************************************************************************!*\
+  !*** ./build.definitions/n44/Actions/attachment_table_create_entity.action ***!
+  \*****************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult":{"_Name":"create"},"OnFailure":"/n44/Actions/CreateEntityFailureMessage.action","OnSuccess":"/n44/Actions/CreateEntitySuccessMessage.action","Target":{"EntitySet":"Attachments_table","Service":"/n44/Services/capurl.service"},"Properties":{"doc_id":"#Control:doc_id/#Value","invitationId":"#Control:invitationId/#SelectedValue","mediaType":"#Control:mediaType/#Value","fileName":"#Control:fileName/#Value","size":"#Control:size/#Value","url":"#Control:url/#Value"}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/attachment_table_upload_stream.action":
+/*!*****************************************************************************!*\
+  !*** ./build.definitions/n44/Actions/attachment_table_upload_stream.action ***!
+  \*****************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.UploadStream","ActionResult":{"_Name":"uploadstream"},"OnFailure":"/n44/Actions/UploadStreamFailureMessage.action","OnSuccess":"/n44/Actions/UploadStreamSuccessMessage.action","ShowActivityIndicator":true,"Target":{"Service":"/n44/Services/capurl.service","EntitySet":"Attachments_table","ReadLink":"{@odata.readLink}"},"Properties":{"content":"#Control:content/#Value"}}
 
 /***/ }),
 
@@ -2868,6 +5654,16 @@ module.exports = {"_Type":"Action.Type.PushNotificationRegister","ActionResult":
 
 /***/ }),
 
+/***/ "./build.definitions/n44/Actions/qusUpdate.action":
+/*!********************************************************!*\
+  !*** ./build.definitions/n44/Actions/qusUpdate.action ***!
+  \********************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","ActionResult":{"_Name":"update"},"OnFailure":"/n44/Actions/UpdateEntityFailureMessage.action","OnSuccess":"/n44/Actions/UpdateEntitySuccessMessage.action","Target":{"EntitySet":"Questionnaire_reply_table","Service":"/n44/Services/capurl.service","ReadLink":"{@odata.readLink}"},"Properties":{"doc_id":"#Control:doc_id/#Value","questionnaire_id":"#Control:questionnaire_id/#SelectedValue","invitationId":"#Control:invitationId/#SelectedValue","user_reply":"/n44/Rules/userReplyRule.js","description":"#Control:description/#Value","type":"#Control:type/#Value"}}
+
+/***/ }),
+
 /***/ "./build.definitions/n44/Actions/toApproveDetail.action":
 /*!**************************************************************!*\
   !*** ./build.definitions/n44/Actions/toApproveDetail.action ***!
@@ -2875,6 +5671,76 @@ module.exports = {"_Type":"Action.Type.PushNotificationRegister","ActionResult":
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"toApproveDetail"},"PageToOpen":"/n44/Pages/Supplier_table/Approved Bids.page"}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/toApprovedQus.action":
+/*!************************************************************!*\
+  !*** ./build.definitions/n44/Actions/toApprovedQus.action ***!
+  \************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"toApprovedQus"},"PageToOpen":"/n44/Pages/approvedQus.page"}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/toAwardedDetail.action":
+/*!**************************************************************!*\
+  !*** ./build.definitions/n44/Actions/toAwardedDetail.action ***!
+  \**************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"toAwardedDetail"},"PageToOpen":"/n44/Pages/Supplier_table/Awarded Detail.page"}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/toAwardedList.action":
+/*!************************************************************!*\
+  !*** ./build.definitions/n44/Actions/toAwardedList.action ***!
+  \************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"toAwardedList"},"PageToOpen":"/n44/Pages/Supplier_table/Awarded List.page"}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/toAwardedQus.action":
+/*!***********************************************************!*\
+  !*** ./build.definitions/n44/Actions/toAwardedQus.action ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"toAwardedQus"},"PageToOpen":"/n44/Pages/AwardedQus.page"}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/toQus.action":
+/*!****************************************************!*\
+  !*** ./build.definitions/n44/Actions/toQus.action ***!
+  \****************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"toQus"},"PageToOpen":"/n44/Pages/qus.page","Properties":{"Target":{"EntitySet":"Questionnaire_reply_table","Service":"/n44/Services/capurl.service","ReadLink":"{@odata.readLink}","Properties":{"doc_id":"Doc54576248","invitationId":"testcase1peol@gmail.com"}}}}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/toQusAns.action":
+/*!*******************************************************!*\
+  !*** ./build.definitions/n44/Actions/toQusAns.action ***!
+  \*******************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"toQusAns"},"PageToOpen":"/n44/Pages/qusAns.page"}
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Actions/toQusEdit.action":
+/*!********************************************************!*\
+  !*** ./build.definitions/n44/Actions/toQusEdit.action ***!
+  \********************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"toQusEdit"},"PageToOpen":"/n44/Pages/qusEdit.page","ModalPage":true,"ModalPageFullscreen":false}
 
 /***/ }),
 
@@ -2948,6 +5814,1007 @@ module.exports = {"DestinationName":"capurl","OfflineEnabled":false,"SourceType"
 
 /***/ }),
 
+/***/ "./build.definitions/n44/Extensions/QuestionnaireClass/controls/QuestionnaireClass.ts":
+/*!********************************************************************************************!*\
+  !*** ./build.definitions/n44/Extensions/QuestionnaireClass/controls/QuestionnaireClass.ts ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   QuestionnaireClass: () => (/* binding */ QuestionnaireClass)
+/* harmony export */ });
+/* harmony import */ var mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mdk-core/controls/IControl */ "webpack/sharing/consume/default/mdk-core/controls/IControl");
+/* harmony import */ var mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nativescript/core/ui/text-field */ "webpack/sharing/consume/default/@nativescript/core/ui/text-field");
+/* harmony import */ var _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nativescript/core/ui/layouts/stack-layout */ "webpack/sharing/consume/default/@nativescript/core/ui/layouts/stack-layout");
+/* harmony import */ var _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @nativescript/core/ui/label */ "webpack/sharing/consume/default/@nativescript/core/ui/label");
+/* harmony import */ var _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @nativescript/core/ui/button */ "webpack/sharing/consume/default/@nativescript/core/ui/button");
+/* harmony import */ var _nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _nativescript_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @nativescript/core */ "webpack/sharing/consume/default/@nativescript/core");
+/* harmony import */ var _nativescript_core__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @nativescript/core/ui/dialogs */ "webpack/sharing/consume/default/@nativescript/core/ui/dialogs");
+/* harmony import */ var _nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @nativescript/core/ui/gestures */ "webpack/sharing/consume/default/@nativescript/core/ui/gestures");
+/* harmony import */ var _nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _nativescript_core_ui_text_view__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @nativescript/core/ui/text-view */ "webpack/sharing/consume/default/@nativescript/core/ui/text-view");
+/* harmony import */ var _nativescript_core_ui_text_view__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_text_view__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+
+
+
+class QuestionnaireClass extends mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__.IControl {
+    constructor() {
+        super();
+        this._descriptionLabels = [];
+        this._replyFields = [];
+        this._questionnaireIdFields = [];
+        this._itemTypes = [];
+    }
+    view() {
+        if (!this._mainStackLayout) {
+            this._mainStackLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            this._mainStackLayout.orientation = 'vertical';
+            this.fetchAndPopulateData();
+            let bottomLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            bottomLayout.height = 100;
+            bottomLayout.width = '100%';
+            bottomLayout.verticalAlignment = 'bottom';
+            let buttonContainer = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            buttonContainer.horizontalAlignment = 'left';
+            buttonContainer.verticalAlignment = 'bottom';
+            buttonContainer.width = '100%';
+            this._saveButton = this.createStyledButton('Save', this.updateServiceWithData.bind(this));
+            buttonContainer.addChild(this._saveButton);
+            let pageLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            pageLayout.addChild(this._mainStackLayout);
+            pageLayout.addChild(buttonContainer);
+            return pageLayout;
+        }
+        return this._mainStackLayout;
+    }
+    createStyledButton(text, onTap) {
+        const button = new _nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__.Button();
+        button.text = text;
+        button.width = 100;
+        button.height = 50;
+        button.marginTop = 25;
+        button.borderRadius = 25;
+        button.backgroundColor = '#51abf1';
+        button.color = '#FFFFFF';
+        button.horizontalAlignment = 'left';
+        button.on(_nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__.Button.tapEvent, onTap);
+        return button;
+    }
+    updateServiceWithData() {
+        let result;
+        let updateCount = 0;
+        const totalUpdates = this._questionnaireIdFields.length;
+        for (let i = 0; i < this._questionnaireIdFields.length; i++) {
+            const questionnaireId = this._questionnaireIdFields[i].text;
+            let userReply;
+            const replyControl = this._replyFields[i];
+            if (this._itemTypes[i] === 'RQASTRINGListOfChoices') {
+                userReply = this._payment;
+            }
+            else if (this._itemTypes[i] === 'RQABOOLEAN') {
+                userReply = this._doc;
+            }
+            else if (this._itemTypes[i] === 'RQASTRING') {
+                userReply = replyControl.text;
+            }
+            const updateServiceUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Questionnaire_reply_table(doc_id='${this._docId}',invitationId='${this._invitationId}',questionnaire_id='${questionnaireId}')`;
+            const dataPayload = { user_reply: userReply };
+            _nativescript_core__WEBPACK_IMPORTED_MODULE_5__.Http.request({
+                url: updateServiceUrl,
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                content: JSON.stringify(dataPayload)
+            }).then(response => {
+                result = response.statusCode;
+                updateCount++;
+                if (updateCount === totalUpdates && result === 200) {
+                    (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`Data updated`);
+                }
+            }).catch(error => {
+                (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`There was an error updating the service for questionnaire ID: ${questionnaireId}. Error: ${error.message}`);
+            });
+        }
+    }
+    fetchAndPopulateData() {
+        this._docId = this.context.binding.doc_id;
+        this._invitationId = this.context.binding.invitationId;
+        const serviceUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Questionnaire_reply_table?$filter=doc_id eq '${this._docId}' and invitationId eq '${this._invitationId}'`;
+        _nativescript_core__WEBPACK_IMPORTED_MODULE_5__.Http.getJSON(serviceUrl).then(response => {
+            if (response && response.value && Array.isArray(response.value)) {
+                response.value.forEach((item, index) => {
+                    if (item) {
+                        if (item.type === "RQAATTACH") {
+                            return false;
+                        }
+                        const qusIdField = new _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__.TextField();
+                        qusIdField.hint = 'Questionnaire ID';
+                        qusIdField.text = item.questionnaire_id || 'No questionnaire ID';
+                        qusIdField.visibility = 'collapsed';
+                        this._mainStackLayout.addChild(qusIdField);
+                        this._questionnaireIdFields.push(qusIdField);
+                        const descriptionLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+                        descriptionLabel.fontSize = 18;
+                        descriptionLabel.style.color = 'white';
+                        descriptionLabel.horizontalAlignment = 'left';
+                        descriptionLabel.marginBottom = 10;
+                        descriptionLabel.marginTop = 30;
+                        descriptionLabel.text = item.description || 'No description available';
+                        this._mainStackLayout.addChild(descriptionLabel);
+                        this._descriptionLabels.push(descriptionLabel);
+                        this._itemTypes[index] = item.type;
+                        if (item.type === 'RQASTRINGListOfChoices' || item.type === 'RQABOOLEAN') {
+                            if (item.type === 'RQASTRINGListOfChoices') {
+                                const radioGroupLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+                                this.populateRadioOptions(item, radioGroupLayout, index);
+                                this._mainStackLayout.addChild(radioGroupLayout);
+                                this._replyFields[index] = radioGroupLayout;
+                            }
+                            else if (item.type === 'RQABOOLEAN') {
+                                const radioGroupLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+                                this.populateBooleanOptions(item, radioGroupLayout, index);
+                                this._mainStackLayout.addChild(radioGroupLayout);
+                                this._replyFields[index] = radioGroupLayout;
+                            }
+                        }
+                        else if (item.type === "RQAATTACH") {
+                            return;
+                        }
+                        else {
+                            const replyField = new _nativescript_core_ui_text_view__WEBPACK_IMPORTED_MODULE_8__.TextView();
+                            replyField.hint = `User Reply ${index + 1}`;
+                            replyField.text = item.user_reply || '';
+                            replyField.backgroundColor = 'white';
+                            replyField.color = '#000000';
+                            replyField.borderRadius = 5;
+                            replyField.borderWidth = 1;
+                            replyField.borderColor = '#000000';
+                            replyField.padding = 10;
+                            replyField.width = 288;
+                            replyField.horizontalAlignment = 'left';
+                            replyField.marginLeft = 7;
+                            replyField.marginRight = 7;
+                            replyField.style.cssText = `
+                                    display: flex;
+                                    box-sizing: border-box;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    overflow: auto;
+                                    word-wrap: break-word;
+                                    white-space: pre-wrap;
+                                `;
+                            this._mainStackLayout.addChild(replyField);
+                            this._replyFields[index] = replyField;
+                            replyField.on('textChange', (args) => {
+                                const textView = args.object;
+                                if (textView.ios) {
+                                    const fixedWidth = textView.ios.frame.size.width;
+                                    const newSize = textView.ios.sizeThatFits(CGSizeMake(fixedWidth, Number.MAX_SAFE_INTEGER));
+                                    textView.height = newSize.height + 10;
+                                }
+                                else if (textView.android) {
+                                    textView.height = 'auto';
+                                    textView.requestLayout();
+                                }
+                            });
+                            if (replyField.android) {
+                                replyField.on('loaded', () => {
+                                    replyField.android.setMinLines(1);
+                                    replyField.android.setMaxLines(5);
+                                });
+                            }
+                        }
+                        descriptionLabel.on(_nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_7__.GestureTypes.tap, () => {
+                            const replyField = this._replyFields[index];
+                            if (replyField.visibility === 'collapse') {
+                                replyField.visibility = 'visible';
+                                descriptionLabel.text = `${item.description} ( Ans )`;
+                            }
+                            else {
+                                replyField.visibility = 'collapse';
+                                descriptionLabel.text = `${item.description} ( ans )`;
+                            }
+                        });
+                    }
+                });
+            }
+            else {
+                throw new Error('Invalid response format');
+            }
+        }).catch(error => {
+            console.error('Error fetching data from service:', error);
+            (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`Failed to fetch data: ${error.message}`);
+        });
+    }
+    populateRadioOptions(item, radioGroupLayout, index) {
+        const radioOptionsUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Dropdown?$filter=questionnaire_id eq '${item.questionnaire_id}'`;
+        _nativescript_core__WEBPACK_IMPORTED_MODULE_5__.Http.getJSON(radioOptionsUrl).then(response => {
+            if (response && response.value && Array.isArray(response.value)) {
+                response.value.forEach((option, optionIndex) => {
+                    const radioButtonLayout = this.createRadioButton1(option.dropdown_value, 'groupName', false);
+                    radioGroupLayout.addChild(radioButtonLayout);
+                    if (index === 0 && optionIndex === 0) {
+                        const textBox = new _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__.TextField();
+                        textBox.hint = `Enter text for ${option.dropdown_value}`;
+                        textBox.borderRadius = 5;
+                        textBox.borderWidth = 1;
+                        textBox.borderColor = 'black';
+                        textBox.height = 40;
+                        textBox.marginTop = 5;
+                        textBox.paddingLeft = 5;
+                        radioGroupLayout.addChild(textBox);
+                    }
+                });
+                radioGroupLayout.visibility = 'visible';
+                this._replyFields[index] = radioGroupLayout;
+            }
+            else {
+                throw new Error('Invalid radio options response format');
+            }
+        }).catch(error => {
+            console.error('Error fetching radio options:', error);
+            (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)('Failed to fetch radio options.');
+        });
+    }
+    populateBooleanOptions(item, radioGroupLayout, index) {
+        const yesRadioButton = this.createRadioButton('Yes', index, 'boolean', item.user_reply === 'Yes');
+        const noRadioButton = this.createRadioButton('No', index, 'boolean', item.user_reply === 'No');
+        radioGroupLayout.addChild(yesRadioButton);
+        radioGroupLayout.addChild(noRadioButton);
+    }
+    createRadioButton(optionText, index, groupName, isSelected) {
+        const radioButtonLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+        radioButtonLayout.orientation = 'horizontal';
+        radioButtonLayout.verticalAlignment = 'middle';
+        radioButtonLayout.padding = 1;
+        radioButtonLayout.marginBottom = 7;
+        radioButtonLayout.width = '100%';
+        const radioIndicator = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+        radioIndicator.text = '';
+        radioIndicator.width = 15;
+        radioIndicator.height = 15;
+        radioIndicator.borderRadius = 10;
+        radioIndicator.borderWidth = 1;
+        radioIndicator.borderColor = isSelected ? '#51abf1' : 'black';
+        radioIndicator.backgroundColor = isSelected ? '#51abf1' : 'white';
+        radioIndicator.marginRight = 10;
+        const radioLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+        radioLabel.text = optionText;
+        radioLabel.fontSize = 16;
+        radioButtonLayout.addChild(radioIndicator);
+        radioButtonLayout.addChild(radioLabel);
+        radioButtonLayout.on(_nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_7__.GestureTypes.tap, () => {
+            const parentLayout = radioButtonLayout.parent;
+            parentLayout.eachChild((child) => {
+                if (child instanceof _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout) {
+                    const indicator = child.getChildAt(0);
+                    indicator.borderColor = 'black';
+                    indicator.backgroundColor = 'white';
+                }
+                return true;
+            });
+            radioIndicator.borderColor = '#51abf1';
+            radioIndicator.backgroundColor = '#51abf1';
+            this._doc = optionText;
+        });
+        return radioButtonLayout;
+    }
+    createRadioButton1(optionText, index, groupName, isSelected) {
+        const radioButtonLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+        radioButtonLayout.orientation = 'horizontal';
+        radioButtonLayout.verticalAlignment = 'middle';
+        radioButtonLayout.padding = 1;
+        radioButtonLayout.marginBottom = 7;
+        radioButtonLayout.width = '100%';
+        const radioIndicator = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+        radioIndicator.text = '';
+        radioIndicator.width = 15;
+        radioIndicator.height = 15;
+        radioIndicator.borderRadius = 10;
+        radioIndicator.borderWidth = 1;
+        radioIndicator.borderColor = isSelected ? '#51abf1' : 'black';
+        radioIndicator.backgroundColor = isSelected ? '#51abf1' : 'white';
+        radioIndicator.marginRight = 10;
+        const radioLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+        radioLabel.text = optionText;
+        radioLabel.fontSize = 16;
+        radioButtonLayout.addChild(radioIndicator);
+        radioButtonLayout.addChild(radioLabel);
+        radioButtonLayout.on(_nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_7__.GestureTypes.tap, () => {
+            const parentLayout = radioButtonLayout.parent;
+            parentLayout.eachChild((child) => {
+                if (child instanceof _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout) {
+                    const indicator = child.getChildAt(0);
+                    indicator.borderColor = 'black';
+                    indicator.backgroundColor = 'white';
+                }
+                return true;
+            });
+            radioIndicator.borderColor = '#51abf1';
+            radioIndicator.backgroundColor = '#51abf1';
+            this._payment = optionText;
+        });
+        return radioButtonLayout;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Extensions/QusEXtn.ts":
+/*!*****************************************************!*\
+  !*** ./build.definitions/n44/Extensions/QusEXtn.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   QusEXtn: () => (/* binding */ QusEXtn)
+/* harmony export */ });
+/* harmony import */ var mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mdk-core/controls/IControl */ "webpack/sharing/consume/default/mdk-core/controls/IControl");
+/* harmony import */ var mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nativescript/core/ui/text-field */ "webpack/sharing/consume/default/@nativescript/core/ui/text-field");
+/* harmony import */ var _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nativescript/core/ui/layouts/stack-layout */ "webpack/sharing/consume/default/@nativescript/core/ui/layouts/stack-layout");
+/* harmony import */ var _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @nativescript/core/ui/label */ "webpack/sharing/consume/default/@nativescript/core/ui/label");
+/* harmony import */ var _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @nativescript/core/ui/button */ "webpack/sharing/consume/default/@nativescript/core/ui/button");
+/* harmony import */ var _nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _nativescript_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @nativescript/core */ "webpack/sharing/consume/default/@nativescript/core");
+/* harmony import */ var _nativescript_core__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @nativescript/core/ui/dialogs */ "webpack/sharing/consume/default/@nativescript/core/ui/dialogs");
+/* harmony import */ var _nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _nativescript_core_ui_list_picker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @nativescript/core/ui/list-picker */ "webpack/sharing/consume/default/@nativescript/core/ui/list-picker");
+/* harmony import */ var _nativescript_core_ui_list_picker__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_list_picker__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _nativescript_core_ui_content_view__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @nativescript/core/ui/content-view */ "webpack/sharing/consume/default/@nativescript/core/ui/content-view");
+/* harmony import */ var _nativescript_core_ui_content_view__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_content_view__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _nativescript_core_ui_frame__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @nativescript/core/ui/frame */ "webpack/sharing/consume/default/@nativescript/core/ui/frame");
+/* harmony import */ var _nativescript_core_ui_frame__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_frame__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
+
+
+
+
+
+
+
+class QusEXtn extends mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__.IControl {
+    constructor() {
+        super();
+        this._descriptionLabels = [];
+        this._replyFields = [];
+        this._questionnaireIdFields = [];
+        this._itemTypes = [];
+    }
+    view() {
+        if (!this._mainStackLayout) {
+            this._mainStackLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            this._mainStackLayout.orientation = 'vertical';
+            this.fetchAndPopulateData();
+            let bottomLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            bottomLayout.height = 100;
+            bottomLayout.width = '100%';
+            bottomLayout.verticalAlignment = 'bottom';
+            let buttonContainer = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            buttonContainer.horizontalAlignment = 'right';
+            buttonContainer.verticalAlignment = 'bottom';
+            buttonContainer.width = '100%';
+            this._saveButton = this.createStyledButton('Save', this.updateServiceWithData.bind(this));
+            buttonContainer.addChild(this._saveButton);
+            const navigateButton = this.createNavigateButton('Navigate', this.navigateToAttachmentCreate.bind(this));
+            buttonContainer.addChild(navigateButton);
+            bottomLayout.addChild(buttonContainer);
+            let pageLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            pageLayout.addChild(this._mainStackLayout);
+            pageLayout.addChild(bottomLayout);
+            return pageLayout;
+        }
+        return this._mainStackLayout;
+    }
+    createStyledButton(text, onTap) {
+        const button = new _nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__.Button();
+        button.text = text;
+        button.width = 100;
+        button.height = 50;
+        button.marginTop = 15;
+        button.borderRadius = 25;
+        button.backgroundColor = '#51abf1';
+        button.color = '#FFFFFF';
+        button.horizontalAlignment = 'right';
+        button.on(_nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__.Button.tapEvent, onTap);
+        return button;
+    }
+    createDropdown(options, index) {
+        const dropdown = new _nativescript_core_ui_content_view__WEBPACK_IMPORTED_MODULE_8__.ContentView();
+        const optionsStack = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+        optionsStack.orientation = 'vertical';
+        optionsStack.visibility = 'collapse';
+        const updateVisualState = (selectedOption) => {
+            optionsStack.eachChild((child) => {
+                const label = child;
+                label.text = label.text.includes(selectedOption) ? `◉ ${selectedOption}` : `◯ ${label.text.trim().substring(2)}`;
+                return true;
+            });
+            (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`You selected: ${selectedOption}`);
+            this._replyFields[index] = selectedOption;
+            this._dpva = selectedOption;
+            this._replyFields[index] = selectedOption;
+        };
+        options.forEach((option) => {
+            const optionLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+            optionLabel.text = `◯ ${option.dropdown_value}`;
+            optionLabel.fontSize = 18;
+            optionLabel.marginBottom = 10;
+            optionLabel.width = 280;
+            optionLabel.textAlignment = 'left';
+            optionLabel.horizontalAlignment = 'left';
+            optionLabel.padding = 10;
+            optionLabel.on('tap', () => {
+                updateVisualState(option.dropdown_value);
+            });
+            optionsStack.addChild(optionLabel);
+        });
+        dropdown.content = optionsStack;
+        return dropdown;
+    }
+    createBooleanDropdown(options, index) {
+        const dropdown = new _nativescript_core_ui_content_view__WEBPACK_IMPORTED_MODULE_8__.ContentView();
+        const optionsStack = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+        optionsStack.orientation = 'vertical';
+        optionsStack.visibility = 'collapse';
+        const updateVisualState = (selectedOption) => {
+            optionsStack.eachChild((child) => {
+                const label = child;
+                label.text = label.text.includes(selectedOption) ? `◉ ${selectedOption}` : `◯ ${label.text.trim().substring(2)}`;
+                return true;
+            });
+            (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`You selected: ${selectedOption}`);
+            this._replyFields[index] = selectedOption;
+            this._dpval = selectedOption;
+            this._replyFields[index] = selectedOption;
+        };
+        options.forEach((option) => {
+            const optionLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+            optionLabel.text = `◯ ${option}`;
+            optionLabel.fontSize = 18;
+            optionLabel.marginBottom = 10;
+            optionLabel.width = 150;
+            optionLabel.textAlignment = 'left';
+            optionLabel.horizontalAlignment = 'left';
+            optionLabel.padding = 10;
+            optionLabel.on('tap', () => {
+                updateVisualState(option);
+            });
+            optionsStack.addChild(optionLabel);
+        });
+        dropdown.content = optionsStack;
+        return dropdown;
+    }
+    fetchAndPopulateData() {
+        this._docId = this.context.binding.doc_id;
+        this._invitationId = this.context.binding.invitationId;
+        (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`${this._docId}`);
+        const serviceUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Questionnaire_reply_table?$filter=doc_id eq '${this._docId}' and invitationId eq '${this._invitationId}'`;
+        _nativescript_core__WEBPACK_IMPORTED_MODULE_5__.Http.getJSON(serviceUrl).then(response => {
+            if (response && response.value && Array.isArray(response.value)) {
+                response.value.forEach((item, index) => {
+                    if (item) {
+                        if (item.type === 'RQAATTACH') {
+                            return;
+                        }
+                        const qusIdField = new _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__.TextField();
+                        qusIdField.hint = 'Questionnaire ID';
+                        qusIdField.text = item.questionnaire_id || 'No questionnaire ID';
+                        qusIdField.visibility = 'collapsed';
+                        this._questionnaireIdFields.push(qusIdField);
+                        const descriptionLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+                        if (item.type === 'RQABOOLEAN' || item.type === 'RQASTRINGListOfChoices') {
+                            this._itemTypes[index] = item.type;
+                        }
+                        descriptionLabel.fontSize = 20;
+                        descriptionLabel.textDecoration = 'none';
+                        descriptionLabel.style.fontWeight = 'bold';
+                        descriptionLabel.marginBottom = 10;
+                        descriptionLabel.text = item.description ? `${item.description}  ( > )` : 'No description available';
+                        this._descriptionLabels.push(descriptionLabel);
+                        let replyField;
+                        if (item.type === 'RQASTRINGListOfChoices') {
+                            replyField = new _nativescript_core_ui_list_picker__WEBPACK_IMPORTED_MODULE_7__.ListPicker();
+                            replyField.visibility = 'collapse';
+                            this._replyFields[index] = replyField;
+                            const dropdownServiceUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Dropdown?$filter=questionnaire_id eq '${item.questionnaire_id}'`;
+                            _nativescript_core__WEBPACK_IMPORTED_MODULE_5__.Http.getJSON(dropdownServiceUrl).then(dropdownResponse => {
+                                if (dropdownResponse && dropdownResponse.value && Array.isArray(dropdownResponse.value)) {
+                                    const dropdown = this.createDropdown(dropdownResponse.value, index);
+                                    const itemLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+                                    itemLayout.orientation = 'vertical';
+                                    itemLayout.addChild(qusIdField);
+                                    itemLayout.addChild(descriptionLabel);
+                                    itemLayout.addChild(dropdown);
+                                    itemLayout.addChild(replyField);
+                                    this._mainStackLayout.addChild(itemLayout);
+                                    descriptionLabel.on('tap', () => {
+                                        const dropdownContent = dropdown.content;
+                                        dropdownContent.visibility = dropdownContent.visibility === 'collapse' ? 'visible' : 'collapse';
+                                        descriptionLabel.text = dropdownContent.visibility === 'visible' ? `${item.description} ( v )` : `${item.description} ( > )`;
+                                    });
+                                }
+                                else {
+                                    throw new Error('Invalid dropdown response format');
+                                }
+                            }).catch(dropdownError => {
+                                console.error('Error fetching dropdown data:', dropdownError);
+                                (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)('Failed to fetch dropdown data.');
+                            });
+                        }
+                        else if (item.type === 'RQABOOLEAN') {
+                            const dropdown = this.createBooleanDropdown(['Yes', 'No'], index);
+                            const itemLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+                            itemLayout.orientation = 'vertical';
+                            itemLayout.addChild(qusIdField);
+                            itemLayout.addChild(descriptionLabel);
+                            itemLayout.addChild(dropdown);
+                            this._mainStackLayout.addChild(itemLayout);
+                            descriptionLabel.on('tap', () => {
+                                const dropdownContent = dropdown.content;
+                                dropdownContent.visibility = dropdownContent.visibility === 'collapse' ? 'visible' : 'collapse';
+                                descriptionLabel.text = dropdownContent.visibility === 'visible' ? `${item.description} ( v )` : `${item.description} ( > )`;
+                            });
+                        }
+                        else {
+                            replyField = new _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__.TextField();
+                            replyField.hint = `User Reply ${index + 1}`;
+                            replyField.text = item.user_reply || 'No reply available';
+                            replyField.visibility = 'collapse';
+                            replyField.underline = false;
+                            this._replyFields[index] = replyField;
+                            const itemLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+                            itemLayout.orientation = 'vertical';
+                            itemLayout.addChild(qusIdField);
+                            itemLayout.addChild(descriptionLabel);
+                            itemLayout.addChild(replyField);
+                            this._mainStackLayout.addChild(itemLayout);
+                        }
+                        descriptionLabel.on('tap', () => {
+                            const replyField = this._replyFields[index];
+                            if (replyField instanceof _nativescript_core_ui_content_view__WEBPACK_IMPORTED_MODULE_8__.ContentView) {
+                                const contentView = replyField.content;
+                                contentView.visibility = contentView.visibility === 'collapse' ? 'visible' : 'collapse';
+                                descriptionLabel.text = contentView.visibility === 'visible' ? `${item.description} ( v ) ` : `${item.description} ( > )`;
+                            }
+                            else if (replyField instanceof _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__.TextField) {
+                                replyField.visibility = replyField.visibility === 'collapse' ? 'visible' : 'collapse';
+                                descriptionLabel.text = replyField.visibility === 'visible' ? `${item.description} ( v )` : `${item.description} ( > )`;
+                            }
+                        });
+                    }
+                });
+            }
+            else {
+                throw new Error('Invalid response format');
+            }
+        }).catch(error => {
+            console.error('Error fetching data from service:', error);
+            (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`Failed to fetch data: ${error.message}`);
+        });
+    }
+    updateServiceWithData() {
+        for (let i = 0; i < this._questionnaireIdFields.length; i++) {
+            const questionnaireId = this._questionnaireIdFields[i].text;
+            let userReply;
+            const replyControl = this._replyFields[i];
+            if (this._itemTypes[i] === 'RQASTRINGListOfChoices') {
+                (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`in ${this._dpva}`);
+                userReply = this._dpva;
+            }
+            else if (this._itemTypes[i] === 'RQABOOLEAN') {
+                (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`in ${this._dpval}`);
+                userReply = this._dpval;
+            }
+            else {
+                userReply = replyControl.text;
+                (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`text ${replyControl.text}`);
+            }
+            const updateServiceUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Questionnaire_reply_table(doc_id='${this._docId}',invitationId='${this._invitationId}',questionnaire_id='${questionnaireId}')`;
+            const dataPayload = {
+                user_reply: userReply
+            };
+            _nativescript_core__WEBPACK_IMPORTED_MODULE_5__.Http.request({
+                url: updateServiceUrl,
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                content: JSON.stringify(dataPayload)
+            }).then(response => {
+                const result = response.statusCode;
+                if (result === 200) {
+                    (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`The service has been updated successfully for questionnaire ID: ${questionnaireId} ${userReply}`);
+                }
+                else {
+                    (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`There was an error updating the service for questionnaire ID: ${questionnaireId}`);
+                }
+            }).catch(error => {
+                (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)(`There was an error updating the service for questionnaire ID: ${error.message}`);
+            });
+        }
+    }
+    createNavigateButton(text, onTap) {
+        const button = new _nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__.Button();
+        button.text = text;
+        button.width = 150;
+        button.height = 50;
+        button.marginTop = 15;
+        button.borderRadius = 25;
+        button.backgroundColor = '#51abf1';
+        button.color = '#FFFFFF';
+        button.visibility = 'hidden';
+        button.horizontalAlignment = 'right';
+        button.on(_nativescript_core_ui_button__WEBPACK_IMPORTED_MODULE_4__.Button.tapEvent, onTap);
+        return button;
+    }
+    navigateToAttachmentCreate() {
+        try {
+            console.log('Navigating to attachment create page...');
+            const topFrame = _nativescript_core_ui_frame__WEBPACK_IMPORTED_MODULE_9__.Frame.topmost();
+            if (topFrame) {
+                topFrame.navigate({
+                    moduleName: '/home/user/projects/peolApp2/Pages/AttachCreate.page',
+                    clearHistory: false,
+                    animated: true
+                });
+            }
+            else {
+                throw new Error('Topmost frame not found.');
+            }
+        }
+        catch (error) {
+            console.error('Error navigating to attachment create page:', error);
+            (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_6__.alert)('Failed to navigate: ' + `${error}`);
+        }
+    }
+}
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Extensions/QusEXtn/controls/dropdown.ts":
+/*!***********************************************************************!*\
+  !*** ./build.definitions/n44/Extensions/QusEXtn/controls/dropdown.ts ***!
+  \***********************************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Extensions/questionnaireAprv/controls/questionnaireAprv.ts":
+/*!******************************************************************************************!*\
+  !*** ./build.definitions/n44/Extensions/questionnaireAprv/controls/questionnaireAprv.ts ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   questionnaireAprv: () => (/* binding */ questionnaireAprv)
+/* harmony export */ });
+/* harmony import */ var mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mdk-core/controls/IControl */ "webpack/sharing/consume/default/mdk-core/controls/IControl");
+/* harmony import */ var mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nativescript/core/ui/text-field */ "webpack/sharing/consume/default/@nativescript/core/ui/text-field");
+/* harmony import */ var _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nativescript/core/ui/layouts/stack-layout */ "webpack/sharing/consume/default/@nativescript/core/ui/layouts/stack-layout");
+/* harmony import */ var _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @nativescript/core/ui/label */ "webpack/sharing/consume/default/@nativescript/core/ui/label");
+/* harmony import */ var _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _nativescript_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @nativescript/core */ "webpack/sharing/consume/default/@nativescript/core");
+/* harmony import */ var _nativescript_core__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @nativescript/core/ui/dialogs */ "webpack/sharing/consume/default/@nativescript/core/ui/dialogs");
+/* harmony import */ var _nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @nativescript/core/ui/gestures */ "webpack/sharing/consume/default/@nativescript/core/ui/gestures");
+/* harmony import */ var _nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _nativescript_core_ui_text_view__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @nativescript/core/ui/text-view */ "webpack/sharing/consume/default/@nativescript/core/ui/text-view");
+/* harmony import */ var _nativescript_core_ui_text_view__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_nativescript_core_ui_text_view__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+class questionnaireAprv extends mdk_core_controls_IControl__WEBPACK_IMPORTED_MODULE_0__.IControl {
+    constructor() {
+        super();
+        this._descriptionLabels = [];
+        this._replyFields = [];
+        this._questionnaireIdFields = [];
+        this._itemTypes = [];
+    }
+    view() {
+        if (!this._mainStackLayout) {
+            this._mainStackLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+            this._mainStackLayout.orientation = 'vertical';
+            this.fetchAndPopulateData();
+            return this._mainStackLayout;
+        }
+        return this._mainStackLayout;
+    }
+    updateServiceWithData() {
+        let result;
+        let updateCount = 0;
+        const totalUpdates = this._questionnaireIdFields.length;
+        for (let i = 0; i < this._questionnaireIdFields.length; i++) {
+            const questionnaireId = this._questionnaireIdFields[i].text;
+            let userReply;
+            const replyControl = this._replyFields[i];
+            if (this._itemTypes[i] === 'RQASTRINGListOfChoices') {
+                userReply = this._payment;
+            }
+            else if (this._itemTypes[i] === 'RQABOOLEAN') {
+                userReply = this._doc;
+            }
+            else if (this._itemTypes[i] === 'RQASTRING') {
+                userReply = replyControl.text;
+            }
+            const updateServiceUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Questionnaire_reply_table(doc_id='${this._docId}',invitationId='${this._invitationId}',questionnaire_id='${questionnaireId}')`;
+            const dataPayload = { user_reply: userReply };
+            _nativescript_core__WEBPACK_IMPORTED_MODULE_4__.Http.request({
+                url: updateServiceUrl,
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                content: JSON.stringify(dataPayload)
+            }).then(response => {
+                result = response.statusCode;
+                updateCount++;
+                if (updateCount === totalUpdates && result === 200) {
+                    (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_5__.alert)('Data updated');
+                }
+            }).catch(error => {
+                (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_5__.alert)(`There was an error updating the service for questionnaire ID: ${questionnaireId}. Error: ${error.message}`);
+            });
+        }
+    }
+    fetchAndPopulateData() {
+        this._docId = this.context.binding.doc_id;
+        this._invitationId = this.context.binding.invitationId;
+        const serviceUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Questionnaire_reply_table?$filter=doc_id eq '${this._docId}' and invitationId eq '${this._invitationId}'`;
+        _nativescript_core__WEBPACK_IMPORTED_MODULE_4__.Http.getJSON(serviceUrl).then(response => {
+            if (response && response.value && Array.isArray(response.value)) {
+                response.value.forEach((item, index) => {
+                    if (item) {
+                        const qusIdField = new _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__.TextField();
+                        qusIdField.hint = 'Questionnaire ID';
+                        qusIdField.text = item.questionnaire_id || 'No questionnaire ID';
+                        qusIdField.editable = false;
+                        qusIdField.visibility = 'collapsed';
+                        this._mainStackLayout.addChild(qusIdField);
+                        this._questionnaireIdFields.push(qusIdField);
+                        const descriptionLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+                        descriptionLabel.fontSize = 20;
+                        descriptionLabel.marginBottom = 10;
+                        descriptionLabel.marginTop = 30;
+                        descriptionLabel.text = item.description || 'No description available';
+                        this._mainStackLayout.addChild(descriptionLabel);
+                        this._descriptionLabels.push(descriptionLabel);
+                        this._itemTypes[index] = item.type;
+                        if (item.type === 'RQASTRINGListOfChoices' || item.type === 'RQABOOLEAN') {
+                            if (item.type === 'RQASTRINGListOfChoices') {
+                                const radioGroupLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+                                this.populateRadioOptions(item, radioGroupLayout, index);
+                                this._mainStackLayout.addChild(radioGroupLayout);
+                                this._replyFields[index] = radioGroupLayout;
+                            }
+                            else if (item.type === 'RQABOOLEAN') {
+                                const radioGroupLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+                                this.populateBooleanOptions(item, radioGroupLayout, index);
+                                this._mainStackLayout.addChild(radioGroupLayout);
+                                this._replyFields[index] = radioGroupLayout;
+                            }
+                        }
+                        else if (item.type === "RQAATTACH") {
+                            return;
+                        }
+                        else {
+                            const replyField = new _nativescript_core_ui_text_view__WEBPACK_IMPORTED_MODULE_7__.TextView();
+                            replyField.text = item.user_reply || '';
+                            replyField.backgroundColor = 'white';
+                            replyField.color = '#000000';
+                            replyField.editable = false;
+                            replyField.borderRadius = 5;
+                            replyField.borderWidth = 1;
+                            replyField.borderColor = '#000000';
+                            replyField.padding = 10;
+                            replyField.width = 288;
+                            replyField.horizontalAlignment = 'left';
+                            replyField.marginLeft = 7;
+                            replyField.marginRight = 7;
+                            replyField.style.cssText = `
+                                display: flex;
+                                box-sizing: border-box;
+                                flex-direction: column;
+                                width: 100%;
+                                overflow: auto;
+                                word-wrap: break-word;
+                                white-space: pre-wrap;
+                            `;
+                            this._mainStackLayout.addChild(replyField);
+                            this._replyFields[index] = replyField;
+                            replyField.on('textChange', (args) => {
+                                const textView = args.object;
+                                if (textView.ios) {
+                                    const fixedWidth = textView.ios.frame.size.width;
+                                    const newSize = textView.ios.sizeThatFits(CGSizeMake(fixedWidth, Number.MAX_SAFE_INTEGER));
+                                    textView.height = newSize.height + 10;
+                                }
+                                else if (textView.android) {
+                                    textView.height = 'auto';
+                                    textView.requestLayout();
+                                }
+                            });
+                            if (replyField.android) {
+                                replyField.on('loaded', () => {
+                                    replyField.android.setMinLines(1);
+                                    replyField.android.setMaxLines(5);
+                                });
+                            }
+                        }
+                        descriptionLabel.on(_nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_6__.GestureTypes.tap, () => {
+                            const replyField = this._replyFields[index];
+                            if (replyField.visibility === 'collapse') {
+                                replyField.visibility = 'visible';
+                                descriptionLabel.text = `${item.description} ( Ans )`;
+                            }
+                            else {
+                                replyField.visibility = 'collapse';
+                                descriptionLabel.text = `${item.description} ( ans )`;
+                            }
+                        });
+                    }
+                });
+            }
+            else {
+                throw new Error('Invalid response format');
+            }
+        }).catch(error => {
+            console.error('Error fetching data from service:', error);
+            (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_5__.alert)(`Failed to fetch data: ${error.message}`);
+        });
+    }
+    populateRadioOptions(item, radioGroupLayout, index) {
+        const radioOptionsUrl = `https://366db960trial-dev-mobile-bid-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/whatsapp/Dropdown?$filter=questionnaire_id eq '${item.questionnaire_id}'`;
+        _nativescript_core__WEBPACK_IMPORTED_MODULE_4__.Http.getJSON(radioOptionsUrl).then(response => {
+            if (response && response.value && Array.isArray(response.value)) {
+                response.value.forEach((option, optionIndex) => {
+                    const radioButtonLayout = this.createRadioButton1(option.dropdown_value, 'groupName', false);
+                    radioGroupLayout.addChild(radioButtonLayout);
+                    if (index === 0 && optionIndex === 0) {
+                        const textBox = new _nativescript_core_ui_text_field__WEBPACK_IMPORTED_MODULE_1__.TextField();
+                        textBox.hint = `Enter text for ${option.dropdown_value}`;
+                        textBox.editable = false;
+                        textBox.borderRadius = 5;
+                        textBox.borderWidth = 1;
+                        textBox.borderColor = 'black';
+                        textBox.height = 40;
+                        textBox.marginTop = 5;
+                        textBox.paddingLeft = 5;
+                        radioGroupLayout.addChild(textBox);
+                    }
+                });
+                radioGroupLayout.visibility = 'visible';
+                this._replyFields[index] = radioGroupLayout;
+            }
+            else {
+                throw new Error('Invalid radio options response format');
+            }
+        }).catch(error => {
+            console.error('Error fetching radio options:', error);
+            (0,_nativescript_core_ui_dialogs__WEBPACK_IMPORTED_MODULE_5__.alert)('Failed to fetch radio options.');
+        });
+    }
+    populateBooleanOptions(item, radioGroupLayout, index) {
+        const yesRadioButton = this.createRadioButton('Yes', index, 'boolean', item.user_reply === 'Yes');
+        const noRadioButton = this.createRadioButton('No', index, 'boolean', item.user_reply === 'No');
+        radioGroupLayout.addChild(yesRadioButton);
+        radioGroupLayout.addChild(noRadioButton);
+    }
+    createRadioButton(optionText, index, groupName, isSelected) {
+        const radioButtonLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+        radioButtonLayout.orientation = 'horizontal';
+        radioButtonLayout.verticalAlignment = 'middle';
+        radioButtonLayout.padding = 1;
+        radioButtonLayout.marginBottom = 7;
+        radioButtonLayout.width = '100%';
+        const radioIndicator = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+        radioIndicator.text = '';
+        radioIndicator.width = 15;
+        radioIndicator.height = 15;
+        radioIndicator.borderRadius = 10;
+        radioIndicator.borderWidth = 1;
+        radioIndicator.borderColor = isSelected ? '#51abf1' : 'black';
+        radioIndicator.backgroundColor = isSelected ? '#51abf1' : 'white';
+        radioIndicator.marginRight = 10;
+        const radioLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+        radioLabel.text = optionText;
+        radioLabel.fontSize = 16;
+        radioButtonLayout.addChild(radioIndicator);
+        radioButtonLayout.addChild(radioLabel);
+        radioButtonLayout.on(_nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_6__.GestureTypes.tap, () => {
+            const parentLayout = radioButtonLayout.parent;
+            parentLayout.eachChild((child) => {
+                if (child instanceof _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout) {
+                    const indicator = child.getChildAt(0);
+                    indicator.borderColor = 'black';
+                    indicator.backgroundColor = 'white';
+                }
+                return true;
+            });
+            radioIndicator.borderColor = '#51abf1';
+            radioIndicator.backgroundColor = '#51abf1';
+            this._doc = optionText;
+        });
+        radioButtonLayout.isEnabled = false;
+        return radioButtonLayout;
+    }
+    createRadioButton1(optionText, index, groupName, isSelected) {
+        const radioButtonLayout = new _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout();
+        radioButtonLayout.orientation = 'horizontal';
+        radioButtonLayout.verticalAlignment = 'middle';
+        radioButtonLayout.padding = 1;
+        radioButtonLayout.marginBottom = 7;
+        radioButtonLayout.width = '100%';
+        const radioIndicator = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+        radioIndicator.text = '';
+        radioIndicator.width = 15;
+        radioIndicator.height = 15;
+        radioIndicator.borderRadius = 10;
+        radioIndicator.borderWidth = 1;
+        radioIndicator.borderColor = isSelected ? '#51abf1' : 'black';
+        radioIndicator.backgroundColor = isSelected ? '#51abf1' : 'white';
+        radioIndicator.marginRight = 10;
+        const radioLabel = new _nativescript_core_ui_label__WEBPACK_IMPORTED_MODULE_3__.Label();
+        radioLabel.text = optionText;
+        radioLabel.fontSize = 16;
+        radioButtonLayout.addChild(radioIndicator);
+        radioButtonLayout.addChild(radioLabel);
+        radioButtonLayout.on(_nativescript_core_ui_gestures__WEBPACK_IMPORTED_MODULE_6__.GestureTypes.tap, () => {
+            const parentLayout = radioButtonLayout.parent;
+            parentLayout.eachChild((child) => {
+                if (child instanceof _nativescript_core_ui_layouts_stack_layout__WEBPACK_IMPORTED_MODULE_2__.StackLayout) {
+                    const indicator = child.getChildAt(0);
+                    indicator.borderColor = 'black';
+                    indicator.backgroundColor = 'white';
+                }
+                return true;
+            });
+            radioIndicator.borderColor = '#51abf1';
+            radioIndicator.backgroundColor = '#51abf1';
+            this._payment = optionText;
+        });
+        radioButtonLayout.isEnabled = false;
+        return radioButtonLayout;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./build.definitions/n44/Images/peol_logo (1).png":
 /*!********************************************************!*\
   !*** ./build.definitions/n44/Images/peol_logo (1).png ***!
@@ -2970,10 +6837,51 @@ module.exports = "1.1\n";
 
 /***/ }),
 
-/***/ "./build.definitions/n44/Styles/Styles.json":
-/*!**************************************************!*\
-  !*** ./build.definitions/n44/Styles/Styles.json ***!
-  \**************************************************/
+/***/ "webpack/container/entry/bundle.js":
+/*!***********************!*\
+  !*** container entry ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+var moduleMap = {
+	".": () => {
+		return Promise.resolve().then(() => (() => ((__webpack_require__(/*! ./build.definitions/application-index.js */ "./build.definitions/application-index.js")))));
+	}
+};
+var get = (module, getScope) => {
+	__webpack_require__.R = getScope;
+	getScope = (
+		__webpack_require__.o(moduleMap, module)
+			? moduleMap[module]()
+			: Promise.resolve().then(() => {
+				throw new Error('Module "' + module + '" does not exist in container.');
+			})
+	);
+	__webpack_require__.R = undefined;
+	return getScope;
+};
+var init = (shareScope, initScope) => {
+	if (!__webpack_require__.S) return;
+	var name = "default"
+	var oldScope = __webpack_require__.S[name];
+	if(oldScope && oldScope !== shareScope) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
+	__webpack_require__.S[name] = shareScope;
+	return __webpack_require__.I(name, initScope);
+};
+
+// This exports getters to disallow modifications
+__webpack_require__.d(exports, {
+	get: () => (get),
+	init: () => (init)
+});
+
+/***/ }),
+
+/***/ "./build.definitions/n44/Styles/Styles.light.json":
+/*!********************************************************!*\
+  !*** ./build.definitions/n44/Styles/Styles.light.json ***!
+  \********************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -2999,7 +6907,7 @@ module.exports = JSON.parse('{"include":["Rules/**/*",".typings/**/*"]}');
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"compilerOptions":{"target":"es2015","module":"esnext","moduleResolution":"node","lib":["es2018","dom"],"experimentalDecorators":true,"emitDecoratorMetadata":true,"removeComments":true,"inlineSourceMap":true,"noEmitOnError":false,"noEmitHelpers":true,"baseUrl":".","plugins":[{"transform":"@nativescript/webpack/dist/transformers/NativeClass","type":"raw"}]},"exclude":["node_modules"]}');
+module.exports = JSON.parse('{"compilerOptions":{"module":"esnext","target":"es2019","moduleResolution":"node","lib":["esnext","dom"],"experimentalDecorators":true,"emitDecoratorMetadata":true,"removeComments":true,"inlineSourceMap":true,"noEmitOnError":false,"noEmitHelpers":true,"baseUrl":".","plugins":[{"transform":"@nativescript/webpack/dist/transformers/NativeClass","type":"raw"}]},"exclude":["node_modules"]}');
 
 /***/ })
 
@@ -3029,7 +6937,25 @@ module.exports = JSON.parse('{"compilerOptions":{"target":"es2015","module":"esn
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = __webpack_module_cache__;
+/******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -3058,15 +6984,228 @@ module.exports = JSON.parse('{"compilerOptions":{"target":"es2015","module":"esn
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/sharing */
+/******/ 	(() => {
+/******/ 		__webpack_require__.S = {};
+/******/ 		var initPromises = {};
+/******/ 		var initTokens = {};
+/******/ 		__webpack_require__.I = (name, initScope) => {
+/******/ 			if(!initScope) initScope = [];
+/******/ 			// handling circular init calls
+/******/ 			var initToken = initTokens[name];
+/******/ 			if(!initToken) initToken = initTokens[name] = {};
+/******/ 			if(initScope.indexOf(initToken) >= 0) return;
+/******/ 			initScope.push(initToken);
+/******/ 			// only runs once
+/******/ 			if(initPromises[name]) return initPromises[name];
+/******/ 			// creates a new share scope if needed
+/******/ 			if(!__webpack_require__.o(__webpack_require__.S, name)) __webpack_require__.S[name] = {};
+/******/ 			// runs all init snippets from all modules reachable
+/******/ 			var scope = __webpack_require__.S[name];
+/******/ 			var warn = (msg) => {
+/******/ 				if (typeof console !== "undefined" && console.warn) console.warn(msg);
+/******/ 			};
+/******/ 			var uniqueName = undefined;
+/******/ 			var register = (name, version, factory, eager) => {
+/******/ 				var versions = scope[name] = scope[name] || {};
+/******/ 				var activeVersion = versions[version];
+/******/ 				if(!activeVersion || (!activeVersion.loaded && (!eager != !activeVersion.eager ? eager : uniqueName > activeVersion.from))) versions[version] = { get: factory, from: uniqueName, eager: !!eager };
+/******/ 			};
+/******/ 			var initExternal = (id) => {
+/******/ 				var handleError = (err) => (warn("Initialization of sharing external failed: " + err));
+/******/ 				try {
+/******/ 					var module = __webpack_require__(id);
+/******/ 					if(!module) return;
+/******/ 					var initFn = (module) => (module && module.init && module.init(__webpack_require__.S[name], initScope))
+/******/ 					if(module.then) return promises.push(module.then(initFn, handleError));
+/******/ 					var initResult = initFn(module);
+/******/ 					if(initResult && initResult.then) return promises.push(initResult['catch'](handleError));
+/******/ 				} catch(err) { handleError(err); }
+/******/ 			}
+/******/ 			var promises = [];
+/******/ 			switch(name) {
+/******/ 			}
+/******/ 			if(!promises.length) return initPromises[name] = 1;
+/******/ 			return initPromises[name] = Promise.all(promises).then(() => (initPromises[name] = 1));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/consumes */
+/******/ 	(() => {
+/******/ 		var parseVersion = (str) => {
+/******/ 			// see webpack/lib/util/semver.js for original code
+/******/ 			var p=p=>{return p.split(".").map((p=>{return+p==p?+p:p}))},n=/^([^-+]+)?(?:-([^+]+))?(?:\+(.+))?$/.exec(str),r=n[1]?p(n[1]):[];return n[2]&&(r.length++,r.push.apply(r,p(n[2]))),n[3]&&(r.push([]),r.push.apply(r,p(n[3]))),r;
+/******/ 		}
+/******/ 		var versionLt = (a, b) => {
+/******/ 			// see webpack/lib/util/semver.js for original code
+/******/ 			a=parseVersion(a),b=parseVersion(b);for(var r=0;;){if(r>=a.length)return r<b.length&&"u"!=(typeof b[r])[0];var e=a[r],n=(typeof e)[0];if(r>=b.length)return"u"==n;var t=b[r],f=(typeof t)[0];if(n!=f)return"o"==n&&"n"==f||("s"==f||"u"==n);if("o"!=n&&"u"!=n&&e!=t)return e<t;r++}
+/******/ 		}
+/******/ 		var rangeToString = (range) => {
+/******/ 			// see webpack/lib/util/semver.js for original code
+/******/ 			var r=range[0],n="";if(1===range.length)return"*";if(r+.5){n+=0==r?">=":-1==r?"<":1==r?"^":2==r?"~":r>0?"=":"!=";for(var e=1,a=1;a<range.length;a++){e--,n+="u"==(typeof(t=range[a]))[0]?"-":(e>0?".":"")+(e=2,t)}return n}var g=[];for(a=1;a<range.length;a++){var t=range[a];g.push(0===t?"not("+o()+")":1===t?"("+o()+" || "+o()+")":2===t?g.pop()+" "+g.pop():rangeToString(t))}return o();function o(){return g.pop().replace(/^\((.+)\)$/,"$1")}
+/******/ 		}
+/******/ 		var satisfy = (range, version) => {
+/******/ 			// see webpack/lib/util/semver.js for original code
+/******/ 			if(0 in range){version=parseVersion(version);var e=range[0],r=e<0;r&&(e=-e-1);for(var n=0,i=1,a=!0;;i++,n++){var f,s,g=i<range.length?(typeof range[i])[0]:"";if(n>=version.length||"o"==(s=(typeof(f=version[n]))[0]))return!a||("u"==g?i>e&&!r:""==g!=r);if("u"==s){if(!a||"u"!=g)return!1}else if(a)if(g==s)if(i<=e){if(f!=range[i])return!1}else{if(r?f>range[i]:f<range[i])return!1;f!=range[i]&&(a=!1)}else if("s"!=g&&"n"!=g){if(r||i<=e)return!1;a=!1,i--}else{if(i<=e||s<g!=r)return!1;a=!1}else"s"!=g&&"n"!=g&&(a=!1,i--)}}var t=[],o=t.pop.bind(t);for(n=1;n<range.length;n++){var u=range[n];t.push(1==u?o()|o():2==u?o()&o():u?satisfy(u,version):!o())}return!!o();
+/******/ 		}
+/******/ 		var ensureExistence = (scopeName, key) => {
+/******/ 			var scope = __webpack_require__.S[scopeName];
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) throw new Error("Shared module " + key + " doesn't exist in shared scope " + scopeName);
+/******/ 			return scope;
+/******/ 		};
+/******/ 		var findVersion = (scope, key) => {
+/******/ 			var versions = scope[key];
+/******/ 			var key = Object.keys(versions).reduce((a, b) => {
+/******/ 				return !a || versionLt(a, b) ? b : a;
+/******/ 			}, 0);
+/******/ 			return key && versions[key]
+/******/ 		};
+/******/ 		var findSingletonVersionKey = (scope, key) => {
+/******/ 			var versions = scope[key];
+/******/ 			return Object.keys(versions).reduce((a, b) => {
+/******/ 				return !a || (!versions[a].loaded && versionLt(a, b)) ? b : a;
+/******/ 			}, 0);
+/******/ 		};
+/******/ 		var getInvalidSingletonVersionMessage = (scope, key, version, requiredVersion) => {
+/******/ 			return "Unsatisfied version " + version + " from " + (version && scope[key][version].from) + " of shared singleton module " + key + " (required " + rangeToString(requiredVersion) + ")"
+/******/ 		};
+/******/ 		var getSingleton = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var version = findSingletonVersionKey(scope, key);
+/******/ 			return get(scope[key][version]);
+/******/ 		};
+/******/ 		var getSingletonVersion = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var version = findSingletonVersionKey(scope, key);
+/******/ 			if (!satisfy(requiredVersion, version)) warn(getInvalidSingletonVersionMessage(scope, key, version, requiredVersion));
+/******/ 			return get(scope[key][version]);
+/******/ 		};
+/******/ 		var getStrictSingletonVersion = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var version = findSingletonVersionKey(scope, key);
+/******/ 			if (!satisfy(requiredVersion, version)) throw new Error(getInvalidSingletonVersionMessage(scope, key, version, requiredVersion));
+/******/ 			return get(scope[key][version]);
+/******/ 		};
+/******/ 		var findValidVersion = (scope, key, requiredVersion) => {
+/******/ 			var versions = scope[key];
+/******/ 			var key = Object.keys(versions).reduce((a, b) => {
+/******/ 				if (!satisfy(requiredVersion, b)) return a;
+/******/ 				return !a || versionLt(a, b) ? b : a;
+/******/ 			}, 0);
+/******/ 			return key && versions[key]
+/******/ 		};
+/******/ 		var getInvalidVersionMessage = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var versions = scope[key];
+/******/ 			return "No satisfying version (" + rangeToString(requiredVersion) + ") of shared module " + key + " found in shared scope " + scopeName + ".\n" +
+/******/ 				"Available versions: " + Object.keys(versions).map((key) => {
+/******/ 				return key + " from " + versions[key].from;
+/******/ 			}).join(", ");
+/******/ 		};
+/******/ 		var getValidVersion = (scope, scopeName, key, requiredVersion) => {
+/******/ 			var entry = findValidVersion(scope, key, requiredVersion);
+/******/ 			if(entry) return get(entry);
+/******/ 			throw new Error(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
+/******/ 		};
+/******/ 		var warn = (msg) => {
+/******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
+/******/ 		};
+/******/ 		var warnInvalidVersion = (scope, scopeName, key, requiredVersion) => {
+/******/ 			warn(getInvalidVersionMessage(scope, scopeName, key, requiredVersion));
+/******/ 		};
+/******/ 		var get = (entry) => {
+/******/ 			entry.loaded = 1;
+/******/ 			return entry.get()
+/******/ 		};
+/******/ 		var init = (fn) => (function(scopeName, a, b, c) {
+/******/ 			var promise = __webpack_require__.I(scopeName);
+/******/ 			if (promise && promise.then) return promise.then(fn.bind(fn, scopeName, __webpack_require__.S[scopeName], a, b, c));
+/******/ 			return fn(scopeName, __webpack_require__.S[scopeName], a, b, c);
+/******/ 		});
+/******/ 		
+/******/ 		var load = /*#__PURE__*/ init((scopeName, scope, key) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return get(findVersion(scope, key));
+/******/ 		});
+/******/ 		var loadFallback = /*#__PURE__*/ init((scopeName, scope, key, fallback) => {
+/******/ 			return scope && __webpack_require__.o(scope, key) ? get(findVersion(scope, key)) : fallback();
+/******/ 		});
+/******/ 		var loadVersionCheck = /*#__PURE__*/ init((scopeName, scope, key, version) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return get(findValidVersion(scope, key, version) || warnInvalidVersion(scope, scopeName, key, version) || findVersion(scope, key));
+/******/ 		});
+/******/ 		var loadSingleton = /*#__PURE__*/ init((scopeName, scope, key) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return getSingleton(scope, scopeName, key);
+/******/ 		});
+/******/ 		var loadSingletonVersionCheck = /*#__PURE__*/ init((scopeName, scope, key, version) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return getSingletonVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var loadStrictVersionCheck = /*#__PURE__*/ init((scopeName, scope, key, version) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return getValidVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var loadStrictSingletonVersionCheck = /*#__PURE__*/ init((scopeName, scope, key, version) => {
+/******/ 			ensureExistence(scopeName, key);
+/******/ 			return getStrictSingletonVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var loadVersionCheckFallback = /*#__PURE__*/ init((scopeName, scope, key, version, fallback) => {
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) return fallback();
+/******/ 			return get(findValidVersion(scope, key, version) || warnInvalidVersion(scope, scopeName, key, version) || findVersion(scope, key));
+/******/ 		});
+/******/ 		var loadSingletonFallback = /*#__PURE__*/ init((scopeName, scope, key, fallback) => {
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) return fallback();
+/******/ 			return getSingleton(scope, scopeName, key);
+/******/ 		});
+/******/ 		var loadSingletonVersionCheckFallback = /*#__PURE__*/ init((scopeName, scope, key, version, fallback) => {
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) return fallback();
+/******/ 			return getSingletonVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var loadStrictVersionCheckFallback = /*#__PURE__*/ init((scopeName, scope, key, version, fallback) => {
+/******/ 			var entry = scope && __webpack_require__.o(scope, key) && findValidVersion(scope, key, version);
+/******/ 			return entry ? get(entry) : fallback();
+/******/ 		});
+/******/ 		var loadStrictSingletonVersionCheckFallback = /*#__PURE__*/ init((scopeName, scope, key, version, fallback) => {
+/******/ 			if(!scope || !__webpack_require__.o(scope, key)) return fallback();
+/******/ 			return getStrictSingletonVersion(scope, scopeName, key, version);
+/******/ 		});
+/******/ 		var installedModules = {};
+/******/ 		var moduleToHandlerMapping = {
+/******/ 			"webpack/sharing/consume/default/mdk-core/controls/IControl": () => (loadSingletonVersionCheck("default", "mdk-core/controls/IControl", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/text-field": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/text-field", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/layouts/stack-layout": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/layouts/stack-layout", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/label": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/label", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core": () => (loadSingletonVersionCheck("default", "@nativescript/core", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/dialogs": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/dialogs", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/gestures": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/gestures", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/text-view": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/text-view", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/button": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/button", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/list-picker": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/list-picker", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/content-view": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/content-view", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/frame": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/frame", [0])),
+/******/ 			"webpack/sharing/consume/default/@nativescript/core/ui/layouts/flexbox-layout": () => (loadSingletonVersionCheck("default", "@nativescript/core/ui/layouts/flexbox-layout", [0]))
+/******/ 		};
+/******/ 		var initialConsumes = ["webpack/sharing/consume/default/mdk-core/controls/IControl","webpack/sharing/consume/default/@nativescript/core/ui/text-field","webpack/sharing/consume/default/@nativescript/core/ui/layouts/stack-layout","webpack/sharing/consume/default/@nativescript/core/ui/label","webpack/sharing/consume/default/@nativescript/core","webpack/sharing/consume/default/@nativescript/core/ui/dialogs","webpack/sharing/consume/default/@nativescript/core/ui/gestures","webpack/sharing/consume/default/@nativescript/core/ui/text-view","webpack/sharing/consume/default/@nativescript/core/ui/button","webpack/sharing/consume/default/@nativescript/core/ui/list-picker","webpack/sharing/consume/default/@nativescript/core/ui/content-view","webpack/sharing/consume/default/@nativescript/core/ui/frame","webpack/sharing/consume/default/@nativescript/core/ui/layouts/flexbox-layout"];
+/******/ 		initialConsumes.forEach((id) => {
+/******/ 			__webpack_require__.m[id] = (module) => {
+/******/ 				// Handle case when module is used sync
+/******/ 				installedModules[id] = 0;
+/******/ 				delete __webpack_require__.c[id];
+/******/ 				var factory = moduleToHandlerMapping[id]();
+/******/ 				if(typeof factory !== "function") throw new Error("Shared module is not available for eager consumption: " + id);
+/******/ 				module.exports = factory();
+/******/ 			}
+/******/ 		});
+/******/ 		// no chunk loading of consumes
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 /******/ 	
+/******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./build.definitions/application-index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/bundle.js");
+/******/ 	var __webpack_export_target__ = exports;
+/******/ 	for(var i in __webpack_exports__) __webpack_export_target__[i] = __webpack_exports__[i];
+/******/ 	if(__webpack_exports__.__esModule) Object.defineProperty(__webpack_export_target__, "__esModule", { value: true });
 /******/ 	
-/******/ 	return __webpack_exports__;
 /******/ })()
 ;
-});
 //# sourceMappingURL=bundle.js.map

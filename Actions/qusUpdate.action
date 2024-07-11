@@ -1,0 +1,21 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "update"
+	},
+	"OnFailure": "/n44/Actions/UpdateEntityFailureMessage.action",
+	"OnSuccess": "/n44/Actions/UpdateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "Questionnaire_reply_table",
+		"Service": "/n44/Services/capurl.service",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"doc_id": "#Control:doc_id/#Value",
+		"questionnaire_id": "#Control:questionnaire_id/#SelectedValue",
+		"invitationId": "#Control:invitationId/#SelectedValue",
+		"user_reply": "/n44/Rules/userReplyRule.js",
+		"description": "#Control:description/#Value",
+		"type": "#Control:type/#Value"
+	}
+}

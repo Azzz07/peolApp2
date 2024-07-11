@@ -13,10 +13,13 @@
                     <NavigationPropertyBinding Path="header_item_rel" Target="Item_table"/>
                     <NavigationPropertyBinding Path="header_supplier_rel" Target="Supplier_table"/>
                     <NavigationPropertyBinding Path="header_supplier_bid_rel" Target="Supplier_bid_table"/>
+                    <NavigationPropertyBinding Path="header_questionnarie_rel" Target="Questionnaire_table"/>
                 </EntitySet>
                 <EntitySet Name="Supplier_table" EntityType="WhatsappService.Supplier_table">
                     <NavigationPropertyBinding Path="supplier_header_rel" Target="Header_table"/>
                     <NavigationPropertyBinding Path="supplier_to_sbid" Target="Supplier_bid_table"/>
+                    <NavigationPropertyBinding Path="supplier_to_attachment" Target="Attachments_table"/>
+                    <NavigationPropertyBinding Path="supplier_to_question_reply_rel" Target="Questionnaire_reply_table"/>
                 </EntitySet>
                 <EntitySet Name="Item_table" EntityType="WhatsappService.Item_table">
                     <NavigationPropertyBinding Path="item_header_rel" Target="Header_table"/>
@@ -26,8 +29,19 @@
                 </EntitySet>
                 <EntitySet Name="Bid_reply" EntityType="WhatsappService.Bid_reply"/>
                 <EntitySet Name="supplier_replay" EntityType="WhatsappService.supplier_replay"/>
-                <EntitySet Name="Timestamp" EntityType="WhatsappService.Timestamp"/>
-                <EntitySet Name="Approved_Bid" EntityType="WhatsappService.Approved_Bid"/>
+                <EntitySet Name="Attachments_table" EntityType="WhatsappService.Attachments_table">
+                    <NavigationPropertyBinding Path="attachment_supplier_rel" Target="Supplier_table"/>
+                </EntitySet>
+                <EntitySet Name="Questionnaire_table" EntityType="WhatsappService.Questionnaire_table">
+                    <NavigationPropertyBinding Path="quest_quest_reply_rel" Target="Questionnaire_reply_table"/>
+                    <NavigationPropertyBinding Path="quest_header_rel" Target="Header_table"/>
+                </EntitySet>
+                <EntitySet Name="Dropdown" EntityType="WhatsappService.Dropdown"/>
+                <EntitySet Name="Questionnaire_reply_table" EntityType="WhatsappService.Questionnaire_reply_table">
+                    <NavigationPropertyBinding Path="quest_reply_questionnaire_rel" Target="Questionnaire_table"/>
+                    <NavigationPropertyBinding Path="quest_reply_supplier_rel" Target="Supplier_table"/>
+                    <NavigationPropertyBinding Path="quest_reply_dropdown_rel" Target="Dropdown"/>
+                </EntitySet>
             </EntityContainer>
             <EntityType Name="Header_table">
                 <Key>
@@ -41,6 +55,7 @@
                 <NavigationProperty Name="header_item_rel" Type="Collection(WhatsappService.Item_table)"/>
                 <NavigationProperty Name="header_supplier_rel" Type="Collection(WhatsappService.Supplier_table)"/>
                 <NavigationProperty Name="header_supplier_bid_rel" Type="Collection(WhatsappService.Supplier_bid_table)"/>
+                <NavigationProperty Name="header_questionnarie_rel" Type="Collection(WhatsappService.Questionnaire_table)"/>
             </EntityType>
             <EntityType Name="Supplier_table">
                 <Key>
@@ -53,10 +68,14 @@
                 <Property Name="smvendor_id" Type="Edm.String"/>
                 <Property Name="phone_main" Type="Edm.String"/>
                 <Property Name="status" Type="Edm.String"/>
+                <Property Name="award_status" Type="Edm.String"/>
+                <Property Name="award_msg_status" Type="Edm.String"/>
                 <NavigationProperty Name="supplier_header_rel" Type="WhatsappService.Header_table">
                     <ReferentialConstraint Property="doc_id" ReferencedProperty="doc_id"/>
                 </NavigationProperty>
                 <NavigationProperty Name="supplier_to_sbid" Type="Collection(WhatsappService.Supplier_bid_table)"/>
+                <NavigationProperty Name="supplier_to_attachment" Type="Collection(WhatsappService.Attachments_table)"/>
+                <NavigationProperty Name="supplier_to_question_reply_rel" Type="Collection(WhatsappService.Questionnaire_reply_table)"/>
             </EntityType>
             <EntityType Name="Item_table">
                 <Key>
@@ -65,8 +84,8 @@
                 </Key>
                 <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
                 <Property Name="itemid" Type="Edm.String" MaxLength="20" Nullable="false"/>
-                <Property Name="improvise_amount" Type="Edm.Int32"/>
                 <Property Name="item_name" Type="Edm.String"/>
+                <Property Name="improvise_amount" Type="Edm.Int32"/>
                 <Property Name="price" Type="Edm.String"/>
                 <Property Name="quantity" Type="Edm.String"/>
                 <NavigationProperty Name="item_header_rel" Type="WhatsappService.Header_table">
@@ -93,11 +112,16 @@
                 <Property Name="status" Type="Edm.String"/>
                 <Property Name="ariba_status" Type="Edm.String"/>
                 <Property Name="whatsapp_status" Type="Edm.String"/>
+                <Property Name="award_price" Type="Edm.Int32"/>
                 <NavigationProperty Name="supplier_bid_header_rel" Type="WhatsappService.Header_table">
                     <ReferentialConstraint Property="doc_id" ReferencedProperty="doc_id"/>
                 </NavigationProperty>
             </EntityType>
             <EntityType Name="Bid_reply">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
                 <Property Name="doc_id" Type="Edm.String"/>
                 <Property Name="item_name" Type="Edm.String"/>
                 <Property Name="phone" Type="Edm.String"/>
@@ -125,22 +149,76 @@
                 <Property Name="From" Type="Edm.String"/>
                 <Property Name="ApiVersion" Type="Edm.String"/>
             </EntityType>
-            <EntityType Name="Timestamp">
-                <Property Name="timestamp" Type="Edm.String"/>
-            </EntityType>
-            <EntityType Name="Approved_Bid">
+            <EntityType Name="Attachments_table">
                 <Key>
                     <PropertyRef Name="doc_id"/>
                     <PropertyRef Name="invitationId"/>
                 </Key>
                 <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
                 <Property Name="invitationId" Type="Edm.String" MaxLength="50" Nullable="false"/>
-                <Property Name="item_id" Type="Edm.String" MaxLength="20"/>
-                <Property Name="item_name" Type="Edm.String"/>
-                <Property Name="price" Type="Edm.Int32"/>
-                <Property Name="quantity" Type="Edm.Int32"/>
-                <Property Name="status" Type="Edm.String"/>
+                <Property Name="content" Type="Edm.Stream"/>
+                <Property Name="mediaType" Type="Edm.String"/>
+                <Property Name="fileName" Type="Edm.String"/>
+                <Property Name="size" Type="Edm.Int32"/>
+                <Property Name="url" Type="Edm.String"/>
+                <NavigationProperty Name="attachment_supplier_rel" Type="WhatsappService.Supplier_table">
+                    <ReferentialConstraint Property="invitationId" ReferencedProperty="invitationId"/>
+                </NavigationProperty>
             </EntityType>
+            <EntityType Name="Questionnaire_table">
+                <Key>
+                    <PropertyRef Name="doc_id"/>
+                    <PropertyRef Name="questionnaire_id"/>
+                </Key>
+                <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="questionnaire_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="description" Type="Edm.String"/>
+                <Property Name="type" Type="Edm.String"/>
+                <NavigationProperty Name="quest_quest_reply_rel" Type="Collection(WhatsappService.Questionnaire_reply_table)"/>
+                <NavigationProperty Name="quest_header_rel" Type="WhatsappService.Header_table">
+                    <ReferentialConstraint Property="doc_id" ReferencedProperty="doc_id"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="Dropdown">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="questionnaire_id" Type="Edm.String" MaxLength="20"/>
+                <Property Name="dropdown_value" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Questionnaire_reply_table">
+                <Key>
+                    <PropertyRef Name="doc_id"/>
+                    <PropertyRef Name="questionnaire_id"/>
+                    <PropertyRef Name="invitationId"/>
+                </Key>
+                <Property Name="doc_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="questionnaire_id" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="invitationId" Type="Edm.String" MaxLength="50" Nullable="false"/>
+                <Property Name="user_reply" Type="Edm.String"/>
+                <NavigationProperty Name="quest_reply_questionnaire_rel" Type="WhatsappService.Questionnaire_table">
+                    <ReferentialConstraint Property="questionnaire_id" ReferencedProperty="questionnaire_id"/>
+                </NavigationProperty>
+                <NavigationProperty Name="quest_reply_supplier_rel" Type="WhatsappService.Supplier_table">
+                    <ReferentialConstraint Property="invitationId" ReferencedProperty="invitationId"/>
+                </NavigationProperty>
+                <NavigationProperty Name="quest_reply_dropdown_rel" Type="Collection(WhatsappService.Dropdown)"/>
+                <Property Name="description" Type="Edm.String"/>
+                <Property Name="type" Type="Edm.String"/>
+            </EntityType>
+            <Annotations Target="WhatsappService.Bid_reply/id">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="WhatsappService.Attachments_table/content">
+                <Annotation Term="Core.MediaType" Path="mediaType"/>
+            </Annotations>
+            <Annotations Target="WhatsappService.Attachments_table/mediaType">
+                <Annotation Term="Core.IsMediaType" Bool="true"/>
+            </Annotations>
+            <Annotations Target="WhatsappService.Dropdown/id">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

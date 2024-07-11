@@ -5,41 +5,71 @@
 				"ShowAllFilters": false,
 				"_Type": "Control.Type.FilterFeedbackBar"
 			},
-			"_Name": "SectionedTable0",
 			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Buttons": [
 						{
-							"OnPress": "/n44/Actions/Header_table/NavToHeader_table_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton0",
 							"Title": "Header_table",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/n44/Actions/Header_table/NavToHeader_table_List.action"
 						},
 						{
-							"OnPress": "/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton1",
 							"Title": "Supplier_bid_table",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_List.action"
 						},
 						{
-							"OnPress": "/n44/Actions/Supplier_table/NavToSupplier_table_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton2",
 							"Title": "Supplier_table",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/n44/Actions/Supplier_table/NavToSupplier_table_List.action"
 						}
 					],
-					"_Name": "SectionButtonTable0",
-					"_Type": "Section.Type.ButtonTable"
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					}
 				}
 			]
 		}
 	],
-	"_Name": "Main",
 	"_Type": "Page",
+	"_Name": "Main",
 	"Caption": "Main",
 	"PrefersLargeCaption": true,
 	"ActionBar": {

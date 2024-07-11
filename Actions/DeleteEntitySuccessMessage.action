@@ -1,10 +1,9 @@
 {
-    "Animated": true,
-    "Duration": 2,
-    "Message": "Entity deleted",
-    "Icon": "",
-    "IsIconHidden": false,
-    "NumberOfLines": 2,
-    "OnSuccess": "/n44/Actions/CloseModalPage_Complete.action",
-    "_Type": "Action.Type.ToastMessage"
+	"_Type": "Action.Type.ToastMessage",
+	"OnSuccess": "/n44/Actions/CloseModalPage_Complete.action",
+	"Message": "Deleted Successfully",
+	"NumberOfLines": 2,
+	"Duration": 2,
+	"IsIconHidden": false,
+	"Animated": true
 }

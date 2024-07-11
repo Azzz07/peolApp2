@@ -1,0 +1,17 @@
+{
+	"_Type": "Action.Type.ODataService.UploadStream",
+	"ActionResult": {
+		"_Name": "uploadstream"
+	},
+	"OnFailure": "/n44/Actions/UploadStreamFailureMessage.action",
+	"OnSuccess": "/n44/Actions/UploadStreamSuccessMessage.action",
+	"ShowActivityIndicator": true,
+	"Target": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Attachments_table",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"content": "#Control:content/#Value"
+	}
+}

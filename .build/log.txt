@@ -1,2 +1,2 @@
 Pass:
-Generated bundle file /home/user/projects/n44/.build/n44/.build/uploadBundle.zip
+Generated bundle file /home/user/projects/peolApp2/.build/n44/.build/uploadBundle.zip

@@ -1,0 +1,7 @@
+{
+	"_Type": "Register.Type.ExtensionControl",
+	"Module": "QusEXtn",
+	"Control": "QusEXtn",
+	"Class": "QusEXtn",
+	"Display": "Questionnaire Page"
+}

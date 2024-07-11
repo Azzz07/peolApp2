@@ -83,7 +83,7 @@
 							"Value": "{leadBid}",
 							"_Name": "KeyValue13",
 							"KeyName": "Lead Bid",
-							"Visible": true
+							"Visible": "/n44/Rules/leadVsisD.js"
 						},
 						{
 							"Value": "{eventTypeName}",

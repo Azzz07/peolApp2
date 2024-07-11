@@ -1,6 +1,6 @@
 {
-    "Message": "Create entity failure - {#ActionResults:create/error}",
-    "Duration": 7,
-    "Animated": true,
-    "_Type": "Action.Type.BannerMessage"
+	"_Type": "Action.Type.BannerMessage",
+	"Message": "/n44/Rules/fileUpdateError.js",
+	"Duration": 7,
+	"Animated": true
 }

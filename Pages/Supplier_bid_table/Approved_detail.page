@@ -98,6 +98,12 @@
 							"Visible": true
 						},
 						{
+							"Value": "{award_price}",
+							"_Name": "KeyValue12",
+							"KeyName": "Awarded Price",
+							"Visible": false
+						},
+						{
 							"Value": "{whatsapp_status}",
 							"_Name": "KeyValue11",
 							"KeyName": "whatsapp_status",

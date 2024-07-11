@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "toAwardedList"
+	},
+	"PageToOpen": "/n44/Pages/Supplier_table/Awarded List.page"
+}

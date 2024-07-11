@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "toApprovedQus"
+	},
+	"PageToOpen": "/n44/Pages/approvedQus.page"
+}

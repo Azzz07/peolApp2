@@ -38,10 +38,11 @@
 //     return 'Error: Unable to fetch count';
 //     });
 //     }
-export default function count(sectionProxy, clientAPI) {
+export default function countRule(sectionProxy, clientAPI) {
 
     let a = sectionProxy.evaluateTargetPath('#Page:Login/#Control:FormCellSimpleProperty0/#Value');
-    let queryOptions =  `$filter=supplier_header_rel/status eq 'Open' and invitationId eq '${a}'`;;
+    // let queryOptions =  `$filter=supplier_header_rel/status eq 'Open' and invitationId eq '${a}'`;;myLogin
+    let queryOptions =  `$filter=supplier_header_rel/status eq 'Open' and phone_main eq '${a}'`;;
     return sectionProxy.count('/n44/Services/capurl.service', 'Supplier_table',queryOptions)
     .then(count => {
   

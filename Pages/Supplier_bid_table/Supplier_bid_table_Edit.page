@@ -96,7 +96,7 @@
 							"Separator": true,
 							"Caption": "Quantity",
 							"Enabled": true,
-							"IsEditable": false
+							"IsEditable": true
 						},
 						{
 							"Value": "{status}",
@@ -123,7 +123,7 @@
 							"Value": "{leadBid}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FormCellSimpleProperty1",
-							"IsVisible": true,
+							"IsVisible": "/n44/Rules/qusBtnVisiRule.js",
 							"Separator": true,
 							"Caption": "Lead Bid",
 							"PlaceHolder": "PlaceHolder",

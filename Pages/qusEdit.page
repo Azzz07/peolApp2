@@ -1,0 +1,215 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Questionnaire_reply_table",
+		"QueryOptions": "$expand=quest_reply_dropdown_rel"
+	},
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "{doc_id}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "doc_id",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "Doc Id",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{questionnaire_id}",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "questionnaire_id",
+							"IsVisible": false,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Questionnaire Id",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"PickerItems": {
+								"DisplayValue": "{questionnaire_id}",
+								"ReturnValue": "{questionnaire_id}",
+								"Target": {
+									"EntitySet": "Questionnaire_table",
+									"Service": "/n44/Services/capurl.service"
+								}
+							}
+						},
+						{
+							"Value": "{invitationId}",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "invitationId",
+							"IsVisible": false,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Invitation Id",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"PickerItems": {
+								"DisplayValue": "{invitationId}",
+								"ReturnValue": "{invitationId}",
+								"Target": {
+									"EntitySet": "Supplier_table",
+									"Service": "/n44/Services/capurl.service"
+								}
+							}
+						},
+						{
+							"Value": "{description}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "description",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Question",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{user_reply}",
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "user_reply3",
+							"IsVisible": "/n44/Rules/visiRule.js",
+							"Separator": true,
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{user_reply}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "user_reply",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "Answer",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "user_reply2",
+							"IsVisible": "/n44/Rules/visibleRule.js",
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Choose Single",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								"Yes",
+								"No"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "userReply4",
+							"IsVisible": "/n44/Rules/visiblePaymentRule.js",
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Choose Single",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/n44/Services/capurl.service",
+									"EntitySet": "{@odata.readLink}/quest_reply_dropdown_rel",
+									"QueryOptions": "$filter=questionnaire_id eq '{questionnaire_id}'"
+								},
+								"DisplayValue": "{dropdown_value}",
+								"ReturnValue": "{dropdown_value}"
+							}
+						},
+						{
+							"Value": "{type}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "type",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "type",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{user_reply}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty0",
+							"IsVisible": "/n44/Rules/numVisibleRule.js",
+							"Separator": true,
+							"Caption": "Answer",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Questionnaire_reply_table_Edit",
+	"Caption": "Qus & Ans",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/n44/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/n44/Actions/qusUpdate.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

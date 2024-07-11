@@ -1,4 +1,4 @@
-/// version: MDK SDK 23.12
+/// version: MDK SDK 24.4
 
 /**
  * A designer-facing interface that provides access to a context.
@@ -19,6 +19,10 @@
    * Get the topmost page in the navigation stack
    */
    currentPage: any;
+    /*
+   * Returns a set of NativeScript Framework Modules that can be accessed using a well known property name.
+  */
+  nativescript: any;
    /**
    * Synchronously evaluate the target path and return the value from the resulting context.
    * 
@@ -221,7 +225,7 @@
    * Can only be accessed for IClientAPI instances associated with a UI element, 
    * because that guarantees that the data will last for the lifetime of that element.
    */
-  getClientData(): IClientData;
+  getClientData(): Object;
   /**
    * Get the Application context client data object. This starts out as a plain JavaScript object, 
    * and can be modified to hold application state.
@@ -270,7 +274,7 @@
    */
   isCurrentPage(pageName: string): boolean;
   /**
-   * Get whether or not the media object for the supplied readLink exists and is local
+   * Get whether or not the media object for the supplied readLink is available in local
    * 
    * @param serviceName service name
    * @param entitySet entityset name
@@ -341,22 +345,47 @@
    */
   getRegions(): Object;
   /**
-   * Get the versions of application, definitions, SDK & etc
+   * Get the versions of application, definitions, SDK and etc.
    * 
-   * @returns it returns an array of key/value pairs 
+   * @returns It returns an array of key/value pairs 
    * to represent the versions for different components.
    * iOS app and Android app may have different components and versions.
    * 
-   * iOS app may inlcude the following keys: "Application Version", "Definitions Version", 
-   * "SAPMDC", "SAPCommon", "APFiori", "SAPFioriFlows", "SAPFoundation", 
-   * "SAPOfflineOData", "SAPOData"
+   * iOS app may include the following keys:
+   * <li> "Application Version": AppVersion from MDKProject.json
+   * <li> "Definitions Version": Version from Application.app in the metadata
+   * <li> "SAPMDC": MDK client version
+   * <li> SDK libraries used by MDK: 
+   * <ul>
+   *   <li> "SAPCommon"
+   *   <li> "SAPFiori"
+   *   <li> "SAPFioriFlows"
+   *   <li> "SAPFoundation"
+   *   <li> "SAPOfflineOData"
+   *   <li> "SAPOData"
+   * </ul>
    * 
-   * Android app may include the following keys: "Application Version", "Definitions Version",
-   * "MDKClient Version", "com.sap.cloud.android:foundation", "com.sap.cloud.android:onboarding",
-   * "com.sap.cloud.android:fiori", "com.sap.cloud.android:odata", "com.sap.cloud.android:offline-odata"
+   * Android app may include the following keys:
+   * <li> "Application Version": AppVersion from MDKProject.json
+   * <li> "Definitions Version": Version from Application.app in the metadata
+   * <li> "MDKClient Version": MDK client version
+   * <li> SDK libraries used by MDK:
+   * <ul>
+   *   <li> "com.sap.cloud.android:foundation"
+   *   <li> "com.sap.cloud.android:onboarding"
+   *   <li> "com.sap.cloud.android:fiori"
+   *   <li> "com.sap.cloud.android:odata"
+   *   <li> "com.sap.cloud.android:offline-odata"
+   * </ul>
    * 
-   * WebApp may include the following keys: "Definition Version", "WebClient Version",
-   * "@ui5/webcomponents Version", "ui5-webcomponents-mdk Version"
+   * Web application may include the following keys:
+   * <li> "Definition Version": Version from Application.app in the metadata
+   * <li> "WebClient Version": Web client version
+   * <li> SDK libraries used by MDK:
+   * <ul>
+   *   <li> "@ui5/webcomponents Version"
+   *   <li> "ui5-webcomponents-mdk Version"
+   * </ul>
    */
   getVersionInfo(): Object;  
 /**
@@ -409,7 +438,8 @@
    */
   setLanguage(language: string): void;
   /**
-   * This method is to set app region into app settings.
+   * This method is to set app region into app settings. Different from the region specifier in 
+   * SetLanguage, setRegion only affects formatting, e.g. date and number formats.
    * 
    * @param region region
    */
@@ -490,6 +520,10 @@
    * This method is to get Endpoint Url of connection to application in SAP Mobile Services
    */
   getMobileServiceEndpointUrl(): string;
+   /**
+   * This method is to get the value of _Name property for client application
+   */
+  getAppName(): string;
   /**
    * This method is to send a request to application's SAP Mobile Services.
    * 
@@ -565,7 +599,7 @@
       * Returns Enum for specifying filterType in createFilterCriteria API.
       * Has two values, Filter and Sorter.
       */
-     filterTypeEnum: any;
+     filterTypeEnum: typeof FilterType;
      /**
       * Create filter criteria for non-supported controls(except Filter & Sorter formcell) to be used in Filter page.
       * 
@@ -573,12 +607,16 @@
       * 
       *    let filterResult6 = clientAPI.createFilterCriteria(clientAPI.filterTypeEnum.Filter, undefined, undefined, result6, true);
       * @param filterType - filterTypeEnum value (Filter or Sorter).
-      * @param name - Property name on which the filter is applied.
+      * @param name - Property name on which the filter is applied. If FilterCriteria is complex query, name will be used as CustomQueryGroup to match with FastFilter items in FilterFeedbackBar.
       * @param caption - Name of the control.
       * @param filterItems - Array of filter items.
       * @param isFilterItemsComplex - True if the filterItems contains logical/lambda operators, default is false. If set to true, name and caption properties are ignored.
+      * @param label - label to be displayed beside display value when the item is being shown as selected item on filter feedback bar. Default is empty string.
+      * @param filterItems - Array of display value of the filter items. Default is null.
+      * 
+      * @return {FilterCriteria} the created FilterCriteria
       */
-     createFilterCriteria(filterType: any, name: string, caption: string, filterItems: Array<object>, isFilterItemsComplex: boolean): any;
+     createFilterCriteria(filterType: FilterType, name: string, caption: string, filterItems: Array<object>, isFilterItemsComplex: boolean, label?, filterItemsDisplayValue?): FilterCriteria;
      /**
       * Convert array of FilterCriteria to JSON string, user can store it and restore back later using convertJSONStringToFilterCriteriaArray().
       * 
@@ -589,7 +627,7 @@
       * 
       * @return {string} the JSON string
       */
-     convertFilterCriteriaArrayToJSONString(filters: Array<any>): string
+     convertFilterCriteriaArrayToJSONString(filters: Array<FilterCriteria>): string
      /**
       * Convert JSON string to array of FilterCriteria, JSON string can be used the return value from convertFilterCriteriaArrayToJSONString().
       * 
@@ -600,11 +638,20 @@
       * 
       * @return {Array<FilterCriteria>} the array of FilterCriteria
       */
-     convertJSONStringToFilterCriteriaArray(jsonString: string): Array<any>;
+     convertJSONStringToFilterCriteriaArray(jsonString: string): Array<FilterCriteria>;
      /**
-      * Delete OData Cache images.
+      * Delete OData cache images
+      * Note: This function is for iOS & Android only
       */
      deleteODataCacheImages(serviceFileName?: string, entityName?: string);
+     /**
+     * Get OData cache image path
+     * @param {string} path OData direct image rendering path
+     * @param {string} mimeType Mime Type
+     * @returns {Promise<string>} returns OData cache image path
+     * Note: This function is for iOS & Android only
+     */
+    getODataCacheImagePath(path: string, mimeType?: string): Promise<string>;
 }
 
 /**
@@ -882,11 +929,23 @@ interface IFormCellProxy extends IControlProxy {
    */
    setEnable(isEnable: boolean): void;
 
+   /**
+   * Sets the Enabled property of the FormCell's control.
+   * @param {boolean} isEnabled true enables and false disables.
+   */
+  setEnabled(isEnabled: boolean): void;
+
   /**
    * Returns the Enable property value defined for the control.
    * @return {boolean}
    */
   getEnable(): boolean;
+
+  /**
+   * Returns the Enabled property value defined for the control.
+   * @return {boolean}
+   */
+  getEnabled(): boolean;
 
   /**
    * Sets the Caption property of the FormCell's control.
@@ -911,6 +970,27 @@ interface IFormCellProxy extends IControlProxy {
    * @return {string}
    */
   getHelperText(): string;
+
+  /**
+   * Gets the control's visible state.
+   * @returns {boolean} returns true if the control is visible otherwise false. 
+   */
+  getVisible(): boolean;
+
+  /**
+   * Create an object for attachment entry
+   * Note: This function is for iOS & Android only
+   *
+   * @param attachmentPath the path for the attachment file
+   * @param entitySet entity set name
+   * @param property the property of the entity set
+   * @param readLink readlink string
+   * @param service service name
+   * @param encodeURI whether the URI need to be encoded, default value is true
+   *
+   * @returns an object with all information for the attachment entry or undefined if the attachment is invalid
+   */
+  createAttachmentEntry(attachmentPath: string, entitySet: string, property: string, readLink: string, service: string, encodeURI: boolean): any;
 }
 
 /**
@@ -1201,6 +1281,80 @@ interface ISignatureCaptureFormCellProxy extends IFormCellProxy {
      * @return {string[]}
      */
     getAllowedFileTypes(): string[];
+
+    /**
+     * Open the item of the specified attachment at given index
+     * @param index The index of the item
+     */
+    openAttachmentItem(index: number);
+
+    /**
+     * Set the item's value in the attachment control.
+     * The value should be generated from: [FormCellControlProxy.createAttachmentEntry()](../../../reference/apidoc/classes/formcellcontrolproxy.html#createattachmententry) or [AttachmentEntryProxy.createAttachmentEntry()](../../../reference/apidoc/classes/attachmententryproxy.html#createattachmententry)
+     * @param value value to be set
+     * @param index The index of the item
+     * @param notify whether to send the notification
+     * @returns {IControlProxy} this - allows chaining
+     */
+    setValueByIndex(value: any, index: number, notify?: boolean);
+}
+
+/**
+ * A designer-facing interface that provides access to an item of attachmen control.
+ */
+interface IAttachmentEntryProxy extends IClientAPI {
+  /**
+   * Get item value (Read-Only).
+   * The value is in accordance with the interface [IAttachment](../../../reference/apidoc/interfaces/iattachment.html) definition.
+   * @return {any} the value of the item
+   */
+  getValue(): any;
+
+  /**
+   * Set the new value in the item.
+   * The value should be generated from: [FormCellControlProxy.createAttachmentEntry()](../../../reference/apidoc/classes/formcellcontrolproxy.html#createattachmententry) or [AttachmentEntryProxy.createAttachmentEntry()](../../../reference/apidoc/classes/attachmententryproxy.html#createattachmententry)
+   * @param value value to be set
+   * @param notify whether to send the notification
+   * @returns {IControlProxy} this - allows chaining
+   */
+  setValue(value: any, notify?: boolean);
+
+  /**
+   * This method returns AttachmentFormCell proxy
+   * @return {IAttachmentFormCellProxy}
+   */
+  getParent(): IAttachmentFormCellProxy;
+
+  /**
+   * Get index
+   * @return {number}
+   */
+  getIndex(): number;
+
+  /**
+   * @returns {IPageProxy} the Page, which the control belongs to 
+   */
+  getPageProxy(): IPageProxy;
+
+  /**
+   * Open the item of the specified attachment
+   */
+  open(): void;
+
+  /**
+   * Create an object for attachment entry
+   * Note: This function is for iOS & Android only
+   *
+   * @param attachmentPath the path for the attachment file
+   * @param entitySet entity set name
+   * @param property the property of the entity set
+   * @param readLink readlink string
+   * @param service service name
+   * @param encodeURI whether the URI need to be encoded, default value is true
+   *
+   * @returns an object with all information for the attachment entry or undefined if the attachment is invalid
+   */
+  createAttachmentEntry(attachmentPath: string, entitySet: string, property: string, readLink: string, service: string, encodeURI: boolean): any;
 }
 
 /**
@@ -1247,6 +1401,54 @@ interface ISignatureCaptureFormCellProxy extends IFormCellProxy {
    * @return {string}
    */
   getTitle(): string 
+
+  /**
+   * Sets the Image property of the Button FormCell's   control.
+   * @param {string} image {string} value to set.
+   */
+  setImage(image: string): void;
+
+  /**
+   * Returns the Image property value defined for the FormCell's control.
+   * @return {string}
+   */
+  getImage(): string;
+ 
+  /**
+   * Sets the Semantic property of the Button FormCell's control.
+   * @param {string} semantic {string} value to set.
+   */
+  setSemantic(semantic: string): void;
+ 
+  /**
+   * Returns the Semantic property value defined for the Button FormCell's control.
+   * @return {string}
+   */
+  getSemantic(): string;
+ 
+  /**
+   * Sets the ImagePosition property of the Button FormCell's control.
+   * @param {string} imagePosition {string} value to set.
+   */
+  setImagePosition(imagePosition: string): void;
+ 
+  /**
+   * Returns the ImagePosition property value defined for the Button FormCell's control.
+   * @return {string}
+   */
+  getImagePosition(): string;
+
+  /**
+   * Sets the ImageSize property of the Button FormCell's control.
+   * @param {Object} imageSize {Object} value to set.
+   */
+  setImageSize(imageSize: Object): void;
+
+  /**
+   * Returns the ImageSize property value defined for the Button FormCell's control.
+   * @return {Object}
+   */
+  getImageSize(): Object;
 }
 
 
@@ -1635,6 +1837,14 @@ interface IListPickerFormCellTargetProxy extends IFormCellTargetProxy {
    * @return {Object}
    */
   getSearch(): Object;
+
+  /**
+   * Returns the list of selected items as JavaScript Objects, each with ReturnValue and DisplayValue properties. 
+   * If the ListPicker is bound to an entity set, 
+   * each item will have a BindingObject property containing the full associated binding object.
+   * @return {Object[]}
+   */
+  getValue(): Object[];
 }
 
 /**
@@ -1653,7 +1863,7 @@ interface IPageProxy extends IControlContainerProxy {
   /**
    * return the most recently swipe item on this page.
    */
-   getExecutedContextMenuItem(): any;
+   getExecutedContextMenuItem(): ContextItem;
 
   /**
    * After running a CheckRequiredFields action, 
@@ -1692,6 +1902,18 @@ interface IPageProxy extends IControlContainerProxy {
    * @param newCaption  the new caption
    */
   setToolbarItemCaption(toolbarItemName: string, newCaption: string): Promise<any>;
+  /**
+   * 
+   * @returns {IToolbarProxy} return the ToolbarProxy instance
+   * of the associated toolbar of that page
+   */
+  getToolbar(): IToolbarProxy;
+  /**
+   * 
+   * @returns {IToolbarProxy} return the ToolbarProxy instance
+   * of the associated toolbar of that page
+   */
+  getFioriToolbar(): IFioriToolbarProxy;
   /**
    * Set specified actionBar item on page to visible/hidden
    * 
@@ -1734,7 +1956,7 @@ interface ISectionedTableProxy extends IControlProxy {
   /**
    * Get or set the current filters for this Sectioned Table. Modifying this property will cause the filters to be applied on the Sectioned Table.
    */
-     filters: any[];
+     filters: FilterCriteria[];
   /**
    * Factory method to construct an instance of DataQueryBuilder
    */
@@ -1856,9 +2078,16 @@ interface ISectionProxy {
   getControls(): IControlProxy[];
   /**
    * Redraw the section
+   * 
+   * @param fullSection false whether redraw full section or redraw on update items only
    * @returns {Promise<any>}
    */
-   redraw(): Promise<any> ;
+   redraw(fullSection: boolean): Promise<any> ;
+   /**
+   * This method returns the number of items in the section
+   * @returns {number}
+   */
+   getLoadedItemsCount(): number;
   }
   
   /**
@@ -1885,6 +2114,30 @@ interface ISectionProxy {
      */
     setTargetSpecifier(target: ITargetProxy, redraw?: boolean): Promise<any>;
   }
+
+  /**
+ * A ICalendarProxy can get/set the section's calendar dates, as well as scroll to a given date.
+ */
+interface ICalendarSectionProxy extends ISectionProxy {
+  /**
+   * Returns the selected date based on device's local time zone via JavaScript Date Object
+   * 
+   * @return {Date}
+   */
+  getSelectedDate() : Date;
+  /**
+   * Changes the selected date in the calendar based on device's local time zone.
+   * Accepted inputs: date string in "yyyy-MM-dd" or "yyyy-MM-ddThh:mm:ss" format, JavaScript Date Object.
+   * @param {any} dateInput
+   */
+  setSelectedDate(dateInput: any);
+  /**
+   * Scrolls the calendar to the specified date based on device's local time zone.
+   * Accepted values: date string in "yyyy-MM-dd" or "yyyy-MM-ddThh:mm:ss" format, JavaScript Date Object.
+   * @param {any} dateInput
+   */
+  scrollToDate(dateInput: any);
+}
   
   /*
   * SelectableSectionProxy is mainly for selection operations when enable the Multiple section for list.
@@ -1899,7 +2152,7 @@ interface ISectionProxy {
     /**
      * Get the current section selected items when selection mode is active. Otherwise an empty array will be returned.
      */
-    getSelectedItems(): [any];
+    getSelectedItems(): [SelectedItem];
   
     /**
      * Get selection mode for the current section.
@@ -1910,8 +2163,68 @@ interface ISectionProxy {
     /**
      * Get the last selected or deselected item.
      */
-    getSelectionChangedItem(): any;
+    getSelectionChangedItem(): ChangedItem;
+
+    /**
+     * Select all items of the section if it is in multiple selection mode.
+     * Only items that are loaded and rendered will be selected. Items that are subsequently loaded via data paging will not be selected.
+     */
+    selectAllItems(): void;
+
+    /**
+     * Deselect all items of the section if it is in multiple selection mode.
+     */
+    deselectAllItems(): void;
+
+    /**
+     * Get the number of loaded items of section.
+     * @returns {number}
+     */
+    getSelectedItemsCount(): number;
   }
+
+  /*
+* ObjectCardSectionProxy is mainly for ObjectCardSection operations.
+*/
+interface IObjectCardCollectionSectionProxy extends IBindableSectionProxy {
+
+}
+
+/*
+* DataTableSectionProxy is mainly for DataTableSection operations.
+*/
+interface IDataTableSectionProxy extends IBindableSectionProxy {
+  /**
+   * Get edit mode.
+   * The return value is None or Inline
+   */
+  getEditMode(): string;
+
+  /**
+   * Set the edit mode. The data changes are reset when set to none.
+   * @param value None or Inline 
+   */
+  setEditMode(editMode: string): void;
+
+  /**
+   * Get the data changes. This is only apply to the value that bind to a valid Property name.
+   * @returns {Array<object>} list of row changes
+   */
+  getChanges(): Array<IChangedObject>;
+
+  /**
+   * Reset the data changes
+   */
+  reset(): void;
+
+  /**
+   * Get the cell
+   * @param rowIndex 
+   * @param columnIndex 
+   * @returns {IDataTableCellProxy} returns the DataTableCellProxy
+   */
+  getCell(rowIndex: number, columnIndex: number): IDataTableCellProxy;
+}
   
   /**
    * An IResetableSectionProxy can reset the controls in the section. 
@@ -1981,12 +2294,262 @@ interface ILinkSpecifierProxy {
  */
 interface IToolbarProxy extends IControlProxy {
   /**
+   * This method returns the top-level controls of Toolbar Items for this container
+   * 
+   * @return {IToolbarItemProxy[]} The controls for this container 
+   */
+  getToolbarItems(): IToolbarItemProxy[];
+  /**
+   * 
+   * @param itemName takes in _Name property of the toolbar item
+   * @returns {IToolbarItemProxy} returns the ToolbarItemProxy
+   * instance of the item by the name
+   */
+  getToolbarItem(itemName: string): IToolbarItemProxy;
+  /**
+   * This method returns the NativeScript objects of Toolbar Items for this container
+   * 
+   * @return {ToolBarItem[]} The controls for this container 
+   */
+  getToolbarControls(): ToolBarItem[];
+  /**
+   * Sets the control's visible state with / without redraw
+   * 
+   * @param value visible state
+   * @param redraw true if redraw after setting the visible state
+   */
+  setVisible(value: boolean, redraw: boolean);
+
+    /**
+   * Determine if the toolbar control is a container.
+   *
+   * @returns {boolean}
+   */
+  isContainer(): boolean;
+  /**
+   * @returns {boolean} true/false
+   */
+  getVisible(): boolean;
+}
+
+/**
+ * A designer-facing interface that provides access to a toolbar item
+ * control.
+ * 
+ * It is passed to rules to provide access to a toolbar item control
+ * for application specific customizations.
+ * 
+ * In addition it provides access to the IControlProxy interface.
+ */
+interface IToolbarItemProxy extends IControlProxy {
+  /**
    * This method returns the top-level controls for this container
    * 
    * @return {IControlProxy[]} The controls for this container 
+   * @deprecated - use new ToolbarProxy API: getParent().getToolbarControls()
    */
   getToolbarControls(): IControlProxy[];
+  /**
+   * This method returns toolbar container control
+   * 
+   * @return {IToolbarProxy} The control of the toolbar container 
+   */
+  getParent(): IToolbarProxy;
+  /**
+   * Sets the control's visible state with / without redraw
+   * 
+   * @param value visible state
+   * @param redraw true if redraw after setting the visible state
+   */
+  setVisible(value: boolean, redraw: boolean);
+  /**
+   * @returns {boolean} true/false
+   */
+  getVisible(): boolean
 }
+
+/**
+ * A designer-facing interface that provides access to a toolbar
+ * control.
+ * 
+ * It is passed to rules to provide access to a toolbar control
+ * for application specific customizations.
+ * 
+ * In addition it provides access to the IControlProxy interface.
+ */
+interface IFioriToolbarProxy extends IControlProxy {
+  /**
+   * This method returns the top-level controls of Toolbar Items for this container
+   *
+   * @return {IFIoriToolbarItemProxy[]} The toolbar items controls for this container
+   */
+  getItems(): IFioriToolbarItemProxy[];
+
+  /**
+   * 
+   * @param itemName takes in _Name property of the toolbar item
+   * @returns {IToolbarItemProxy} returns the ToolbarItemProxy
+   * instance of the item by the name
+   */
+  getItem(itemName: string): IFioriToolbarItemProxy;
+
+  /**
+   * Sets the toolbar's visible state with / without redraw
+   *
+   * @param value visible state
+   * @param redraw true if redraw after setting the visible state
+   */
+  setVisible(value: boolean, redraw: boolean);
+
+  /**
+   * Determine if the toolbar control is a container.
+   *
+   * @returns {boolean} true/false.
+   */
+  isContainer(): boolean;
+
+    /**
+   * 
+   * @returns {boolean} true/false
+   */
+  getVisible(): boolean;
+
+  /**
+   * Sets the OverflowIcon property of the fiori toolbar control.
+   * @param {string} overflowIcon {string} value to set.
+   */
+  setOverflowIcon(overflowIcon: string): void;
+
+  /**
+   * Returns the Image property value defined for the control.
+   * @return {string}
+   */
+  getOverflowIcon(): string;
+
+  /**
+   * Sets the HelperText property of the toolbar control.
+   * @param {string} helperText {string} value to set.
+   */
+  setHelperText(helperText: string): void;
+
+  /**
+   * Returns the HelperText property value defined for the toolbar control.
+   * @return {string}
+   */
+  getHelperText(): string;
+}
+
+interface IFioriToolbarItemProxy extends IControlProxy {
+  /**
+   * Sets the Enabled property of the control.
+   * @param {boolean} isEnabled true enables and false disables.
+   */
+  setEnabled(isEnabled: boolean): void;
+
+  /**
+   * Returns the Enabled property value defined for the control.
+   * @return {boolean}
+   */
+  getEnabled(): boolean;
+
+  /**
+   * Gets the control's visible state.
+   * @returns {boolean} returns true if the control is visible otherwise false. 
+   */
+  getVisible(): boolean;
+}
+
+
+/**
+ * FioriToolbarItemIconControlProxy is a developer-facing interface that provides access to a
+ * button control and allows customizations.
+ * In addition it provides access to the IFioriToolbarItemProxy interface.
+ */
+interface IFioriToolbarItemIconControlProxy extends IFioriToolbarItemProxy {
+  
+  /**
+   * Sets the Icon property of the  control.
+   * @param {string} image {string} value to set.
+   */
+  setIcon(image: string): void;
+
+  /**
+   * Returns the Icon property value defined for the control.
+   * @return {string}
+   */
+  getIcon(): string;
+ 
+ }
+
+
+/**
+ * FioriToolbarItemButtonControlProxy is a developer-facing interface that provides access to a
+ * button control and allows customizations.
+ * In addition it provides access to the IFioriToolbarItemProxy interface.
+ */
+interface IFioriToolbarItemButtonControlProxy extends IFioriToolbarItemProxy {
+  
+  /**
+   * Sets the ButtonType property of the control.
+   * Accepted values are: "Button", "Normal".
+   * @param {string} type value to set.
+   */
+  setButtonType(type: string) 
+
+  /**
+   * Returns the ButtonType property value defined for the control.
+   * @return {string}
+   */
+  getButtonType(): string;
+
+  /**
+   * Sets the Title property of the control.
+   * @param {string} title {string} value to set.
+   */
+  setTitle(title: string): void;
+
+  /**
+   * Returns the Title property value defined for the control.
+   * @return {string}
+   */
+  getTitle(): string 
+
+  /**
+   * Sets the Image property of the Button control.
+   * @param {string} image {string} value to set.
+   */
+  setImage(image: string): void;
+
+  /**
+   * Returns the Image property value defined for the control.
+   * @return {string}
+   */
+  getImage(): string;
+ 
+  /**
+   * Sets the Semantic property of the Button control.
+   * @param {string} semantic {string} value to set.
+   */
+  setSemantic(semantic: string): void;
+ 
+  /**
+   * Returns the Semantic property value defined for the Button control.
+   * @return {string}
+   */
+  getSemantic(): string;
+ 
+  /**
+   * Sets the ImagePosition property of the Button control.
+   * @param {string} imagePosition {string} value to set.
+   */
+  setImagePosition(imagePosition: string): void;
+ 
+  /**
+   * Returns the ImagePosition property value defined for the Button control.
+   * @return {string}
+   */
+  getImagePosition(): string;
+ }
 
 /**
  * A designer-facing interface that provides access to a bottomnavigation and tabs control
@@ -2058,7 +2621,7 @@ interface IActionResult {
    /** 
     * The status of the action.
     */ 
-   status: any;
+   status: ActionExecutionStatus;
    /**
     * Whether or not the action is enabled.
     */
@@ -2078,6 +2641,11 @@ interface IActionResult {
    * @returns {IControlProxy[]} list of items in the side drawer control
    */
   menuItems: Array<ISideDrawerMenuItemProxy[]>;
+
+  /**
+   * @returns {ISideDrawerMenuItemProxy} a single SideDrawerMenuItemProxy instance of the menu item that's identified by the provided name (which is based on the _Name property)
+   */
+  getMenuItem(name: String): ISideDrawerMenuItemProxy;
 
   /**
    * @returns {string[]} list of section captions in the side drawer control
@@ -2144,6 +2712,21 @@ interface ISideDrawerMenuItemProxy extends IClientAPI {
    * Set menu item visibility
    */
   setVisibility(visibility: boolean);
+
+  /**
+   * Reset the SideDrawerMenuItem's navigation stack.
+   * If the selected sideDrawer menu item is active, it navigates to the initial page configured in the PageToOpen attribute.
+   * 
+   * Example:
+   * 
+   *   sideDrawerMenuItemProxy.reset().then((currentPageProxy) => {
+   *       var currentPageCaption = currentPageProxy.getCaption();
+   *       ...
+   *   });
+   * 
+   * @return {Promise<any>} the pageProxy of the current page after reset
+   */
+  reset(): Promise<any>;
 }
 
 /**
@@ -2161,6 +2744,12 @@ interface IODataProviderProxy {
    * @return {boolean}
    */
   isInitialized(): boolean;
+
+  /**
+   * Determine whether the entitySet is draft enabled
+   * @return {boolean}
+   */
+  isDraftEnabled(entitySet: string): Boolean;
 }
 
 /**
@@ -2196,12 +2785,24 @@ interface IOfflineODataProviderProxy extends IODataProviderProxy {
    */
   hasPendingUpload(): boolean;
 
+  /**
+   * Gets the list of defining requests
+   * @return {Object}
+   */
+  getDefiningRequests(): Array<IDefiningRequest>;
 }
 
 /**
  * A designer-facing interface that provides access to a offline odata parameters.
  */
 interface IOfflineODataParametersProxy {
+  /**
+   * Gets the value of parameter
+   * @param {string} name
+   * @return {any}
+   */
+  get(name: string): any;
+
   /**
    * Gets the custom HTTP request headers
    * @return {boolean}
@@ -2271,6 +2872,89 @@ interface IHttpResponse {
    * Gets the response content
    */
   content: IHttpResponseContent;
+}
+
+/**
+ * Represents the interface for the changed object.
+ */
+interface IChangedObject {
+  /**
+   * Get the target ReadLink.
+   */
+  readLink: string;
+
+  /**
+   * Get the list of changed properties with key/value pair
+   */
+  changedProperties: object;
+
+  /**
+   * Get the list of original properties with key/value pair
+   */
+  originalProperties: object;
+}
+
+/**
+ * A designer-facing interface that provides access to a data table cell.
+ */
+interface IDataTableCellProxy extends IClientAPI {
+  /**
+   * Get cell value
+   * @return {string} the value of the cell
+   */
+  getValue(): string;
+
+  /**
+   * Set the value in the cell
+   * @param value value to be set
+   */
+  setValue(value: string): void;
+
+  /**
+   * This method returns DataTableSection proxy
+   * @return {IDataTableSectionProxy}
+   */
+  getParent(): IDataTableSectionProxy;
+
+  /**
+   * Get row index
+   * @return {number}
+   */
+  getRowIndex(): number;
+
+  /**
+   * Get column index
+   * @return {number}
+   */
+  getColumnIndex(): number;
+}
+
+/**
+ * A designer-facing interface that provides access to a data table cell.
+ */
+interface IDataTableListPickerCellProxy extends IDataTableCellProxy {
+  /**
+   * @return {string} the caption of the cell
+   */
+  getCaption(): string;
+
+  /**
+   * Set the caption property of the cell
+   * @param {string} caption value to set.
+   */
+  setCaption(caption: string): void;
+
+  /**
+   * Get a target specifier from this cell
+   * @returns {ITargetProxy}
+   */
+  getTargetSpecifier(): IFormCellTargetProxy;
+
+  /**
+   * Set the target specifier
+   * @param {ITargetProxy} specifier specifier for the cell
+   */
+  setTargetSpecifier(specifier: IFormCellTargetProxy): Promise<any>;
 }
 
  declare enum SortOrder {
@@ -3742,3 +4426,44 @@ type Visibility = "visible" | "hidden" | "collapse";
 }
 
 declare class ActionBar {}
+declare class ContextItem {
+  public getBinding(): object;
+  public setLeadingItems(items: string[]);
+  public setTrailingItems(items: string[]);
+}
+
+declare class SelectedItem {
+  binding: any;
+  cell: any;
+}
+
+declare class ChangedItem {
+  public selected: boolean;
+}
+
+declare enum ActionExecutionStatus {
+  /**
+   * Action has been completed with a failure
+   */ 
+  Failed = -1,
+  /**
+   * Action has been completed successfully
+   */
+  Success,
+  /**
+   * Action is not executed because it is invalid
+   */
+  Invalid,
+  /**
+   * Action is valid
+   */ 
+  Valid,
+  /**
+   * Action is currently executing
+   */
+  Pending,
+  /**
+   * Action was canceled
+   */
+  Canceled,
+}

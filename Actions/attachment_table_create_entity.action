@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/n44/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/n44/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "Attachments_table",
+		"Service": "/n44/Services/capurl.service"
+	},
+	"Properties": {
+		"doc_id": "#Control:doc_id/#Value",
+		"invitationId": "#Control:invitationId/#SelectedValue",
+		"mediaType": "#Control:mediaType/#Value",
+		"fileName": "#Control:fileName/#Value",
+		"size": "#Control:size/#Value",
+		"url": "#Control:url/#Value"
+	}
+}

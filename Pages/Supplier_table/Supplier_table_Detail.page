@@ -64,6 +64,27 @@
 					},
 					"_Type": "Section.Type.KeyValue",
 					"_Name": "SectionKeyValue0",
+					"Header": {
+						"_Name": "SectionHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"OnPress": "/n44/Actions/toQus.action",
+						"Caption": "Qusestion Section",
+						"Items": [
+							{
+								"_Name": "SectionHeaderItemTypeButton0",
+								"Title": "Question Section",
+								"ButtonType": "Text",
+								"Semantic": "Tint",
+								"ImagePosition": "Leading",
+								"Visible": "/n44/Rules/qusBtnVisiRule.js",
+								"Enabled": true,
+								"Position": "Right",
+								"_Type": "SectionHeaderItem.Type.Button",
+								"OnPress": "/n44/Actions/toQus.action"
+							}
+						]
+					},
 					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
@@ -122,6 +143,7 @@
 							"ImageIsCircular": true
 						},
 						"OnPress": "/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Detail.action",
+						"OnAccessoryButtonPress": "/n44/Actions/Supplier_bid_table/NavToSupplier_bid_table_Detail.action",
 						"Selected": false
 					},
 					"DataPaging": {

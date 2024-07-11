@@ -1,0 +1,152 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "/n44/Rules/doc_idVal.js",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "doc_id",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Doc Id",
+							"Enabled": false,
+							"IsEditable": false
+						},
+						{
+							"Value": "/n44/Rules/inviIdValRule.js",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "invitationId",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Invitation Id",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"PickerItems": {
+								"Target": {
+									"Service": "/n44/Services/capurl.service",
+									"EntitySet": "Supplier_table"
+								},
+								"DisplayValue": "{invitationId}",
+								"ReturnValue": "{invitationId}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.Attachment",
+							"_Name": "content",
+							"IsVisible": true,
+							"Separator": true,
+							"AttachmentActionType": [
+								"AddPhoto",
+								"TakePhoto",
+								"SelectFile"
+							],
+							"AttachmentTitle": "Content",
+							"AllowedFileTypes": [
+								"jpg",
+								"png",
+								"gif",
+								"pdf",
+								"xlsx",
+								"xls",
+								"docx",
+								"doc",
+								"mp4",
+								"avi",
+								"mov",
+								"txt"
+							],
+							"AttachmentAddTitle": "Browse"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "mediaType",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "mediaType",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "fileName",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "fileName",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "size",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "size",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "url",
+							"IsVisible": false,
+							"Separator": true,
+							"Caption": "url",
+							"Enabled": true,
+							"IsEditable": false
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Attachments_table_Create",
+	"Caption": "Upload",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/n44/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/n44/Rules/Attachments_table_CreateEntity.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

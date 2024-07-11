@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.OpenDocument",
+	"ActionResult": {
+		"_Name": "OpenDocument"
+	},
+	"Path": "/n44/Services/capurl.service/{@odata.readLink}/content",
+	"MimeType": "/n44/Rules/openDocRule.js"
+}

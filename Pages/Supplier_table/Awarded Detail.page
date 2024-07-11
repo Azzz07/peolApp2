@@ -1,0 +1,165 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/n44/Services/capurl.service",
+		"EntitySet": "Supplier_table",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [
+				"Supplier_bid_table"
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"HeadlineText": "{doc_id}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{doc_id}",
+							"_Name": "KeyValue0",
+							"KeyName": "Doc Id",
+							"Visible": false
+						},
+						{
+							"Value": "{invitationId}",
+							"_Name": "KeyValue1",
+							"KeyName": "Supplier Mail Id",
+							"Visible": true
+						},
+						{
+							"Value": "{smvendor_id}",
+							"_Name": "KeyValue2",
+							"KeyName": "Supplier Id",
+							"Visible": false
+						},
+						{
+							"Value": "{phone_main}",
+							"_Name": "KeyValue3",
+							"KeyName": "Supplier Contact",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Header": {
+						"_Name": "SectionHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Caption",
+						"Items": [
+							{
+								"_Name": "SectionHeaderItemTypeButton0",
+								"Title": "Question Section",
+								"ButtonType": "Text",
+								"Semantic": "Tint",
+								"ImagePosition": "Leading",
+								"Visible": "/n44/Rules/qusBtnVisiRule.js",
+								"Enabled": true,
+								"Position": "Right",
+								"_Type": "SectionHeaderItem.Type.Button",
+								"OnPress": "/n44/Actions/toAwardedQus.action"
+							}
+						]
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				},
+				{
+					"Header": {
+						"_Name": "SectionHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Awarded Bids Line Item"
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/n44/Services/capurl.service",
+						"EntitySet": "{@odata.readLink}/supplier_to_sbid",
+						"QueryOptions": "/n44/Rules/awardedFilRule.js"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No Record Found",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": []
+						},
+						"Title": "{item_name}",
+						"Subhead": "{doc_id}",
+						"Description": "{invitationId}",
+						"StatusText": "{supp_quot_price}",
+						"SubstatusText": "{supp_quot_quantity}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "DisclosureIndicator",
+						"AccessoryButtonIcon": "sap-icon://navigation-right-arrow",
+						"Tags": [],
+						"AvatarStack": {
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"ImageIsCircular": true
+						},
+						"OnPress": "/n44/Actions/toaprvdetail.action",
+						"OnAccessoryButtonPress": "/n44/Actions/toaprvdetail.action",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"HighlightSelectedItem": false
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Supplier_table_Detail",
+	"Caption": "Awarded Bids Detail",
+	"PrefersLargeCaption": true
+}

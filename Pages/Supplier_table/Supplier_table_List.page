@@ -25,7 +25,7 @@
 					"Target": {
 						"Service": "/n44/Services/capurl.service",
 						"EntitySet": "Supplier_table",
-						"QueryOptions": "$expand=supplier_header_rel,supplier_to_sbid&$filter=invitationId eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and supplier_header_rel/status eq 'Open'"
+						"QueryOptions": "$expand=supplier_header_rel,supplier_to_sbid&$filter=phone_main eq '{{#Page:Login/#Control:FormCellSimpleProperty0/#Value}}' and supplier_header_rel/status eq 'Open'"
 					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
@@ -55,12 +55,12 @@
 							"ImageIsCircular": true
 						},
 						"OnPress": "/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action",
+						"OnAccessoryButtonPress": "/n44/Actions/Supplier_table/NavToSupplier_table_Detail.action",
 						"Selected": false
 					},
 					"Search": {
 						"Enabled": true,
 						"Placeholder": "Item Search",
-						"BarcodeScanner": false,
 						"Delay": 500,
 						"MinimumCharacterThreshold": 3
 					},

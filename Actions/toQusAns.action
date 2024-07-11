@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "toQusAns"
+	},
+	"PageToOpen": "/n44/Pages/qusAns.page"
+}
