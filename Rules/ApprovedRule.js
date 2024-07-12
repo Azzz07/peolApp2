@@ -30,7 +30,7 @@ var ii = `$filter=doc_id eq '${docIdValue}' and status ne 'Open'`
 return `$filter=doc_id eq '${docIdValue}' and (status ne 'Completed' or status ne 'Open')`;
 
 }
-
+///
 
 
 
